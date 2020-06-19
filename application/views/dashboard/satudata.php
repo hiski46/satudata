@@ -6,6 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Agency - Start Bootstrap Theme</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="icon" type="image/x-icon" href="http://localhost/satudata/assets/assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
@@ -33,12 +34,54 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
+        <header class="">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide="1"></li>
+                            <li data-target="#myCarousel" data-slide="2"></li>
+                        </ol> -->
+
+                        <div class="carousel-inner" role="">
+                            <div class="carousel-item active">
+                                <img src="http://localhost/satudata/assets/assets/img/karo-1.jpg" alt="">
+                                <div class="carousel-caption">
+                                    <div class="masthead-subheading">MEJUAH-JUAH</div>
+                                    <div class="masthead-heading text-uppercase">Karo Satu Data</div>
+                                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="http://localhost/satudata/assets/assets/img/karo-2.jpg" alt="">
+                                <div class="carousel-caption">
+                                    <div class="masthead-subheading">MEJUAH-JUAH</div>
+                                    <div class="masthead-heading text-uppercase">Karo Satu Data</div>
+                                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="http://localhost/satudata/assets/assets/img/karo-3.jpeg" alt="">
+                                <div class="carousel-caption">
+                                    <div class="masthead-subheading">MEJUAH-JUAH</div>
+                                    <div class="masthead-heading text-uppercase">Karo Satu Data</div>
+                                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control-prev" href="#myCarousel" role="button" data-slide="perv">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span calss="sr-only">Pervious</span>
+                        </a>
+                        <a class="right carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span calss="sr-only">Next</span>
+                        </a>
+                    </div>
+            <!-- <div class="container">
                 <div class="masthead-subheading">MEJUAH-JUAH</div>
                 <div class="masthead-heading text-uppercase">Karo Satu Data</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
-            </div>
+            </div> -->
         </header>
         <!-- Services-->
         <section class="page-section" id="services">
@@ -495,5 +538,9 @@
         <script src="http://localhost/satudata/assets//css/styles.css/assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="http://localhost/satudata/assets//css/styles.css/js/scripts.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
