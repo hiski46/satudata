@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Agency - Start Bootstrap Theme</title>
+        <title>Karo Satu Data</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="icon" type="image/x-icon" href="http://localhost/satudata/assets/assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -24,17 +26,17 @@
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="" /></a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url("data") ?>">Data</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>">Galeri</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>">Toolkit</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>">Login</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="">
+        <header class="masthead">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide="0" class="active"></li>
@@ -44,33 +46,44 @@
 
                         <div class="carousel-inner" role="">
                             <div class="carousel-item active">
-                                <img src="http://localhost/satudata/assets/assets/img/karo-1.jpg" alt="">
-                                <div class="carousel-caption">
+                                <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/karo-5.jpg" alt="" >
+                                <div class="carousel-caption ">
                                     <div class="masthead-subheading">MEJUAH-JUAH</div>
                                     <div class="masthead-heading text-uppercase">Karo Satu Data</div>
-                                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                                    <!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="http://localhost/satudata/assets/assets/img/karo-2.jpg" alt="">
-                                <div class="carousel-caption">
+                                <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/karo-4.jpg" alt="">
+                                <div class="carousel-caption ">
                                     <div class="masthead-subheading">MEJUAH-JUAH</div>
                                     <div class="masthead-heading text-uppercase">Karo Satu Data</div>
-                                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                                    <!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="http://localhost/satudata/assets/assets/img/karo-3.jpeg" alt="">
-                                <div class="carousel-caption">
+                                <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/karo-1.jpg" alt="">
+                                <div class="carousel-caption ">
                                     <div class="masthead-subheading">MEJUAH-JUAH</div>
                                     <div class="masthead-heading text-uppercase">Karo Satu Data</div>
-                                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                                    <!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
                                 </div>
                             </div>
                         </div>
-                        <a class="left carousel-control-prev" href="#myCarousel" role="button" data-slide="perv">
+                        <form action="" class="carousel-control">
+                                        <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4" style="padding = 1px">
+                                            <div class="input-group">
+                                                <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light" stle>
+                                                    <div class="input-group-append">
+                                                    <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    </form>
+                        <a class="left carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span calss="sr-only">Pervious</span>
+                            <span calss="sr-only">Previous</span>
                         </a>
                         <a class="right carousel-control-next" href="#myCarousel" role="button" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
