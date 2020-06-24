@@ -37,50 +37,52 @@
         </nav>
         <!-- Masthead-->
         <header class="masthead">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <div id="myCarousel" class="carousel row d-flex slide justify-content-center" data-ride="carousel" style="">
                         <!-- <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide="0" class="active"></li>
                             <li data-target="#myCarousel" data-slide="1"></li>
                             <li data-target="#myCarousel" data-slide="2"></li>
                         </ol> -->
-
+                        <div calss="col-sl-5" style="position:absolute; z-index:10; top:15%; margin:10%">
+                            <div class="masthead-subheading">MEJUAH-JUAH</div>
+                            <div class="masthead-heading text-uppercase">Karo Satu Data</div>
+                            <form action="" class="" >
+                            <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4" style="padding = 1px">
+                                <div class="input-group">
+                                    <input type="search" placeholder="Cari data" aria-describedby="button-addon1" class="form-control border-0 bg-transparent" stle>
+                                        <div class="input-group-append">
+                                        <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>   
+                        </form>
+                        </div>
                         <div class="carousel-inner" role="">
                             <div class="carousel-item active">
                                 <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/karo-5.jpg" alt="" >
-                                <div class="carousel-caption ">
+                                <!-- <div class="carousel-caption ">
                                     <div class="masthead-subheading">MEJUAH-JUAH</div>
                                     <div class="masthead-heading text-uppercase">Karo Satu Data</div>
-                                    <!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
-                                </div>
+                                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                                </div> -->
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/karo-4.jpg" alt="">
-                                <div class="carousel-caption ">
+                                <!-- <div class="carousel-caption ">
                                     <div class="masthead-subheading">MEJUAH-JUAH</div>
                                     <div class="masthead-heading text-uppercase">Karo Satu Data</div>
-                                    <!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
-                                </div>
+                                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                                </div> -->
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/karo-1.jpg" alt="">
-                                <div class="carousel-caption ">
+                                <!-- <div class="carousel-caption ">
                                     <div class="masthead-subheading">MEJUAH-JUAH</div>
                                     <div class="masthead-heading text-uppercase">Karo Satu Data</div>
-                                    <!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
-                                </div>
+                                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                                </div> -->
                             </div>
                         </div>
-                        <form action="" class="carousel-control">
-                                        <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4" style="padding = 1px">
-                                            <div class="input-group">
-                                                <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light" stle>
-                                                    <div class="input-group-append">
-                                                    <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    
-                                    </form>
                         <a class="left carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                             <span calss="sr-only">Previous</span>
