@@ -45,9 +45,11 @@
                                     <form class="user" method="post" action="<?= base_url('admin/login') ?>">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="masukkan email anda">
+                                            <?= form_error('email', '<small class ="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="masukkan password anda">
+                                            <?= form_error('password', '<small class ="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <button class="btn btn-outline-success btn-user btn-block" type="submit">Login</button>
                                         <hr>
