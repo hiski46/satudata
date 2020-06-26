@@ -42,6 +42,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Login</h1>
                                     </div>
+                                    <?= $this->session->flashdata('message') ?>
                                     <form class="user" method="post" action="<?= base_url('admin/login') ?>">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="masukkan email anda">
