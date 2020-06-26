@@ -3,7 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Data extends CI_Controller {
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('DataModel');
+    }
+
 	public function index(){
-        $this->load->view('dashboard/data');
+        $data = array(
+            'title' =>'Data',
+            'data_instansi' => $this->DataModel->get_all_instansi() 
+        );
+        $this->load->view('dashboard/data', $data);
     }
 }

@@ -44,7 +44,22 @@
                     <h3 class="section-subheading text-muted">Dalam Satu Data</h3>
                 </div>
                 <div class="row text-center">
+                    <?php 
+                        foreach ($data_instansi as $instansi) {
+                    ?>
                     <div class="col-md-2 col-sm-3 col-4">
+                        <div class="item">
+                            <a href="http://localhost/satudata/detail">
+                                <span class="notify-badge">0</span>
+                                <img src="http://localhost/satudata/assets/assets/img/logokaro.gif" alt="" class="img-responsive img-fluid">
+                                <h4 class="my-3"><?= $instansi->name; ?></h4>
+                            </a>
+                            <p class="text-muted"></p>
+                        </div>
+                    </div>
+
+                        <?php }?>
+                    <!-- <div class="col-md-2 col-sm-3 col-4">
                         <div class="item">
                             <a href="http://localhost/satudata/detail">
                                 <span class="notify-badge">0</span>
@@ -103,17 +118,7 @@
                             </a>
                             <p class="text-muted">Dinas Komunikasi dan Informatika</p>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-sm-3 col-4">
-                        <div class="item">
-                            <a href="http://localhost/satudata/detail">
-                                <span class="notify-badge">0</span>
-                                <img src="http://localhost/satudata/assets/assets/img/logokaro.gif" alt="" class="img-responsive img-fluid">
-                                <h4 class="my-3">DISKOMINFO</h4>
-                            </a>
-                            <p class="text-muted">Dinas Komunikasi dan Informatika</p>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
                 
             </div>
