@@ -37,13 +37,13 @@
         </nav>
         <!-- Masthead-->
         <header class="masthead">
-                    <div id="myCarousel" class="carousel row d-flex slide justify-content-center" data-ride="carousel" style="">
+                    <div id="myCarousel" class="carousel slide row d-flex justify-content-center" data-ride="carousel" style="">
                         <!-- <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide="0" class="active"></li>
                             <li data-target="#myCarousel" data-slide="1"></li>
                             <li data-target="#myCarousel" data-slide="2"></li>
                         </ol> -->
-                        <div calss="col-sl-5" style="position:absolute; z-index:10; top:15%; margin:10%">
+                        <div calss="p-2 col-sl-5 mx-auto my-auto " style="position:absolute; z-index:10; top:15%; margin-top:5%;">
                             <div class="masthead-subheading">MEJUAH-JUAH</div>
                             <div class="masthead-heading text-uppercase">Karo Satu Data</div>
                             <form action="" class="" >
