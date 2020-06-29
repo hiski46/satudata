@@ -27,7 +27,7 @@ class Registrasi extends CI_Controller
                     'name' => $this->input->post('nama'),
                     'email' => $this->input->post('email'),
                     'image' => 'default.jpg',
-                    'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+                    'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
                     'role_id' => 2,
                     'is_active' => 1,
                     'date' => time()
