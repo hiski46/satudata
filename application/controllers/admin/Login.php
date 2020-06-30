@@ -29,7 +29,7 @@ class Login extends CI_Controller
 
         if ($user) {
             if ($user['is_active'] == 1) {
-                if (password_verify($password,$user['password'])) {
+                if (password_verify($password, $user['password'])) {
                     # code...
                     $data = [
                         'email' => $user['email'],
@@ -53,7 +53,7 @@ class Login extends CI_Controller
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('role_id');
 
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil Logout </div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">  Anda Berhasil Logout </div>');
         redirect('admin/login');
     }
 }
