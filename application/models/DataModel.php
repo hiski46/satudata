@@ -7,6 +7,13 @@
             $query = $this->db->select('*')->where('role_id','2')->order_by('id', 'DESC')->get('public.user');
             return $query->result();
         }
+
+
+        public function tampil_userid($id)
+        {
+            $query = $this->db->select('*')->where('id_owner',$id)->get('public.data');
+            return $query->result();
+        }
     }
     
 ?>

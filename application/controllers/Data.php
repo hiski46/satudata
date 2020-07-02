@@ -16,4 +16,10 @@ class Data extends CI_Controller {
         );
         $this->load->view('dashboard/data', $data);
     }
+
+    public function userid(){
+        $id = $this->uri->segment(3);
+        $data['user']=$this->DataModel->tampil_userid($id);
+        $this->load->view('dashboard/detail', $data);
+    }
 }

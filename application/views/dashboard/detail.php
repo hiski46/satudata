@@ -51,14 +51,18 @@
                     <div class="col-10">
                         <div class="bs-example">    
                             <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h4>Asteroid detected near earth</h4>
-                                        <small>1 days ago</small>
-                                    </div>
-                                    <p>Pulvinar leo id risus pellentesque vestibulum. Sed diam libero, sodales eget sapien vel, porttitor bibendum enim. Donec sed nibh vitae lorem porttitor blandit in nec ante.</p>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action ">
+                                <?php 
+                                foreach ($user as $instansi) {
+                                ?>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h4><?= $instansi->judul ?></h4>
+                                            <small><?= $instansi->tanggal ?></small>
+                                        </div>
+                                        <p><?= $instansi->file ?></p>
+                                    </a>
+                                <?php } ?>
+                                <!-- <a href="#" class="list-group-item list-group-item-action ">
                                     <div class="d-flex w-100 justify-content-between">
                                         <h4>Scientists found massive black hole</h4>
                                         <small>2 days ago</small>
@@ -71,7 +75,7 @@
                                         <small>3 days ago</small>
                                     </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
