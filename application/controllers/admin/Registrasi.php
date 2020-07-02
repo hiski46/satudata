@@ -6,6 +6,11 @@ class Registrasi extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        if (!$this->session->userdata('email')) {
+            redirect('admin/login');
+        } elseif ($this->session->userdata('role_id') != 1) {
+            redirect('admin/salah');
+        }
         $this->load->library('form_validation');
     }
 

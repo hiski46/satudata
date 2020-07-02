@@ -12,6 +12,11 @@ class Login extends CI_Controller
 
     public function index()
     {
+        if ($this->session->userdata('email')  && $this->session->userdata('role_id') == 2) {
+            redirect('admin/admin');
+        } else if ($this->session->userdata('email')  && $this->session->userdata('role_id') == 1) {
+            redirect('admin/operator');
+        }
         $this->form_validation->set_rules('email', 'email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'password', 'trim|required');
         if ($this->form_validation->run() == false) {
