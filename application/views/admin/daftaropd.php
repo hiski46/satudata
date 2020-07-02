@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Karo Satu Data - Dashboard Operator</title>
+    <title> Daftar OPD </title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('assets/admin/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -33,7 +33,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-th-large "></i>
                 </div>
-                <div class="sidebar-brand-text mx-3" disabled>Dashboard operator</div>
+                <div class="sidebar-brand-text mx-3">Dashboard operator</div>
             </a>
 
             <!-- Divider -->
@@ -69,7 +69,7 @@
             </li>
              <!-- Nav Item - Pages Collapse Menu -->
              <li class="nav-item">
-                <a class="nav-link collapsed" href=" <?php echo base_url("admin/DaftarOPD") ?> " data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href=" <?php echo base_url("data") ?> " data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-folder"></i>
                     <span> Daftar OPD </span>
                 </a>
@@ -162,7 +162,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <!--<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                         
                             <input type="text" class="form-control bg-light border-0 small" placeholder=" Cari OPD ..." aria-label="Search" aria-describedby="basic-addon2">
@@ -299,7 +299,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                                <img class="img-profile rounded-circle" src="<?php echo  base_url('assets/assets/img/logokaro.gif');?>">
+                                <img class="img-profile rounded-circle" src="<?php echo  base_url('assets/assets/img/logokaro.gif');?>" >
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -333,21 +333,90 @@
 
                     <!-- Page Heading -->
                     <center>
-                    <h1 class="h3 mb-4 text-gray-800" style="text-align:center" > SELAMAT DATANG OPERATOR</h1>
-                    <h1 class="h3 mb-4 text-gray-800" style="text-align:center" > SATUDATA </h1>
-                    <h1 class="h3 mb-4 text-gray-800" style="text-align:center" >KABUPATEN KARO</h1>
-                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                                <img class=alt="image"height="440" width="440" src="<?php echo  base_url('assets/assets/img/logokaro.gif');?>">
-                            </a>
+                    <div class="list-group">
+                             <button type="button" class="list-group-item list-group-item-action active with nested dropdown" disabled>
+                                Daftar OPD Satudata Kabupaten Karo
+                            </button>
+                            </center>
+<br>
+<br>
+                            <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
+                                Dinas Pendidikan
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Edit</a>
+                                <a class="dropdown-item" href="#"> Hapus</a>
+                            </div>
+                            </div>
+<br>
+                            <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
+                                Dinas Pekerjaan Umum
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Edit</a>
+                                <a class="dropdown-item" href="#"> Hapus</a>
+                            </div>
+                            </div>
+    <br>
+                              <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
+                                Dinas Perhuhungan
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Edit</a>
+                                <a class="dropdown-item" href="#"> Hapus</a>
+                            </div>
+                            </div>
+                            
+    <br>
+                              <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
+                                DISKOMINFO
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Edit</a>
+                                <a class="dropdown-item" href="#"> Hapus</a>
+                            </div>
+                            </div>
+                            
+    <br>
+                              <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
+                                Dinas Pertanian
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Edit</a>
+                                <a class="dropdown-item" href="#"> Hapus</a>
+                            </div>
+                            </div>
+                            
+    <br>
+                              <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
+                                DISCAPIL
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Edit</a>
+                                <a class="dropdown-item" href="#"> Hapus</a>
+                            </div>
+                            </div>
+                            
+    <br>
+                              <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
+                                Dinas Kesehatan
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Edit</a>
+                                <a class="dropdown-item" href="#"> Hapus</a>
+                            </div>
+                            </div>
                             
 
-                    
-                    </center>
-                </div>
-                <!-- /.container-fluid -->
-
-            </div>
+</div>
+            
             <!-- End of Main Content -->
 
             <!-- Footer -->
