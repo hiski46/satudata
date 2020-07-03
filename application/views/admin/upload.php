@@ -46,9 +46,9 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/dashboard'); ?>">
+                <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard Admin</span></a>
+                    <span>Dashboard</span></a>
             </li>
 
             <!-- Divider -->
@@ -163,18 +163,35 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="card mb-3" style="max-width:auto;">
-                        <div class="row no-gutters mx-auto">
-                            <div class="col-md-4" style="padding: 5%">
-                                <img src="<?= base_url('assets/assets/img/logokaro.gif') ?>" class="card-img " alt="...">
-                            </div>
-                            <div class="col-md-8 ">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?= $user['name']; ?></h5>
-                                    <p class="card-text"><?= $user['email']; ?></p>
-                                    <p class="card-text"><small class="text-muted">tanggal pembuatan akun :<?= date('d F Y', $user['date']); ?> </small></p>
+                    <div class="card border-primary mb-3" style="max-width: auto;">
+                        <div class="card-header">Upload Berkas</div>
+                        <div class="card-body text-primary">
+                            <form>
+                                <div class="form-group" style="max-width: 50%;">
+                                    <label for="formGroupExampleInput">Judul Berkas</label>
+                                    <input name="judul" type="text" class="form-control" id="formGroupExampleInput" placeholder="Masukkan Judul Berkas">
                                 </div>
-                            </div>
+                                <div class="form-group" style="max-width: 50%; ">
+                                    <div class="custom-file">
+                                        <input type="file" class="" id="customFile">
+                                    </div>
+                                </div>
+                                <div class="form-group" style="max-width: 50%;">
+                                    <textarea name="ketarangan" id="formGroupExampleInput2" cols="30" rows="5" class="form-control" placeholder="masukkan keterangan"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Right-aligned menu
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <button class="dropdown-item" type="button">Action</button>
+                                            <button class="dropdown-item" type="button">Another action</button>
+                                            <button class="dropdown-item" type="button">Something else here</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
 
