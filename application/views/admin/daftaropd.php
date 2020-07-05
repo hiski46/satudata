@@ -69,7 +69,7 @@
             </li>
              <!-- Nav Item - Pages Collapse Menu -->
              <li class="nav-item">
-                <a class="nav-link collapsed" href=" <?php echo base_url("data") ?> " data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="<?php echo base_url("admin/DaftarOPD") ?> ?> " data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-folder"></i>
                     <span> Daftar OPD </span>
                 </a>
@@ -165,7 +165,7 @@
                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                         
-                            <input type="text" class="form-control bg-light border-0 small" placeholder=" Cari OPD ..." aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder=" Cari Instansi ..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -340,80 +340,96 @@
                             </center>
 <br>
 <br>
-                            <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
-                                Dinas Pendidikan
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Edit</a>
-                                <a class="dropdown-item" href="#"> Hapus</a>
+<table class="table">
+  <caption>List of users</caption>
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col"> Nama Instansi </th>
+      <th scope="col"> Email </th>
+      <th scope="col=left"> Aksi </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td> Dinas Kesehatan</td>
+      <td> Dinkes@gmail.com</td>
+      <td>
+            <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong" > edit </button>
+
+            
+    <!-- Hapus Modal-->
+            <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modalsaya"> hapus </button>
+
+                                    
+    </tr>
+  </tbody>
+</table>
+<!-- modal -->
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content p-5 pl-2">
+      <div class="modal-header mx-auto">
+     
+        <h5 class="modal-title " id="exampleModalLongTitle" > Edit Instansi </h5>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          
+        </button>
+      </div>
+      <div class="modal-body">
+       
+            <div class="form-group row"> 
+                <label for="exampleFormControlInput1">Nama Instansi</label>
+                <input type="text" class="form-control" id="inputName" placeholder=>
+                <label for="exampleFormControlInput1"> Username </label>
+                <input type="text" class="form-control" id="formEmail" placeholder=> 
+                <label for="inputPassword" >Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder=>
+
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Default@gmail.com">
+               
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+            </div>
+                 
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade"id="modalsaya" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Hapus</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p> Apakah Anda Yakin ? </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Batal </button>
+                                <button type="button" class="btn btn-primary"> Hapus </button>
                             </div>
                             </div>
-<br>
-                            <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
-                                Dinas Pekerjaan Umum
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Edit</a>
-                                <a class="dropdown-item" href="#"> Hapus</a>
-                            </div>
-                            </div>
-    <br>
-                              <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
-                                Dinas Perhuhungan
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Edit</a>
-                                <a class="dropdown-item" href="#"> Hapus</a>
-                            </div>
-                            </div>
-                            
-    <br>
-                              <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
-                                DISKOMINFO
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Edit</a>
-                                <a class="dropdown-item" href="#"> Hapus</a>
-                            </div>
-                            </div>
-                            
-    <br>
-                              <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
-                                Dinas Pertanian
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Edit</a>
-                                <a class="dropdown-item" href="#"> Hapus</a>
-                            </div>
-                            </div>
-                            
-    <br>
-                              <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
-                                DISCAPIL
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Edit</a>
-                                <a class="dropdown-item" href="#"> Hapus</a>
-                            </div>
-                            </div>
-                            
-    <br>
-                              <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="DinasPendidikan" data-toggle="dropright" aria-haspopup="true" aria-expanded="false">
-                                Dinas Kesehatan
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Edit</a>
-                                <a class="dropdown-item" href="#"> Hapus</a>
-                            </div>
-                            </div>
-                            
+                        </div>
+                        </div>
 
 </div>
             
@@ -440,28 +456,10 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
     <!-- Bootstrap core JavaScript-->
     <script src="<?= base_url('assets/admin/'); ?>vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url('assets/admin/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="<?= base_url('assets/admin/'); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
