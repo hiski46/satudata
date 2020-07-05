@@ -166,32 +166,31 @@
                     <div class="card border-primary mb-3" style="max-width: auto;">
                         <div class="card-header">Upload Berkas</div>
                         <div class="card-body text-primary">
-                            <form>
-                                <div class="form-group" style="max-width: 50%;">
+                            <?php echo form_open_multipart('admin/upload/prosestambahgambar'); ?>
+                                <div class="form-group" style="max-width: 70%;">
                                     <label for="formGroupExampleInput">Judul Berkas</label>
                                     <input name="judul" type="text" class="form-control" id="formGroupExampleInput" placeholder="Masukkan Judul Berkas">
                                 </div>
-                                <div class="form-group" style="max-width: 50%; ">
-                                    <div class="custom-file">
-                                        <input type="file" class="" id="customFile">
-                                    </div>
+                                <div class="form-group" style="max-width: 70%; ">
+                                    <input type="file" name="file" id="customFile">
                                 </div>
-                                <div class="form-group" style="max-width: 50%;">
-                                    <textarea name="ketarangan" id="formGroupExampleInput2" cols="30" rows="5" class="form-control" placeholder="masukkan keterangan"></textarea>
+                                <div class="form-group" style="max-width: 70%;">
+                                    <textarea name="keterangan" id="formGroupExampleInput2" cols="30" rows="5" class="form-control" placeholder="masukkan keterangan"></textarea>
+                                </div>                 
+                                <div class="form-group" style="max-width: 70%;">
+                                    <label for="sel1">Kategori :</label>
+                                    <select name="kategori" class="form-control" id="sel1" placeholder="Pilih Kategori" >
+                                        <option value="" disabled selected>Pilih Kategori</option>
+                                        <option value="keuangan" >Keuangan</option>
+                                        <option value="kepegawaian" >Kepegawaian</option>
+                                        <option value="informasi" >Informasi</option>
+                                        <option value="sosial" >Sosial</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Right-aligned menu
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <button class="dropdown-item" type="button">Action</button>
-                                            <button class="dropdown-item" type="button">Another action</button>
-                                            <button class="dropdown-item" type="button">Something else here</button>
-                                        </div>
-                                    </div>
+                                    <input type="submit" value="upload" class="btn btn-primary">
                                 </div>
-                            </form>
+                            <?php echo form_close(); ?>    
                         </div>
                     </div>
 

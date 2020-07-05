@@ -38,7 +38,8 @@ class Login extends CI_Controller
                     # code...
                     $data = [
                         'email' => $user['email'],
-                        'role_id' => $user['role_id']
+                        'role_id' => $user['role_id'],
+                        'id' => $user['id']
                     ];
                     $this->session->set_userdata($data);
                     if ($user['role_id'] == 2) {
@@ -61,6 +62,7 @@ class Login extends CI_Controller
     {
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('role_id');
+        $this->session->unset_userdata('id');
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">  Anda Berhasil Logout </div>');
         redirect('admin/login');
