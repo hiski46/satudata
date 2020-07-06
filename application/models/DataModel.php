@@ -14,6 +14,10 @@
             $query = $this->db->select('*')->where('id_owner',$id)->get('public.data');
             return $query->result();
         }
+
+        public function input_data($data,$table){
+            $this->db->insert($table,$data);
+        }
     }
     
 ?>

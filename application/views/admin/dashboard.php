@@ -101,6 +101,15 @@
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Upload Data</span></a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Colors</a>
+                        <a class="collapse-item" href="utilities-border.html">Borders</a>
+                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
             </li>
 
 
@@ -167,9 +176,9 @@
                     <h1 class="h3 mb-4 text-gray-800" style="text-align:center">KARO SATU DATA </h1>
                     <h1 class="h3 mb-4 text-gray-800" style="text-align:center">KABUPATEN KARO</h1>
 
-                    <form class="form-inline mr-auto w-100 col col-lg-8">
+                    <form class="form-inline mr-auto w-100">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-2 small" placeholder="Cari Data" aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-2 " placeholder="Cari Data" aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -188,10 +197,10 @@
                             </div>
                             <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
                             <small>
-                                <a href="<?= base_url('admin/login/logout'); ?>">
-                                    <i class="fas fa-chevron-circle-down text-primary"> Details</i>
-                                    <i class="fas fa-trash-alt"> Hapus</i>
-                                </a>
+
+                                <a><i class="fas fa-chevron-circle-down text-primary" data-toggle="modal" data-target="#exampleModalLong"> Details</i></a>
+                                <a><i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya"> Hapus</i></a>
+
                             </small>
                         </div>
                         <div href="#" class="list-group-item list-group-item-action">
@@ -203,7 +212,7 @@
                             <small class="text-muted">
                                 <a href="<?= base_url('admin/login/logout'); ?>">
                                     <i class="fas fa-chevron-circle-down text-primary"> Details</i>
-                                    <i class="fas fa-trash-alt"> Hapus</i>
+                                    <i class="fas fa-trash-alt text-danger"> Hapus</i>
                                 </a>
                             </small>
                         </div>
@@ -216,7 +225,7 @@
                             <small class="text-muted">
                                 <a href="<?= base_url('admin/login/logout'); ?>">
                                     <i class="fas fa-chevron-circle-down text-primary"> Details</i>
-                                    <i class="fas fa-trash-alt"> Hapus</i>
+                                    <i class="fas fa-trash-alt text-danger"> Hapus</i>
                                 </a>
                             </small>
                         </div>
@@ -224,57 +233,123 @@
                     <!-- /.container-fluid -->
 
                 </div>
-                <!-- End of Main Content -->
 
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; The Most Angry 2020. </span>
+                <!-- modal -->
+                <!-- Button trigger modal -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content p-5 pl-2">
+                            <div class="modal-header mx-auto">
+
+                                <h5 class="modal-title " id="exampleModalLongTitle"> Edit Data </h5>
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="form-group row">
+                                    <label for="exampleFormControlInput1">Edit Data</label>
+                                    <input type="text" class="form-control" id="inputName" placeholder=>
+                                    <label for="exampleFormControlInput1"> Judul </label>
+                                    <input type="text" class="form-control" id="formEmail" placeholder=>
+                                    <label for="inputPassword">Sub Judul</label>
+                                    <input type="password" class="form-control" id="inputPassword" placeholder=>
+
+                                    <label for="staticEmail" class="col-sm-2 col-form-label">Jenis File</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Default@gmail.com">
+
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                <button type="button" class="btn btn-primary">Simpan Perubahan</button>
+                            </div>
                         </div>
                     </div>
-                </footer>
-                <!-- End of Footer -->
+                </div>
+
+
+                <div class="modal fade" id="modalsaya" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Hapus</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p> Apakah Anda Yakin ? </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Batal </button>
+                                <button type="button" class="btn btn-primary"> Hapus </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-            <!-- End of Content Wrapper -->
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; The Most Angry 2020. </span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
 
         </div>
-        <!-- End of Page Wrapper -->
+        <!-- End of Content Wrapper -->
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
+    </div>
+    <!-- End of Page Wrapper -->
 
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="<?= base_url('admin/login/logout'); ?>">Logout</a>
-                    </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout'); ?>">Logout</a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="<?= base_url('assets/admin/'); ?>vendor/jquery/jquery.min.js"></script>
-        <script src="<?= base_url('assets/admin/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?= base_url('assets/admin/'); ?>vendor/jquery/jquery.min.js"></script>
+    <script src="<?= base_url('assets/admin/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Core plugin JavaScript-->
-        <script src="<?= base_url('assets/admin/'); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="<?= base_url('assets/admin/'); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="<?= base_url('assets/admin/'); ?>js/sb-admin-2.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="<?= base_url('assets/admin/'); ?>js/sb-admin-2.min.js"></script>
 
 </body>
 
