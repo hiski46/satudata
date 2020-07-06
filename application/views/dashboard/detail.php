@@ -54,10 +54,10 @@
                                 <?php 
                                 foreach ($user as $instansi) {
                                 ?>
-                                    <a href="#" class="list-group-item list-group-item-action">
+                                    <a href="<?= base_url('upload/file/'.$instansi->file) ?>" class="list-group-item list-group-item-action" download>
                                         <div class="d-flex w-100 justify-content-between">
-                                            <h4><?= $instansi->judul ?></h4>
-                                            <small><?= $instansi->tanggal ?></small>
+                                            <h4><?= $instansi->judul ?> - <?= $instansi->kategori ?></h4>
+                                            <small><?= date('d F Y', $instansi->tanggal) ?></small>
                                         </div>
                                         <p><?= $instansi->file ?></p>
                                     </a>

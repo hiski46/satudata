@@ -53,7 +53,7 @@ class Upload extends CI_Controller
             );
 
             $this->DataModel->input_data($data,'public.data');
-            redirect('admin/upload');
+            redirect('admin/dashboard');
         }
     }
     

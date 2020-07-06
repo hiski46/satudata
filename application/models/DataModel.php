@@ -18,6 +18,16 @@
         public function input_data($data,$table){
             $this->db->insert($table,$data);
         }
+
+        public function hapus_data($id){
+            
+        }
+
+        public function jumlah_data($id){
+            $query=$this->db->query('select * from public.data inner join public.user on public.data.id_owner = public.user.id where public.user.id='.$id.';');
+            $total = $query->num_rows();
+            return $total;
+        }
     }
     
 ?>

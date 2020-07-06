@@ -12,9 +12,15 @@ class Data extends CI_Controller {
 	public function index(){
         $data = array(
             'title' =>'Data',
+            'controller' => $this,
             'data_instansi' => $this->DataModel->get_all_instansi() 
         );
         $this->load->view('dashboard/data', $data);
+    }
+
+    public function hitung($id){
+        $jlh = $this->DataModel->jumlah_data($id);
+        echo $jlh;
     }
 
     public function userid(){

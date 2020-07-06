@@ -50,7 +50,7 @@
                     <div class="col-md-2 col-sm-3 col-4">
                         <div class="item">
                             <a href="<?= base_url('data/userid/'.$instansi->id)?>">
-                                <span class="notify-badge">0</span>
+                                <span class="notify-badge"><?php $controller->hitung($instansi->id); ?></span>
                                 <img src="http://localhost/satudata/assets/assets/img/logokaro.gif" alt="" class="img-responsive img-fluid">
                                 <h4 class="my-3"><?= $instansi->name; ?></h4>
                             </a>

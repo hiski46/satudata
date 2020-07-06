@@ -30,7 +30,7 @@
 
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('admin/admin') ?>">
                 <div class="sidebar-brand-icon ">
                     <i class="fas fa-database"></i>
                 </div>
@@ -47,7 +47,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?= base_url('admin/dashboard') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -188,14 +188,14 @@
                     </form>
                     <hr>
 
-
+                    <?php foreach ($user1 as $x) { ?>
                     <div class="list-group">
                         <div href="#" class="list-group-item list-group-item-action ">
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Data Produksi Kelapa Tahun 2013</h5>
-                                <small>3 hari yang lalu</small>
+                                <h5 class="mb-1"><?= $x->judul; ?> - <?= $x->kategori; ?></h5>
+                                <small><?= date('d F Y', $x->tanggal); ?></small>
                             </div>
-                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                            <p class="mb-1"><?= $x->file; ?></p>
                             <small>
 
                                 <a><i class="fas fa-chevron-circle-down text-primary" data-toggle="modal" data-target="#exampleModalLong"> Details</i></a>
@@ -203,33 +203,8 @@
 
                             </small>
                         </div>
-                        <div href="#" class="list-group-item list-group-item-action">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Data Produksi Kelapa Tahun 2014</h5>
-                                <small class="text-muted">3 hari yang lalu</small>
-                            </div>
-                            <p class="mb-1">kelapa merupakan tanaman yang sangat bermanfaat bagi kehidupan ini,di tanah karo khususnya lau baleng adalah penghasil kelapa terbaik,mantap.</p>
-                            <small class="text-muted">
-                                <a href="<?= base_url('admin/login/logout'); ?>">
-                                    <i class="fas fa-chevron-circle-down text-primary"> Details</i>
-                                    <i class="fas fa-trash-alt text-danger"> Hapus</i>
-                                </a>
-                            </small>
-                        </div>
-                        <div href="#" class="list-group-item list-group-item-action">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Data Produksi Kelapa Tahun 2015</h5>
-                                <small class="text-muted">3 hari yang lalu</small>
-                            </div>
-                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                            <small class="text-muted">
-                                <a href="<?= base_url('admin/login/logout'); ?>">
-                                    <i class="fas fa-chevron-circle-down text-primary"> Details</i>
-                                    <i class="fas fa-trash-alt text-danger"> Hapus</i>
-                                </a>
-                            </small>
-                        </div>
                     </div>
+                    <?php } ?>
                     <!-- /.container-fluid -->
 
                 </div>
