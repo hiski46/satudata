@@ -189,21 +189,21 @@
                     <hr>
 
                     <?php foreach ($user1 as $x) { ?>
-                    <div class="list-group">
-                        <div href="#" class="list-group-item list-group-item-action ">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1"><?= $x->judul; ?> - <?= $x->kategori; ?></h5>
-                                <small><?= date('d F Y', $x->tanggal); ?></small>
+                        <div class="list-group">
+                            <div href="#" class="list-group-item list-group-item-action ">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><?= $x->judul; ?> - <?= $x->kategori; ?></h5>
+                                    <small><?= date('d F Y', $x->tanggal); ?></small>
+                                </div>
+                                <p class="mb-1"><?= $x->file; ?></p>
+                                <small>
+
+                                    <a><i class="fas fa-chevron-circle-down text-primary" data-toggle="modal" data-target="#exampleModalLong"> Details</i></a>
+                                    <a><i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya"> Hapus</i></a>
+
+                                </small>
                             </div>
-                            <p class="mb-1"><?= $x->file; ?></p>
-                            <small>
-
-                                <a><i class="fas fa-chevron-circle-down text-primary" data-toggle="modal" data-target="#exampleModalLong"> Details</i></a>
-                                <a><i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya"> Hapus</i></a>
-
-                            </small>
                         </div>
-                    </div>
                     <?php } ?>
                     <!-- /.container-fluid -->
 
@@ -215,38 +215,44 @@
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                     <div class="modal-dialog" role="document">
-                        <div class="modal-content p-5 pl-2">
-                            <div class="modal-header mx-auto">
-
-                                <h5 class="modal-title " id="exampleModalLongTitle"> Edit Data </h5>
-
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-
+                        <div class="modal-content p-2 pl-2">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"> Form Edit Data</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
                                 </button>
                             </div>
                             <div class="modal-body">
 
                                 <div class="form-group row">
-                                    <label for="exampleFormControlInput1">Edit Data</label>
-                                    <input type="text" class="form-control" id="inputName" placeholder=>
-                                    <label for="exampleFormControlInput1"> Judul </label>
-                                    <input type="text" class="form-control" id="formEmail" placeholder=>
-                                    <label for="inputPassword">Sub Judul</label>
-                                    <input type="password" class="form-control" id="inputPassword" placeholder=>
+                                    <label for="judul"> Judul </label>
+                                    <input type="text" class="form-control" id="judul" placeholder="<?= $x->judul ?>">
+                                    <label for="keterangan">Keterangan</label>
+                                    <input type="password" class="form-control" id="keterangan" placeholder="<?= $x->keterangan ?> ">
 
                                     <label for="staticEmail" class="col-sm-2 col-form-label">Jenis File</label>
                                     <div class="col-sm-10">
-                                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Default@gmail.com">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" placeholder="<?= $x->file ?>">
 
                                         <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>
+                                    <div class="form-group" style="max-width: 70%;">
+                                        <label for="sel1">Kategori :</label>
+                                        <select name="kategori" class="form-control" id="sel1" placeholder="<?= $x->kategori ?>">
+                                            <option value="" disabled>Kategori</option>
+                                            <option value="keuangan">Keuangan</option>
+                                            <option value="kepegawaian">Kepegawaian</option>
+                                            <option value="informasi">Informasi</option>
+                                            <option value="sosial">Sosial</option>
+                                        </select>
                                     </div>
                                 </div>
 
 
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                <button type="button" class="btn btn-primary">Simpan Perubahan</button>
+                                <button type="button" class="btn btn-secondary btn-lg active btn-sm" data-dismiss="modal">Batal</button>
+                                <button type="button" class="btn btn-primary btn-lg active btn-sm">Simpan Perubahan</button>
                             </div>
                         </div>
                     </div>
@@ -266,8 +272,8 @@
                                 <p> Apakah Anda Yakin ? </p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Batal </button>
-                                <a href="<?= base_url('admin/Dashboard/hapus/'.$x->id_data) ?>"><button type="button" class="btn btn-primary"> Hapus </button></a>
+                                <button type="button" class="btn btn-outline-dark" data-dismiss="modal"> Batal </button>
+                                <a href="<?= base_url('admin/Dashboard/hapus/' . $x->id_data) ?>"><button type="button" class="btn btn-light btn btn-outline-primary"> Hapus </button></a>
                             </div>
                         </div>
                     </div>
@@ -302,15 +308,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"> Keluar?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">pilih "Keluar" jika yakin keluar.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout'); ?>">Logout</a>
+                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout'); ?>">Keluar</a>
                 </div>
             </div>
         </div>
