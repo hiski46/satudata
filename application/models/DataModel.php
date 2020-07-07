@@ -20,7 +20,13 @@
         }
 
         public function hapus_data($id){
-            
+            $query = $this->db->delete("public.data", $id);
+
+            if($query){
+                return true;
+            }else {
+                return false;
+            }
         }
 
         public function jumlah_data($id){

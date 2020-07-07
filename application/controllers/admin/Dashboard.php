@@ -23,4 +23,11 @@ class Dashboard extends CI_Controller
 
         $this->load->view('admin/dashboard', $data);
     }
+
+    public function hapus($id_data){
+        $id['id_data'] = $this->uri->segment(4);
+        $this->DataModel->hapus_data($id);
+        redirect('admin/dashboard');
+        
+    }
 }
