@@ -305,32 +305,35 @@
                             </center>
 <br>
 <br>
-<table class="table">
-  <caption>List of users</caption>
-  <thead>
-    <tr>
-      <th scope="col">No</th>
-      <th scope="col"> Nama Instansi </th>
-      <th scope="col"> Email </th>
-      <th scope="col=left"> Aksi </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td> Dinas Kesehatan</td>
-      <td> Dinkes@gmail.com</td>
-      <td>
-            <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong" > edit </button>
-
-            
-    <!-- Hapus Modal-->
-            <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modalsaya"> hapus </button>
-
-                                    
-    </tr>
-  </tbody>
-</table>
+    <table class="table">
+        <caption>List of users</caption>
+        <thead>
+            <tr>
+            <th scope="col">No</th>
+            <th scope="col"> Nama Instansi </th>
+            <th scope="col"> Email </th>
+            <th scope="col=left"> Aksi </th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php  
+                $i = 1;
+                foreach($data_instansi as $instansi ) {
+            ?>
+            <tr>
+            <th scope="row"><?= $i ?></th>
+            <td> <?=$instansi->name ?></td>
+            <td> <?=$instansi->email ?></td>
+            <td>
+                    <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong" > edit </button>
+                    <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modalsaya"> hapus </button>                          
+            </tr>
+            <?php
+                    $i++; 
+                }
+            ?>
+        </tbody>
+    </table>
 <!-- modal -->
     
     <!-- Logout Modal-->
@@ -409,7 +412,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal"> Batal </button>
-                                <button type="button" class="btn btn-primary"> Hapus </button>
+                                <a href="<?= base_url('admin/DaftarOPD/hapus/'.$instansi->id)?>"><button type="button" class="btn btn-primary"> Hapus </button></a>
                             </div>
                             </div>
                         </div>

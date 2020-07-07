@@ -29,6 +29,17 @@
             }
         }
 
+        public function hapus_data_user($id){
+            $query = $this->db->query('DELETE FROM public.data WHERE id_owner ='.$id.';');
+            return $query;
+        }
+        public function hapus_user($id){
+            $this->hapus_data_user($id);
+            $query = $this->db->query('delete from public.user where id ='.$id.';');
+            return $query;
+        
+        }
+
         public function jumlah_data($id){
             $query=$this->db->query('select * from public.data inner join public.user on public.data.id_owner = public.user.id where public.user.id='.$id.';');
             $total = $query->num_rows();
