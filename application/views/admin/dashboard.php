@@ -199,7 +199,7 @@
                                 <small>
 
                                     <a><i class="fas fa-chevron-circle-down text-primary" data-toggle="modal" data-target="#exampleModalLong"> Details</i></a>
-                                    <a><i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya"> Hapus</i></a>
+                                    <a><i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya<?=$x->id_data?>"> Hapus</i></a>
 
                                 </small>
                             </div>
@@ -258,8 +258,8 @@
                     </div>
                 </div>
 
-
-                <div class="modal fade" id="modalsaya" tabindex="-1" role="dialog">
+                <?php foreach ($user1 as $data ) {?>
+                <div class="modal fade" id="modalsaya<?= $data->id_data ?>" tabindex="-1" role="dialog">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -273,11 +273,12 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-dark" data-dismiss="modal"> Batal </button>
-                                <a href="<?= base_url('admin/Dashboard/hapus/' . $x->id_data) ?>"><button type="button" class="btn btn-light btn btn-outline-primary"> Hapus </button></a>
+                                <a href="<?= base_url('admin/Dashboard/hapus/' . $data->id_data) ?>"><button type="button" class="btn btn-light btn btn-outline-primary"> Hapus </button></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php }?>
 
             </div>
             <!-- End of Main Content -->
