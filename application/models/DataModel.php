@@ -20,7 +20,24 @@
         }
 
         public function hapus_data($id){
-            
+            $query = $this->db->delete("public.data", $id);
+
+            if($query){
+                return true;
+            }else {
+                return false;
+            }
+        }
+
+        public function hapus_data_user($id){
+            $query = $this->db->query('DELETE FROM public.data WHERE id_owner ='.$id.';');
+            return $query;
+        }
+        public function hapus_user($id){
+            $this->hapus_data_user($id);
+            $query = $this->db->query('delete from public.user where id ='.$id.';');
+            return $query;
+        
         }
 
         public function jumlah_data($id){

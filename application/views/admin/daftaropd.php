@@ -305,32 +305,35 @@
                             </center>
 <br>
 <br>
-<table class="table">
-  <caption>List of users</caption>
-  <thead>
-    <tr>
-      <th scope="col">No</th>
-      <th scope="col"> Nama Instansi </th>
-      <th scope="col"> Email </th>
-      <th scope="col=left"> Aksi </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td> Dinas Kesehatan</td>
-      <td> Dinkes@gmail.com</td>
-      <td>
-            <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong" > edit </button>
-
-            
-    <!-- Hapus Modal-->
-            <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modalsaya"> hapus </button>
-
-                                    
-    </tr>
-  </tbody>
-</table>
+    <table class="table">
+        <caption>List of users</caption>
+        <thead>
+            <tr>
+            <th scope="col">No</th>
+            <th scope="col"> Nama Instansi </th>
+            <th scope="col"> Email </th>
+            <th scope="col=left"> Aksi </th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php  
+                $i = 1;
+                foreach($data_instansi as $instansi ) {
+            ?>
+            <tr>
+            <th scope="row"><?= $i ?></th>
+            <td> <?=$instansi->name ?></td>
+            <td> <?=$instansi->email ?></td>
+            <td>
+                    <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong" > edit </button>
+                    <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modalsaya<?= $instansi->id?>"> hapus </button>                      
+            </tr>
+            <?php
+                    $i++; 
+                }
+            ?>
+        </tbody>
+    </table>
 <!-- modal -->
     
     <!-- Logout Modal-->
@@ -346,7 +349,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout') ?>">Logout</a>
                 </div>
             </div>
         </div>
@@ -394,26 +397,27 @@
   </div>
 </div>
 
-
-<div class="modal fade"id="modalsaya" tabindex="-1" role="dialog">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Hapus</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p> Apakah Anda Yakin ? </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Batal </button>
-                                <button type="button" class="btn btn-primary"> Hapus </button>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
+<?php foreach ($data_instansi as $data) {?>
+    <div class="modal fade"id="modalsaya<?= $data->id ?>" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Hapus</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p> Apakah Anda Yakin ? </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> Batal </button>
+                    <a href="<?= base_url('admin/DaftarOPD/hapus/'.$data->id)?>"><button type="button" class="btn btn-primary"> Hapus </button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
 
 </div>
             
