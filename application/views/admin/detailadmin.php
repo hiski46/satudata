@@ -56,7 +56,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Data dan Statistik
+                Upload
             </div>
 
             <li class="nav-item">
@@ -64,17 +64,6 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Upload Data</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Statistik</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Lihat Data</span></a>
-            </li>
-
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -96,6 +85,22 @@
                 Data dan Statistik
             </div>
 
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Upload Data</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Statistik</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Lihat Data</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -155,29 +160,95 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="card mb-3" style="max-width:auto;">
-                        <div class="row no-gutters mx-auto">
-                            <div class="col-md-4" style="padding: 5%">
-                                <img src="<?= base_url('assets/assets/img/logokaro.gif') ?>" class="card-img " alt="...">
-                            </div>
-                            <div class="col-md-8 ">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?= $user['name']; ?></h5>
-                                    <p class="card-text"><?= $user['email']; ?></p>
-                                    <p class="card-text"><small class="text-muted">tanggal pembuatan akun :<?= date('d F Y', $user['date']); ?> </small></p>
+                <div class="card text-center mx-auto" style="max-width: 85% ;">
+  <div class="card-header">
+    Profile Instansi
+  </div>
+  <div class="card-body" >
+                                       
+                        <form>
+                                <div class="form-group row">
+                                    <label for="inputEmail4" class="col-md-4">Nama Instansi</label>
+                                    <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="Dinas Kehutanan" disabled>
                                 </div>
+                                <div class="form-group row">
+                                    <label for="inputEmail4" class="col-md-4"> Email</label>
+                                    <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="Dinhut@gmail.com" disabled>
+                            
+                                </div>
+                                <div class="form-group row">
+                                <label for="inputEmail4" class="col-md-4" >Username</label>
+                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="dinhut" disabled>
+                                 </div>
+                                <div class="form-group row">
+                                <label for="inputPassword4" class="col-md-4">Password</label>
+                                <input type="password" class="form-control col-md-6" id="disabledinput" placeholder="******" disabled>
+                                </div>
+                
+                            
+                            <div class="text-center">
+                            <img src="<?php echo  base_url('assets/assets/img/logokaro.gif');?>" class="rounded" alt="image" height="220" width="220">
                             </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /.container-fluid -->
-
+                                
+                            
+                            
+                           
+                            </form>
+                            <div class="card-footer text-muted p-8">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+                            Edit Profile
+                        </button> </div>
             </div>
+        
+
+    
+</div>
+</div>
+  </div>
+  
+</div>
+                    
             <!-- End of Main Content -->
+
+            <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content p-5 pl-2">
+      <div class="modal-header mx-auto">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Edit Profile</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="form-group row"> 
+                <label for="exampleFormControlInput1">Nama Instansi</label>
+                <input type="text" class="form-control" id="inputName" value="Dinas Kehutanan">
+                <label for="exampleFormControlInput1"> Username </label>
+                <input type="text" class="form-control" id="formEmail" value="dinhut"> 
+                <label for="inputPassword" >Password</label>
+                <input type="password" class="form-control" id="inputPassword" value="123456">
+
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10" outline:none;>
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Dinhut@gmail.com">
+               
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary">Simpan Perubahan</button>
+                </div>
+                
+                
+            </div>
+        
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
