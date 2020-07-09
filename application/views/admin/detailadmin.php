@@ -173,37 +173,37 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputEmail4" class="col-md-4"> Email</label>
-                                    <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="Dithut@gmail.com" disabled>
+                                    <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="Dinhut@gmail.com" disabled>
                             
                                 </div>
                                 <div class="form-group row">
                                 <label for="inputEmail4" class="col-md-4" >Username</label>
-                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="dithut" disabled>
+                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="dinhut" disabled>
                                  </div>
                                 <div class="form-group row">
                                 <label for="inputPassword4" class="col-md-4">Password</label>
                                 <input type="password" class="form-control col-md-6" id="disabledinput" placeholder="******" disabled>
                                 </div>
-                            </div>
-                            </div>
+                
+                            
                             <div class="text-center">
                             <img src="<?php echo  base_url('assets/assets/img/logokaro.gif');?>" class="rounded" alt="image" height="220" width="220">
-                            </>
+                            </div>
                                 
-                            </div>
-                            </div>
+                            
+                            
                            
                             </form>
                             <div class="card-footer text-muted p-8">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
-             Edit Profile
-        </button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+                            Edit Profile
+                        </button> </div>
             </div>
-            
+        
 
     
-  </div>
-
+</div>
+</div>
   </div>
   
 </div>
@@ -227,13 +227,13 @@
                 <label for="exampleFormControlInput1">Nama Instansi</label>
                 <input type="text" class="form-control" id="inputName" value="Dinas Kehutanan">
                 <label for="exampleFormControlInput1"> Username </label>
-                <input type="text" class="form-control" id="formEmail" value="dithut"> 
+                <input type="text" class="form-control" id="formEmail" value="dinhut"> 
                 <label for="inputPassword" >Password</label>
                 <input type="password" class="form-control" id="inputPassword" value="123456">
 
                 <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10" outline:none;>
-                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Dithut@gmail.com">
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Dinhut@gmail.com">
                
                 <input type="file" class="form-control-file" id="exampleFormControlFile1">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
