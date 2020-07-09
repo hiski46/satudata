@@ -163,7 +163,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="card border-primary mb-3" style="max-width: auto;">
+                    <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
                         <div class="card-header">Upload Berkas</div>
                         <div class="card-body text-primary">
                             <?php echo form_open_multipart('admin/upload/prosestambahgambar'); ?>

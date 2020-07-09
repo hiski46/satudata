@@ -45,6 +45,10 @@
             $total = $query->num_rows();
             return $total;
         }
+
+        public function edit_data($id){
+            $query = $this->db->query('UPDATE public.data SET judul ='.$id->judul.',keterangan='.$id->keterangan.',kategori='.$id->kategori.'file='.$id->file.'tgl_perbarui='.$id->tgl_perbarui.'WHERE id_data='.$id->id.';');
+        }
     }
     
 ?>

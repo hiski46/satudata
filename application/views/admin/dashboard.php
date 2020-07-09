@@ -198,7 +198,7 @@
                                 <p class="mb-1"><?= $x->file; ?></p>
                                 <small>
 
-                                    <a><i class="fas fa-chevron-circle-down text-primary" data-toggle="modal" data-target="#exampleModalLong"> Details</i></a>
+                                    <a><i class="fas fa-chevron-circle-down text-primary" data-toggle="modal" data-target="#exampleModalLong<?=$x->id_data?>"> Details</i></a>
                                     <a><i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya<?=$x->id_data?>"> Hapus</i></a>
 
                                 </small>
@@ -213,7 +213,8 @@
                 <!-- Button trigger modal -->
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <?php foreach ($user1 as $data ) {?>
+                <div class="modal fade" id="exampleModalLong<?= $data->id_data ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content p-2 pl-2">
                             <div class="modal-header">
@@ -223,22 +224,19 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-
+                                
                                 <div class="form-group row">
                                     <label for="judul"> Judul </label>
-                                    <input type="text" class="form-control" id="judul" placeholder="<?= $x->judul ?>">
+                                    <input name="judul" type="text" class="form-control" id="judul" value="<?= $data->judul ?>">
                                     <label for="keterangan">Keterangan</label>
-                                    <input type="password" class="form-control" id="keterangan" placeholder="<?= $x->keterangan ?> ">
-
-                                    <label for="staticEmail" class="col-sm-2 col-form-label">Jenis File</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" placeholder="<?= $x->file ?>">
-
+                                    <textarea name="keterangan" type="password" class="form-control" id="keterangan" value="<?= $data->keterangan ?> "></textarea>
+                                    <input name="id" type="hidden" value="<?= $data->id_data ?>">
+                                    <div class="col-sm-10">                                      
                                         <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                     </div>
                                     <div class="form-group" style="max-width: 70%;">
                                         <label for="sel1">Kategori :</label>
-                                        <select name="kategori" class="form-control" id="sel1" placeholder="<?= $x->kategori ?>">
+                                        <select name="kategori" class="form-control" id="sel1" placeholder="<?= $data->kategori ?>">
                                             <option value="" disabled>Kategori</option>
                                             <option value="keuangan">Keuangan</option>
                                             <option value="kepegawaian">Kepegawaian</option>
@@ -252,11 +250,12 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary btn-lg active btn-sm" data-dismiss="modal">Batal</button>
-                                <button type="button" class="btn btn-primary btn-lg active btn-sm">Simpan Perubahan</button>
+                                <input type="submit" class="btn btn-primary btn-lg active btn-sm" value="simpan">
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php }?>
 
                 <?php foreach ($user1 as $data ) {?>
                 <div class="modal fade" id="modalsaya<?= $data->id_data ?>" tabindex="-1" role="dialog">
