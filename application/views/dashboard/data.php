@@ -28,7 +28,7 @@
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>">Beranda</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url("data") ?>">Data</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href=<?php echo base_url() ?>">Galeri</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>">Galeri</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>">Toolkit</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url("admin/login") ?>">Login</a></li>
                     </ul>
@@ -51,7 +51,7 @@
                         <div class="item">
                             <a href="<?= base_url('data/userid/'.$instansi->id)?>">
                                 <span class="notify-badge"><?php $controller->hitung($instansi->id); ?></span>
-                                <img src="http://localhost/satudata/assets/assets/img/logokaro.gif" alt="" class="img-responsive img-fluid">
+                                <img src="<?= base_url('upload/foto/'.$instansi->image) ?>" alt="" class="img-responsive img-fluid" style="max-width:60%">
                                 <h4 class="my-3"><?= $instansi->name; ?></h4>
                             </a>
                             <p class="text-muted"></p>

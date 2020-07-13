@@ -50,6 +50,17 @@
             $query = $this->db->query("UPDATE public.data SET judul ='$judul',keterangan='$keterangan',kategori='$kategori',file='$file',tgl_perbarui='$tgl_perbarui' WHERE id_data=$id ;");
             return $query;
         }
+
+        // public function namadangambar($id){
+        //     $query = $this->db->select('*')->where('id',$id)->get('public.user');
+        //     return $query->result();
+        // }
+        public function edit_foto($id,$foto)
+        {
+            $query = $this->db->query("UPDATE public.user SET image ='$foto' WHERE id=$id ;");
+            return $query;
+        }
     }
+    
     
 ?>
