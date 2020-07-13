@@ -37,10 +37,13 @@ class Dashboard extends CI_Controller
         
         
         $file=$_FILES['file']['name'];
+        $file_lama=$this->input->post('file_lama');
         $keterangan=$this->input->post('keterangan');
         $kategori=$this->input->post('kategori');
         $tgl_perbarui=time();
-        if ($file=''){}
+        if ($file==''){
+            $file=$file_lama;
+        }
         else{
             $config['upload_path']='././upload/file';
             $config['allowed_types']='jpg|gif|png|txt|xls|xlsx|doc|docx|pdf|xhtml|ppt|pptx';
