@@ -137,7 +137,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name']; ?></span>
-                                <img class="img-profile rounded-circle" src="http://localhost/satudata/assets/assets/img/logokaro.gif">
+                                <img class="img-profile rounded-circle" src="<?php echo  base_url('upload/foto/'.$user['image']);?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -160,52 +160,43 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="card text-center mx-auto" style="max-width: 85% ;">
-  <div class="card-header">
-    Profile Instansi
-  </div>
-  <div class="card-body" >
-                                       
+                <div class="card  mx-auto" style="max-width: 85% ;">
+                    <div class="card-header">
+                        Profile Instansi
+                    </div>
+                    <div class="card-body" >         
                         <form>
-                                <div class="form-group row">
-                                    <label for="inputEmail4" class="col-md-4">Nama Instansi</label>
-                                    <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="Dinas Kehutanan" disabled>
+                            <div class="form-group row">
+                                <label for="inputEmail4" class="col-md-4">Nama Instansi</label>
+                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['name'] ?>" disabled>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="inputEmail4" class="col-md-4"> Email</label>
-                                    <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="Dinhut@gmail.com" disabled>
-                            
-                                </div>
-                                <div class="form-group row">
-                                <label for="inputEmail4" class="col-md-4" >Username</label>
-                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="dinhut" disabled>
-                                 </div>
-                                <div class="form-group row">
-                                <label for="inputPassword4" class="col-md-4">Password</label>
-                                <input type="password" class="form-control col-md-6" id="disabledinput" placeholder="******" disabled>
-                                </div>
-                
+                            <div class="form-group row">
+                                <label for="inputEmail4" class="col-md-4"> Email</label>
+                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['email'] ?>" disabled>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail4" class="col-md-4" >Foto</label>
+                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['image'] ?>" disabled>
+                            </div>
                             
                             <div class="text-center">
-                            <img src="<?php echo  base_url('assets/assets/img/logokaro.gif');?>" class="rounded" alt="image" height="220" width="220">
+                                <img src="<?php echo  base_url('upload/foto/'.$user['image']);?>" class="rounded" alt="image" style="max-width: 30%">
                             </div>
-                                
-                            
-                            
-                           
-                            </form>
-                            <div class="card-footer text-muted p-8">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
-                            Edit Profile
-                        </button> </div>
+                            <div class="form-group row mx-auto">
+                                <div class="col">
+                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalScrollable">
+                                        Ubah Foto
+                                    </button>
+                                </div>
+                            </div>   
+                        </form>
+                    </div>  
+                    <div class="card-footer text-muted p-8">
+                    </div>
+                </div>
             </div>
-        
-
-    
-</div>
-</div>
-  </div>
-  
+        </div>
+    </div>
 </div>
                     
             <!-- End of Main Content -->
@@ -216,38 +207,24 @@
 <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content p-5 pl-2">
-      <div class="modal-header mx-auto">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">Edit Profile</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          
-        </button>
-      </div>
-      <div class="modal-body">
-      <div class="form-group row"> 
-                <label for="exampleFormControlInput1">Nama Instansi</label>
-                <input type="text" class="form-control" id="inputName" value="Dinas Kehutanan">
-                <label for="exampleFormControlInput1"> Username </label>
-                <input type="text" class="form-control" id="formEmail" value="dinhut"> 
-                <label for="inputPassword" >Password</label>
-                <input type="password" class="form-control" id="inputPassword" value="123456">
-
-                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10" outline:none;>
-                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Dinhut@gmail.com">
-               
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                <button type="button" class="btn btn-primary">Simpan Perubahan</button>
-                </div>
-                
-                
-            </div>
-        
-      </div>
-      <div class="modal-footer">
-      </div>
+        <div class="modal-header mx-auto">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Ubah Foto Profile</h5>
     </div>
-  </div>
+    <div class="modal-body">
+        <form action="<?= base_url('admin/Dashboard/foto') ?>" method="post" enctype="multipart/form-data" >      
+            <div class="form-group row"> 
+                <p>Pilih Gambar</p>
+                <input type="file" name="foto" id="foto">
+            </div>
+            <div class="form-group row"> 
+                <input type="submit" value="Ubah" class="btn btn-primary btn-sm">
+            </div>
+        </form>     
+    </div>
+    <div class="modal-footer">
+    </div>
+    </div>
+    </div>
 </div>
 
             <!-- Footer -->
