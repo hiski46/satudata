@@ -243,6 +243,7 @@
                                     </div>
                                     <div class="form-group row">    
                                         <input name="id" type="hidden" value="<?= $data->id_data ?>">
+                                        <input name="file_lama" type="hidden" value="<?= $data->file ?>">
                                     </div>
                                     <div class="form-group">                                      
                                         <input name="file" type="file" class="form-control-file" id="file">
