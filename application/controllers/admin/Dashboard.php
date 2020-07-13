@@ -31,15 +31,15 @@ class Dashboard extends CI_Controller
         
     }
 
-        public function edit(){
+    public function edit(){
         $id= $this->input->post('id');
         $judul=$this->input->post('judul');
-        $owner=$this->input->post('id_owner');
-        $tanggal=$this->input->post('tanggal');
+        
+        
         $file=$_FILES['file']['name'];
         $keterangan=$this->input->post('keterangan');
         $kategori=$this->input->post('kategori');
-
+        $tgl_perbarui=time();
         if ($file=''){}
         else{
             $config['upload_path']='././upload/file';
@@ -54,17 +54,17 @@ class Dashboard extends CI_Controller
                 $file=$this->upload->data('file_name');
             }
             $data=array(
+                'id_data'=>$id,
                 'judul'=>$judul,
-                'tanggal'=>$tanggal,
-                'id_owner'=>$owner,
+                
+                
                 'file'=>$file,
                 'kategori'=>$kategori,
                 'keterangan'=>$keterangan,
                 'tgl_perbarui'=>time()
             );
         }
-        $this->DataModel->edit_data($id, $data);
+        $this->DataModel->edit_data($id,$judul,$file,$kategori,$keterangan,$tgl_perbarui);
         redirect('admin/dashboard');
-        
     }
 }
