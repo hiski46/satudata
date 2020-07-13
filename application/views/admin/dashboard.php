@@ -152,7 +152,7 @@
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="<?= base_url('admin/detailadmin'); ?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -193,7 +193,15 @@
                             <div href="#" class="list-group-item list-group-item-action ">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1"><?= $x->judul; ?> - <?= $x->kategori; ?></h5>
-                                    <small><?= date('d F Y', $x->tanggal); ?></small>
+                                    <div class="row">
+                                        <small class="col"><?= date('d F Y', $x->tanggal); ?></small>
+                                        <small class="col">Terakhir Diubah :<?php if($x->tgl_perbarui==NULL){
+                                                                                echo date('d F Y', $x->tanggal);
+                                                                            }else{
+                                                                                echo date('d F Y', $x->tgl_perbarui);
+                                                                            } ?></small>
+                                    </div>
+                                    
                                 </div>
                                 <p class="mb-1"><?= $x->file; ?></p>
                                 <small>
@@ -224,15 +232,21 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                
-                                <div class="form-group row">
-                                    <label for="judul"> Judul </label>
-                                    <input name="judul" type="text" class="form-control" id="judul" value="<?= $data->judul ?>">
-                                    <label for="keterangan">Keterangan</label>
-                                    <textarea name="keterangan" type="password" class="form-control" id="keterangan" value="<?= $data->keterangan ?> "></textarea>
-                                    <input name="id" type="hidden" value="<?= $data->id_data ?>">
-                                    <div class="col-sm-10">                                      
-                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                <form action="<?= base_url('admin/Dashboard/edit') ?>" method="post" enctype="multipart/form-data">
+                                    <div class="form-group row">
+                                        <label for="judul"> Judul </label>
+                                        <input name="judul" type="text" class="form-control" id="judul" value="<?= $data->judul ?>">
+                                    </div>
+                                    <div class="form-group row">    
+                                        <label for="keterangan">Keterangan</label>
+                                        <textarea name="keterangan" type="password" class="form-control" id="keterangan"  ><?= $data->keterangan ?></textarea>
+                                    </div>
+                                    <div class="form-group row">    
+                                        <input name="id" type="hidden" value="<?= $data->id_data ?>">
+                                        <input name="file_lama" type="hidden" value="<?= $data->file ?>">
+                                    </div>
+                                    <div class="form-group">                                      
+                                        <input name="file" type="file" class="form-control-file" id="file">
                                     </div>
                                     <div class="form-group" style="max-width: 70%;">
                                         <label for="sel1">Kategori :</label>
@@ -244,13 +258,13 @@
                                             <option value="sosial">Sosial</option>
                                         </select>
                                     </div>
-                                </div>
-
-
+                                    <div class="form-group">
+                                        <input type="submit" value="upload" class="btn btn-primary">
+                                    </div>
+                                </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary btn-lg active btn-sm" data-dismiss="modal">Batal</button>
-                                <input type="submit" class="btn btn-primary btn-lg active btn-sm" value="simpan">
                             </div>
                         </div>
                     </div>

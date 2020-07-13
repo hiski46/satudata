@@ -46,8 +46,9 @@
             return $total;
         }
 
-        public function edit_data($id){
-            $query = $this->db->query('UPDATE public.data SET judul ='.$id->judul.',keterangan='.$id->keterangan.',kategori='.$id->kategori.'file='.$id->file.'tgl_perbarui='.$id->tgl_perbarui.'WHERE id_data='.$id->id.';');
+        public function edit_data($id,$judul,$file,$kategori,$keterangan,$tgl_perbarui){
+            $query = $this->db->query("UPDATE public.data SET judul ='$judul',keterangan='$keterangan',kategori='$kategori',file='$file',tgl_perbarui='$tgl_perbarui' WHERE id_data=$id ;");
+            return $query;
         }
     }
     
