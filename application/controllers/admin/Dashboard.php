@@ -13,6 +13,7 @@ class Dashboard extends CI_Controller
         } elseif ($this->session->userdata('role_id') != 2) {
             redirect('admin/salah');
         }
+        $this->load->library('form_validation');
         $this->load->model('DataModel');
     }
     public function index()
@@ -97,4 +98,6 @@ class Dashboard extends CI_Controller
         $this->DataModel->edit_foto($id, $foto);
         redirect('admin/detailadmin');
     }
+
+    
 }
