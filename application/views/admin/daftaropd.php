@@ -325,7 +325,7 @@
             <td> <?=$instansi->name ?></td>
             <td> <?=$instansi->email ?></td>
             <td>
-                    <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong" > edit </button>
+                    <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong" > Ubah Password </button>
                     <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modalsaya<?= $instansi->id?>"> hapus </button>                      
             </tr>
             <?php
@@ -363,7 +363,7 @@
     <div class="modal-content p-5 pl-2">
       <div class="modal-header mx-auto">
      
-        <h5 class="modal-title " id="exampleModalLongTitle" > Edit Instansi </h5>
+        <h5 class="modal-title " id="exampleModalLongTitle" > Ubah Password </h5>
         
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           
@@ -372,26 +372,18 @@
       <div class="modal-body">
        
             <div class="form-group row"> 
-                <label for="exampleFormControlInput1">Nama Instansi</label>
-                <input type="text" class="form-control" id="inputName" placeholder=>
-                <label for="exampleFormControlInput1"> Username </label>
-                <input type="text" class="form-control" id="formEmail" placeholder=> 
-                <label for="inputPassword" >Password</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder=>
-
-                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Default@gmail.com">
-               
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                <label for="inputPassword4" class="col-md-4">Password Baru</label>
+                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Password Baru" >
+                                <label for="inputPassword4" class="col-md-4">re-Password </label>
+                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Ulangi Password" >
+                                
                 </div>
             </div>
-                 
-
-      </div>
+            
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-primary">Simpan </button>  
+      </div>
       </div>
     </div>
   </div>
