@@ -132,7 +132,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name']; ?></span>
-                                <img class="img-profile rounded-circle" src="<?= base_url('upload/foto/'.$user['image']) ?>">
+                                <img class="img-profile rounded-circle" src="http://localhost/satudata/assets/assets/img/logokaro.gif">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -162,19 +162,25 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="card mb-3" style="max-width:auto;">
-                        <div class="row no-gutters mx-auto">
-                            <div class="col-md-4" style="padding: 5%">
-                                <img src="<?= base_url('upload/foto/'.$user['image']) ?>" class="card-img " alt="...">
-                            </div>
-                            <div class="col-md-8 ">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?= $user['name']; ?></h5>
-                                    <p class="card-text"><?= $user['email']; ?></p>
-                                    <p class="card-text"><small class="text-muted">tanggal pembuatan akun :<?= date('d F Y', $user['date']); ?> </small></p>
+                   
+                    <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
+                        <div class="card-header">Ubah Password</div>
+                        <div class="card-body text-primary">
+                        <div class="form-group row">
+                                <label for="inputPassword4" class="col-md-4">Password Lama</label>
+                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Masukkan Password Lama">
                                 </div>
-                            </div>
-                        </div>
+                         <div class="form-group row">
+                                <label for="inputPassword4" class="col-md-4">Password Baru</label>
+                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Masukkan Password Baru" >
+                                </div>
+                         <div class="form-group row">
+                                <label for="inputPassword4" class="col-md-4">Ulangi Password Baru</label>
+                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Ulangi Masukkan Password Baru">
+                                </div>
+
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                <button type="button" class="btn btn-primary">Simpan Perubahan</button>
                     </div>
 
                 </div>

@@ -2,9 +2,10 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 
-class DetailADMIN extends CI_Controller
+class UbahPASS extends CI_Controller
 {
-     public function __construct()
+
+    public function __construct()
     {
         parent::__construct();
         if (!$this->session->userdata('email')) {
@@ -17,6 +18,6 @@ class DetailADMIN extends CI_Controller
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-        $this->load->view('admin/detailadmin', $data);
+        $this->load->view('admin/ubahpass', $data);
     }
 }

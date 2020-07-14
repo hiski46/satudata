@@ -38,10 +38,10 @@
         <section class="page-section" id="services">
             <div class="container" style="">
                 <div class="row" style="">
-                    <div class="col-2"><img src="http://localhost/satudata/assets/assets/img/logokaro.gif" alt="" class="img-responsive img-fluid" style="max-width:70% height:auto;"></div>
+                    <div class="col-2"><img src="<?= base_url('upload/foto/'.$user1['image']) ?>" alt="" class="img-responsive img-fluid" style="max-width:70% height:auto;"></div>
                     <div class="col-10">
                         <div class="text-left">
-                            <h2 class="section-heading text-uppercase">Kabupaten Karo</h2>
+                            <h2 class="section-heading text-uppercase"><?= $user1['name'] ?></h2>
                             <h3 class="section-subheading text-muted">Dalam Satu Data</h3>
                         </div>  
                     </div>

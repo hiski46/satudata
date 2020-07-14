@@ -70,4 +70,31 @@ class Dashboard extends CI_Controller
         $this->DataModel->edit_data($id,$judul,$file,$kategori,$keterangan,$tgl_perbarui);
         redirect('admin/dashboard');
     }
+
+    public function foto()
+    {
+        $id = $this->session->userdata('id');
+
+        $foto=$_FILES['foto']['name'];
+        
+        if ($foto==''){
+            redirect('admin/detailadmin');
+        }
+        else{
+            $config['upload_path']='././upload/foto';
+            $config['allowed_types']='jpg|gif|png';
+            $config['max_size']             = 10000;
+
+            $this->load->library('upload', $config);
+            if (!$this->upload->do_upload('foto')) {
+                echo "download gagal"; 
+                die;
+            }else{
+                $foto=$this->upload->data('file_name');
+            }
+            
+        }
+        $this->DataModel->edit_foto($id, $foto);
+        redirect('admin/detailadmin');
+    }
 }

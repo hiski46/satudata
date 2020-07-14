@@ -25,6 +25,7 @@ class Data extends CI_Controller {
 
     public function userid(){
         $id = $this->uri->segment(3);
+        $data['user1'] = $this->db->get_where('user', ['id' => $id])->row_array();
         $data['user']=$this->DataModel->tampil_userid($id);
         $this->load->view('dashboard/detail', $data);
     }
