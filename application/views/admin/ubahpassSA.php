@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Daftar OPD </title>
+    <title> Karo Satu Data - Ubah Password SA</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('assets/admin/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -33,7 +33,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-th-large "></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Dashboard operator</div>
+                <div class="sidebar-brand-text mx-3" disabled>Dashboard operator</div>
             </a>
 
             <!-- Divider -->
@@ -55,21 +55,23 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="<?php echo base_url('admin/registrasi')?>">
+                <a class="nav-link collapsed" href="<?php echo base_url('admin/registrasi')?>" >
                     <i class="fas fa-fw fa-plus-square"></i>
                     <span> Registrasi admin</span>
                 </a>
+                
             </li>
              <!-- Nav Item - Pages Collapse Menu -->
              <li class="nav-item">
-                <a class="nav-link collapsed" href="<?php echo base_url('admin/DaftarOPD')?>">
+                <a class="nav-link collapsed" href="<?php echo base_url('admin/DaftarOPD') ?>" >
                     <i class="fas fa-fw fa-folder"></i>
                     <span> Daftar OPD </span>
                 </a>
+                
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            
+           
             
            
 
@@ -134,10 +136,10 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <!--<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                         
-                            <input type="text" class="form-control bg-light border-0 small" placeholder=" Cari Instansi ..." aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder=" Cari OPD ..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -271,7 +273,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                                <img class="img-profile rounded-circle" src="<?php echo  base_url('assets/assets/img/logokaro.gif');?>" >
+                                <img class="img-profile rounded-circle" src="<?php echo  base_url('assets/assets/img/logokaro.gif');?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -284,12 +286,14 @@
                                     Ubah Password
                                 </a>
 
+
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?= base_url('admin/login/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
                             </div>
+                            
                         </li>
 
                     </ul>
@@ -301,125 +305,30 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <center>
-                    <div class="list-group">
-                             <button type="button" class="list-group-item list-group-item-action active with nested dropdown" disabled>
-                                Daftar OPD Satudata Kabupaten Karo
-                            </button>
-                            </center>
-<br>
-<br>
-    <table class="table">
-        <caption>List of users</caption>
-        <thead>
-            <tr>
-            <th scope="col">No</th>
-            <th scope="col"> Nama Instansi </th>
-            <th scope="col"> Email </th>
-            <th scope="col=left"> Aksi </th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php  
-                $i = 1;
-                foreach($data_instansi as $instansi ) {
-            ?>
-            <tr>
-            <th scope="row"><?= $i ?></th>
-            <td> <?=$instansi->name ?></td>
-            <td> <?=$instansi->email ?></td>
-            <td>
-                    <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong" > Ubah Password </button>
-                    <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modalsaya<?= $instansi->id?>"> hapus </button>                      
-            </tr>
-            <?php
-                    $i++; 
-                }
-            ?>
-        </tbody>
-    </table>
-<!-- modal -->
-    
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Apakah Anda Yakin?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout') ?>">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-<!-- Button trigger modal -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content p-5 pl-2">
-      <div class="modal-header mx-auto">
-     
-        <h5 class="modal-title " id="exampleModalLongTitle" > Ubah Password </h5>
-        
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          
-        </button>
-      </div>
-      <div class="modal-body">
-       
-            <div class="form-group row"> 
-                                
+                    <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
+                        <div class="card-header">Ubah Password</div>
+                        <div class="card-body text-primary">
+                        <div class="form-group row">
                                 <label for="inputPassword4" class="col-md-4">Password Lama</label>
-                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Password Lama" >
+                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Masukkan Password Lama">
+                                </div>
+                         <div class="form-group row">
                                 <label for="inputPassword4" class="col-md-4">Password Baru</label>
-                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Password Baru" >
-                                <label for="inputPassword4" class="col-md-4">re-Password </label>
-                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Ulangi Password" >
-                                
-                </div>
-            </div>
-            
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-        <button type="button" class="btn btn-primary">Simpan </button>  
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
+                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Masukkan Password Baru" >
+                                </div>
+                         <div class="form-group row">
+                                <label for="inputPassword4" class="col-md-4">Ulangi Password Baru</label>
+                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Ulangi Masukkan Password Baru">
+                                </div>
 
-<?php foreach ($data_instansi as $data) {?>
-    <div class="modal fade"id="modalsaya<?= $data->id ?>" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Hapus</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p> Apakah Anda Yakin ? </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> Batal </button>
-                    <a href="<?= base_url('admin/DaftarOPD/hapus/'.$data->id)?>"><button type="button" class="btn btn-primary"> Hapus </button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-<?php } ?>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                <button type="button" class="btn btn-primary">Simpan Perubahan</button>
+                    </div>
 
-</div>
-            
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
@@ -443,7 +352,25 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Apakah Anda Yakin?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout') ?>">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap core JavaScript-->
     <script src="<?= base_url('assets/admin/'); ?>vendor/jquery/jquery.min.js"></script>
     <script src="<?= base_url('assets/admin/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -166,27 +166,32 @@
                     <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
                         <div class="card-header">Ubah Password</div>
                         <div class="card-body text-primary">
-                        <div class="form-group row">
-                                <label for="inputPassword4" class="col-md-4">Password Lama</label>
-                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Masukkan Password Lama">
+                            <?= $this->session->flashdata('message'); ?>
+                            <form action="<?= base_url('admin/ubahpass') ?>" method="post" enctype="multipart/form-data">
+                                <div class="form-group row">
+                                    <label for="lama" class="col-md-4">Password Lama</label>
+                                    <input type="password" class="form-control col-md-6" id="lama" name="lama" placeholder="Masukkan Password Lama">
+                                    <?= form_error('lama', '<small class ="text-danger pl-3">', '</small>'); ?>
                                 </div>
-                         <div class="form-group row">
-                                <label for="inputPassword4" class="col-md-4">Password Baru</label>
-                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Masukkan Password Baru" >
+                                <div class="form-group row">
+                                    <label for="baru" class="col-md-4">Password Baru</label>
+                                    <input type="password" class="form-control col-md-6" id="baru" name="baru" placeholder="Masukkan Password Baru" >
+                                    <?= form_error('baru', '<small class ="text-danger pl-3">', '</small>'); ?>
                                 </div>
-                         <div class="form-group row">
-                                <label for="inputPassword4" class="col-md-4">Ulangi Password Baru</label>
-                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Ulangi Masukkan Password Baru">
+                                <div class="form-group row">
+                                    <label for="ulang" class="col-md-4">Ulangi Password Baru</label>
+                                    <input type="password" class="form-control col-md-6" id="ulang" name="ulang" placeholder="Ulangi Masukkan Password Baru">
+                                    <?= form_error('ulang', '<small class ="text-danger pl-3">', '</small>'); ?>
                                 </div>
-
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                <button type="button" class="btn btn-primary">Simpan Perubahan</button>
+                                <div class="form-group row">
+                                    <input type="submit" class="btn btn-primary btn-sm" id="simpan" value="Simpan Perubahan" placeholder="Ulangi Masukkan Password Baru">
+                                </div>
+                            </form>
+                        </div>
                     </div>
-
-                </div>
                 <!-- /.container-fluid -->
 
-            </div>
+                </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
