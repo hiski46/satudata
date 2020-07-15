@@ -309,6 +309,10 @@
                             </center>
 <br>
 <br>
+    <?= $this->session->flashdata('message'); ?>
+    <?= form_error('pass1', '<small class ="text-danger pl-3">', '</small>'); ?>
+    <?= form_error('pwbaru', '<small class ="text-danger pl-3">', '</small>'); ?>
+    <?= form_error('ulangpw', '<small class ="text-danger pl-3">', '</small>'); ?>
     <table class="table">
         <caption>List of users</caption>
         <thead>
@@ -329,7 +333,7 @@
             <td> <?=$instansi->name ?></td>
             <td> <?=$instansi->email ?></td>
             <td>
-                    <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong" > Ubah Password </button>
+                    <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong<?= $instansi->id?>" > Ubah Password </button>
                     <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modalsaya<?= $instansi->id?>"> hapus </button>                      
             </tr>
             <?php
@@ -362,20 +366,24 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<?php  
+                foreach($data_instansi as $instansi ) {
+?>
+<div class="modal fade" id="exampleModalLong<?= $instansi->id ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content p-5 pl-2">
       <div class="modal-header mx-auto">
      
-        <h5 class="modal-title " id="exampleModalLongTitle" > Ubah Password </h5>
+        <h5 class="modal-title " id="exampleModalLongTitle" > Ubah Password <?= $instansi->name ?></h5>
         
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           
         </button>
       </div>
       <div class="modal-body">
-       
+        <form action="<?= base_url('admin/DaftarOPD/gantipassword') ?>" method="post">
             <div class="form-group row"> 
+                <input type="hidden" class="form-control col-md-6" id="id" name="id" value="<?= $instansi->id ?>" >         
                                 
                                 <label for="inputPassword4" class="col-md-4">Password Lama</label>
                                 <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Password Lama" >
@@ -386,15 +394,31 @@
                                 
                 </div>
             </div>
-            
-      <div class="modal-footer">
+            <div class="form-group row"> 
+                <label for="pass1" class="col-md-4">Masukkan Password Anda</label>
+                <input type="password" class="form-control col-md-6" id="pass1" name="pass1" placeholder="Massukkan Password Super Admin" >         
+            </div>
+            <hr>
+            <br>  
+            <div class="form-group row"> 
+                <label for="pwbaru" class="col-md-4">Password Baru</label>
+                <input type="password" class="form-control col-md-6" id="pwbaru" name="pwbaru" placeholder="Password Baru" >         
+            </div>
+            <div class="form-group row">
+                <label for="ulangpw" class="col-md-4">re-Password </label>
+                <input type="password" class="form-control col-md-6" id="ulangpw" name="ulangpw" placeholder="Ulangi Password" >
+            </div>
+        </div>  
+        <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-        <button type="button" class="btn btn-primary">Simpan </button>  
+        <button type="submit" class="btn btn-primary">Simpan </button>  
+        </form>
       </div>
       </div>
     </div>
   </div>
 </div>
+                <?php } ?>
 
 <?php foreach ($data_instansi as $data) {?>
     <div class="modal fade"id="modalsaya<?= $data->id ?>" tabindex="-1" role="dialog">
