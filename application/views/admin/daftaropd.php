@@ -279,6 +279,10 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
+                                <a class="dropdown-item" href="<?= base_url('admin/ubahpassSA'); ?>">
+                                    <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Ubah Password
+                                </a>
 
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?= base_url('admin/login/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
@@ -372,6 +376,9 @@
       <div class="modal-body">
        
             <div class="form-group row"> 
+                                
+                                <label for="inputPassword4" class="col-md-4">Password Lama</label>
+                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Password Lama" >
                                 <label for="inputPassword4" class="col-md-4">Password Baru</label>
                                 <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Password Baru" >
                                 <label for="inputPassword4" class="col-md-4">re-Password </label>
