@@ -1166,3 +1166,18 @@ a {
 
 #lightgallery .item {
   margin-bottom: 30px; }
+
+/* overlay buat gambar */
+.overlay{
+ position: fixed;
+ top: 0;
+ left: 0;
+ background-attachment:rgba(0,0,0,0);
+ z-index: 9999; 
+}
+
+.overlay:target {
+  bottom:0;
+  right: 0;
+  background-attachment:rgba(0,0,0,.8);
+}

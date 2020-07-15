@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Karo Satu Data - Dashboard Operator</title>
+    <title> Karo Satu Data - Ubah Password SA</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('assets/admin/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -281,11 +281,11 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
-
                                 <a class="dropdown-item" href="<?= base_url('admin/ubahpassSA'); ?>">
                                     <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Ubah Password
                                 </a>
+
 
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?= base_url('admin/login/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
@@ -305,18 +305,26 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <center>
-                    <h1 class="h3 mb-4 text-gray-800" style="text-align:center" > SELAMAT DATANG OPERATOR</h1>
-                    <h1 class="h3 mb-4 text-gray-800" style="text-align:center" > SATUDATA </h1>
-                    <h1 class="h3 mb-4 text-gray-800" style="text-align:center" >KABUPATEN KARO</h1>
-                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                                <img class=alt="image"height="440" width="440" src="<?php echo  base_url('assets/assets/img/logokaro.gif');?>">
-                            </a>
-                            
+                    <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
+                        <div class="card-header">Ubah Password</div>
+                        <div class="card-body text-primary">
+                        <div class="form-group row">
+                                <label for="inputPassword4" class="col-md-4">Password Lama</label>
+                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Masukkan Password Lama">
+                                </div>
+                         <div class="form-group row">
+                                <label for="inputPassword4" class="col-md-4">Password Baru</label>
+                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Masukkan Password Baru" >
+                                </div>
+                         <div class="form-group row">
+                                <label for="inputPassword4" class="col-md-4">Ulangi Password Baru</label>
+                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Ulangi Masukkan Password Baru">
+                                </div>
 
-                    
-                    </center>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                <button type="button" class="btn btn-primary">Simpan Perubahan</button>
+                    </div>
+
                 </div>
                 <!-- /.container-fluid -->
 

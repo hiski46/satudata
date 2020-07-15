@@ -7,8 +7,10 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>galery</title>
+    <link href="skins/dark.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="http://localhost/satudata/assets/assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -19,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="http://localhost/satudata/assets/css/styles.css" rel="stylesheet" />
-</head>
+    <link href="http://localhost/satudata/assets/css/galery.css" rel="stylesheet" />
 
 <body id="page-top">
     <!-- Navigation-->
@@ -38,97 +40,140 @@
         </div>
     </nav>
 
-    <!-- Services-->
-    <section class="page-section" id="services">
-        <div class="container border border-2">
-            <div class="text-center border border-2">
-                <h2 class="section-heading text-uppercase">Kabupaten Karo</h2>
-                <h3 class="section-subheading text-muted">Dalam Satu Data</h3>
-            </div>
-            <div class="row text-center">
-                <div class="d-flex justify-content-around">
-                    <div class="col-md-3 col-sm-3 col-4 border border-2">
-                        <div class="item">
-                            <a href="http://localhost/satudata/detail">
-                                <h4 class="my-3">lomba lari dari kenyataan</h4>
-                                <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="" class="img-responsive img-fluid">
-                                <p class="text-muted">Dinas Komunikasi dan Informatika</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-4 border border-2">
-                        <div class="item">
-                            <a href="http://localhost/satudata/detail">
-                                <h4 class="my-3">lomba lari dari kenyataan</h4>
-                                <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="" class="img-responsive img-fluid">
-                                <p class="text-muted">Dinas Komunikasi dan Informatika</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-4 border border-2">
-                        <div class="item">
-                            <a href="http://localhost/satudata/detail">
-                                <h4 class="my-3">lomba lari dari kenyataan</h4>
-                                <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="" class="img-responsive img-fluid">
-                                <p class="text-muted">Dinas Komunikasi dan Informatika</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- <div class="col-md-2 col-sm-3 col-4">
-                    <div class="item">
-                        <a href="http://localhost/satudata/detail">
-                            <span class="notify-badge">0</span>
-                            <img src="http://localhost/satudata/assets/assets/img/logokaro.gif" alt="" class="img-responsive img-fluid">
-                            <h4 class="my-3">DISKOMINFO</h4>
-                        </a>
-                        <p class="text-muted">Dinas Komunikasi dan Informatika</p>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-4">
-                    <div class="item">
-                        <a href="http://localhost/satudata/detail">
-                            <span class="notify-badge">0</span>
-                            <img src="http://localhost/satudata/assets/assets/img/logokaro.gif" alt="" class="img-responsive img-fluid">
-                            <h4 class="my-3">DISKOMINFO</h4>
-                        </a>
-                        <p class="text-muted">Dinas Komunikasi dan Informatika</p>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-4">
-                    <div class="item">
-                        <a href="http://localhost/satudata/detail">
-                            <span class="notify-badge">0</span>
-                            <img src="http://localhost/satudata/assets/assets/img/logokaro.gif" alt="" class="img-responsive img-fluid">
-                            <h4 class="my-3">DISKOMINFO</h4>
-                        </a>
-                        <p class="text-muted">Dinas Komunikasi dan Informatika</p>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-4">
-                    <div class="item">
-                        <a href="http://localhost/satudata/detail">
-                            <span class="notify-badge">0</span>
-                            <img src="http://localhost/satudata/assets/assets/img/logokaro.gif" alt="" class="img-responsive img-fluid">
-                            <h4 class="my-3">DISKOMINFO</h4>
-                        </a>
-                        <p class="text-muted">Dinas Komunikasi dan Informatika</p>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-4">
-                    <div class="item">
-                        <a href="http://localhost/satudata/detail">
-                            <span class="notify-badge">0</span>
-                            <img src="http://localhost/satudata/assets/assets/img/logokaro.gif" alt="" class="img-responsive img-fluid">
-                            <h4 class="my-3">DISKOMINFO</h4>
-                        </a>
-                        <p class="text-muted">Dinas Komunikasi dan Informatika</p>
-                    </div> -->
-                    <!-- </div> -->
-                </div>
-            </div>
 
+    <!-- bismillah  -->
+
+
+
+    <div class="album-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header text-center">
+                        <hr>
+                        <h2>galery</h2>
+                        <p>kadih lalap</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 ">
+                    <div class="single-album">
+                        <div class="album-img">
+                            <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="">
+                        </div>
+                        <div class="album-content">
+                            <div class="album-info">
+                                <h3>ginting</h3>
+                                <p>gintinglah</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="single-album">
+                        <div class="album-img">
+                            <img src="http://localhost/satudata/assets/assets/img/poster4.jpg" alt="">
+                        </div>
+                        <div class="album-content">
+                            <div class="album-info">
+                                <h3>ginting</h3>
+                                <p>gintinglah</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="single-album">
+                        <div class="album-img">
+                            <img src="http://localhost/satudata/assets/assets/img/poster3.jpg" alt="">
+                        </div>
+                        <div class="album-content">
+                            <div class="album-info">
+                                <h3>ginting</h3>
+                                <p>gintinglah</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="single-album">
+                        <div class="album-img">
+                            <img src="http://localhost/satudata/assets/assets/img/poster5.jpg" alt="">
+                        </div>
+                        <div class="album-content">
+                            <div class="album-info">
+                                <h3>ginting</h3>
+                                <p>gintinglah</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 ">
+                    <div class="single-album">
+                        <div class="album-img">
+                            <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="">
+                        </div>
+                        <div class="album-content">
+                            <div class="album-info">
+                                <h3>ginting</h3>
+                                <p>gintinglah</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="single-album">
+                        <div class="album-img">
+                            <img src="http://localhost/satudata/assets/assets/img/poster4.jpg" alt="">
+                        </div>
+                        <div class="album-content">
+                            <div class="album-info">
+                                <h3>ginting</h3>
+                                <p>gintinglah</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="single-album">
+                        <div class="album-img">
+                            <img src="http://localhost/satudata/assets/assets/img/poster3.jpg" alt="">
+                        </div>
+                        <div class="album-content">
+                            <div class="album-info">
+                                <h3>ginting</h3>
+                                <p>gintinglah</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="single-album">
+                        <div class="album-img">
+                            <img src="http://localhost/satudata/assets/assets/img/poster5.jpg" alt="">
+                        </div>
+                        <div class="album-content">
+                            <div class="album-info">
+                                <h3>ginting</h3>
+                                <p>gintinglah</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Footer-->
     <footer class="footer py-4">
@@ -156,6 +201,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="lib/AlloyFinger/alloy_finger.min.js"></script>
+    <script src="js/lc_lightbox.lite.min.js"></script>
 </body>
+
 
 </html>
