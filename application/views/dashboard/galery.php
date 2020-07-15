@@ -44,137 +44,35 @@
     <!-- bismillah  -->
 
 
-
-    <div class="album-sec">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="header text-center">
-                        <hr>
-                        <h2>galery</h2>
-                        <p>kadih lalap</p>
-                    </div>
+    <section class="page-section" id="services">
+        <div class="album-sec">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Galeri Karo Satu Data</h2>
+                    <h3 class="section-subheading text-muted">Tanah karo Dalam Satu Data</h3>
+                    <hr class="garis">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 ">
-                    <div class="single-album">
-                        <div class="album-img">
-                            <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="">
-                        </div>
-                        <div class="album-content">
-                            <div class="album-info">
-                                <h3>ginting</h3>
-                                <p>gintinglah</p>
+                <hr class="garis">
+                <div class="row">
+                    <div class="col-md-3 ">
+                        <div class="single-album">
+                            <div class="album-img">
+                                <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="">
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 ">
-                    <div class="single-album">
-                        <div class="album-img">
-                            <img src="http://localhost/satudata/assets/assets/img/poster4.jpg" alt="">
-                        </div>
-                        <div class="album-content">
-                            <div class="album-info">
-                                <h3>ginting</h3>
-                                <p>gintinglah</p>
+                            <div class="album-content">
+                                <div class="album-info">
+                                    <h3>lomba poster covid-19</h3>
+                                    <p>dinas ketampanan</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 ">
-                    <div class="single-album">
-                        <div class="album-img">
-                            <img src="http://localhost/satudata/assets/assets/img/poster3.jpg" alt="">
-                        </div>
-                        <div class="album-content">
-                            <div class="album-info">
-                                <h3>ginting</h3>
-                                <p>gintinglah</p>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 ">
-                    <div class="single-album">
-                        <div class="album-img">
-                            <img src="http://localhost/satudata/assets/assets/img/poster5.jpg" alt="">
-                        </div>
-                        <div class="album-content">
-                            <div class="album-info">
-                                <h3>ginting</h3>
-                                <p>gintinglah</p>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 ">
-                    <div class="single-album">
-                        <div class="album-img">
-                            <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="">
-                        </div>
-                        <div class="album-content">
-                            <div class="album-info">
-                                <h3>ginting</h3>
-                                <p>gintinglah</p>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 ">
-                    <div class="single-album">
-                        <div class="album-img">
-                            <img src="http://localhost/satudata/assets/assets/img/poster4.jpg" alt="">
-                        </div>
-                        <div class="album-content">
-                            <div class="album-info">
-                                <h3>ginting</h3>
-                                <p>gintinglah</p>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 ">
-                    <div class="single-album">
-                        <div class="album-img">
-                            <img src="http://localhost/satudata/assets/assets/img/poster3.jpg" alt="">
-                        </div>
-                        <div class="album-content">
-                            <div class="album-info">
-                                <h3>ginting</h3>
-                                <p>gintinglah</p>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 ">
-                    <div class="single-album">
-                        <div class="album-img">
-                            <img src="http://localhost/satudata/assets/assets/img/poster5.jpg" alt="">
-                        </div>
-                        <div class="album-content">
-                            <div class="album-info">
-                                <h3>ginting</h3>
-                                <p>gintinglah</p>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    </section>
+    <hr class="garis">
     <!-- Footer-->
     <footer class="footer py-4">
         <div class="container">
