@@ -3,7 +3,7 @@
     position: relative;
 }
 
-.header h2,p{
+.header h2{
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -12,7 +12,7 @@
     overflow: hidden;
     box-shadow: 5px 5px  15px  #6c757d;
     border-radius: 20px 20px 20px 20px ;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .album-img{
@@ -64,4 +64,9 @@
 .album-text{
     color:white;
     padding: 0 10px 5px;
+}
+
+.garis{
+border-style: double;
+margin-bottom: 15px;
 }
