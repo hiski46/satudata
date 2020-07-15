@@ -384,14 +384,6 @@
         <form action="<?= base_url('admin/DaftarOPD/gantipassword') ?>" method="post">
             <div class="form-group row"> 
                 <input type="hidden" class="form-control col-md-6" id="id" name="id" value="<?= $instansi->id ?>" >         
-                                
-                                <label for="inputPassword4" class="col-md-4">Password Lama</label>
-                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Password Lama" >
-                                <label for="inputPassword4" class="col-md-4">Password Baru</label>
-                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Password Baru" >
-                                <label for="inputPassword4" class="col-md-4">re-Password </label>
-                                <input type="password" class="form-control col-md-6" id="inputpassword" placeholder="Ulangi Password" >
-                                
                 </div>
             </div>
             <div class="form-group row"> 
