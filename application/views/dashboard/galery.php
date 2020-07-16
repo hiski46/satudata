@@ -22,6 +22,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="http://localhost/satudata/assets/css/styles.css" rel="stylesheet" />
     <link href="http://localhost/satudata/assets/css/galery.css" rel="stylesheet" />
+    <link href="http://localhost/satudata/assets/css/lc_lightbox.min.css" rel="stylesheet" />
 
 <body id="page-top">
     <!-- Navigation-->
@@ -57,7 +58,123 @@
                     <div class="col-md-3 ">
                         <div class="single-album">
                             <div class="album-img">
-                                <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="">
+                                <a target="_blank" class="mybox" href=" http://localhost/satudata/assets/assets/img/poster.jpg" title="judul" data-lcl-txt="deskripsina" data-lcl-author="aku">
+                                    <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="" class="mb2">
+                            </div>
+                            <div class="album-content">
+                                <div class="album-info">
+                                    <h3>lomba poster covid-19</h3>
+                                    <p>dinas ketampanan</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 ">
+                        <div class="single-album">
+                            <div class="album-img">
+                                <a target="_blank" class="mybox" href=" http://localhost/satudata/assets/assets/img/poster4.jpg" title="judul" data-lcl-txt="deskripsina" data-lcl-author="aku">
+                                    <img src="http://localhost/satudata/assets/assets/img/poster4.jpg" alt="" class="mb2">
+                                </a>
+                            </div>
+                            <div class="album-content">
+                                <div class="album-info">
+                                    <h3>lomba poster covid-19</h3>
+                                    <p>dinas ketampanan</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 ">
+                        <div class="single-album">
+                            <div class="album-img">
+                                <a target="_blank" class="mybox" href=" http://localhost/satudata/assets/assets/img/poster3.jpg" title="judul" data-lcl-txt="deskripsina" data-lcl-author="aku">
+                                    <img src="http://localhost/satudata/assets/assets/img/poster3.jpg" alt="" class="mb2">
+                                </a>
+                            </div>
+                            <div class="album-content">
+                                <div class="album-info">
+                                    <h3>lomba poster covid-19</h3>
+                                    <p>dinas ketampanan</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 ">
+                        <div class="single-album">
+                            <div class="album-img">
+                                <a target="_blank" class="mybox" href=" http://localhost/satudata/assets/assets/img/poster6.jpg" title="judul" data-lcl-txt="deskripsina" data-lcl-author="aku">
+                                    <img src="http://localhost/satudata/assets/assets/img/poster6.jpg" alt="" class="mb2">
+                                </a>
+                            </div>
+                            <div class="album-content">
+                                <div class="album-info">
+                                    <h3>lomba poster covid-19</h3>
+                                    <p>dinas ketampanan</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 ">
+                        <div class="single-album">
+                            <div class="album-img">
+                                <a target="_blank" class="mybox" href=" http://localhost/satudata/assets/assets/img/poster.jpg" title="judul" data-lcl-txt="deskripsina" data-lcl-author="aku">
+                                    <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="" class="mb2">
+                                </a>
+                            </div>
+                            <div class="album-content">
+                                <div class="album-info">
+                                    <h3>lomba poster covid-19</h3>
+                                    <p>dinas ketampanan</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 ">
+                        <div class="single-album">
+                            <div class="album-img">
+                                <a target="_blank" class="mybox" href=" http://localhost/satudata/assets/assets/img/poster4.jpg" title="judul" data-lcl-txt="deskripsina" data-lcl-author="aku">
+                                    <img src="http://localhost/satudata/assets/assets/img/poster4.jpg" alt="" class="mb2">
+                                </a>
+                            </div>
+                            <div class="album-content">
+                                <div class="album-info">
+                                    <h3>lomba poster covid-19</h3>
+                                    <p>dinas ketampanan</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 ">
+                        <div class="single-album">
+                            <div class="album-img">
+                                <a target="_blank" class="mybox" href=" http://localhost/satudata/assets/assets/img/poster3.jpg" title="judul" data-lcl-txt="deskripsina" data-lcl-author="aku">
+                                    <img src="http://localhost/satudata/assets/assets/img/poster3.jpg" alt="" class="mb2">
+                                </a>
+                            </div>
+                            <div class="album-content">
+                                <div class="album-info">
+                                    <h3>lomba poster covid-19</h3>
+                                    <p>dinas ketampanan</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo, asperiores obcaecati velit animi labore, alias aliquid quaerat repellendus minus nesciunt quisquam rem at voluptate soluta dignissimos quas blanditiis. Cupiditate?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 ">
+                        <div class="single-album">
+                            <div class="album-img">
+                                <a target="_blank" class="mybox" href=" http://localhost/satudata/assets/assets/img/poster6.jpg" title="judul" data-lcl-txt="deskripsina" data-lcl-author="aku">
+                                    <img src="http://localhost/satudata/assets/assets/img/poster6.jpg" alt="" class="mb2">
+                                </a>
                             </div>
                             <div class="album-content">
                                 <div class="album-info">
