@@ -60,7 +60,7 @@
             </div>
 
             <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
+                <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Upload Data</span></a>
                 
@@ -74,11 +74,6 @@
 
             <div class="sidebar-heading">
             </div>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-               
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -170,12 +165,12 @@
 
                     <!-- Page Heading -->
                     <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
-                        <div class="card-header">Upload Berkas</div>
+                        <div class="card-header">Upload Galeri</div>
                         <div class="card-body text-primary">
                             <?php echo form_open_multipart('admin/upload/prosestambahgambar'); ?>
                             <div class="form-group" style="max-width: 70%;">
-                                <label for="formGroupExampleInput">Judul Berkas</label>
-                                <input name="judul" type="text" class="form-control" id="formGroupExampleInput" placeholder="Masukkan Judul Berkas">
+                                <label for="formGroupExampleInput">Judul </label>
+                                <input name="judul" type="text" class="form-control" id="formGroupExampleInput" placeholder="Masukkan Judul Galeri">
                             </div>
                             <div class="form-group" style="max-width: 70%; ">
                                 <input type="file" name="file" id="customFile">
@@ -184,16 +179,7 @@
                                 <label for="formGroupExampleInput2">Keterangan</label>
                                 <textarea name="keterangan" id="formGroupExampleInput2" cols="30" rows="5" class="form-control" placeholder="masukkan keterangan"></textarea>
                             </div>
-                            <div class="form-group" style="max-width: 70%;">
-                                <label for="sel1">Kategori :</label>
-                                <select name="kategori" class="form-control" id="sel1" placeholder="Pilih Kategori">
-                                    <option value="" disabled selected>Pilih Kategori</option>
-                                    <option value="keuangan">Keuangan</option>
-                                    <option value="kepegawaian">Kepegawaian</option>
-                                    <option value="informasi">Informasi</option>
-                                    <option value="sosial">Sosial</option>
-                                </select>
-                            </div>
+                            
                             <div class="form-group">
                                 <input type="submit" value="upload" class="btn btn-primary">
                             </div>
