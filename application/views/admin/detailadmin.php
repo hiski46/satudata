@@ -60,47 +60,13 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Upload Data</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <div class="sidebar-heading">
-            </div>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <div class="sidebar-heading">
-                Data dan Statistik
-            </div>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Upload Data</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Statistik</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Lihat Data</span></a>
-            </li>
+                
+                    <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
+                    <i class="fas fa-fw fa-image"></i>
+                    <span>Upload Galeri</span></a>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -144,6 +110,10 @@
                                 <a class="dropdown-item" href="<?= base_url('admin/detailadmin'); ?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
+                                </a>
+                                <a class="dropdown-item" href="<?= base_url('admin/ubahpass'); ?>">
+                                    <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Ubah Password
                                 </a>
 
                                 <div class="dropdown-divider"></div>

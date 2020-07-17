@@ -46,9 +46,9 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/dashboard'); ?>">
+                <a class="nav-link" href="<?= base_url('admin/dashboard') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard Admin</span></a>
+                    <span>Dashboard</span></a>
             </li>
 
             <!-- Divider -->
@@ -56,11 +56,11 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Data dan Statistik
+                Upload
             </div>
 
             <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
+                <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Upload Data</span></a>
                 
@@ -69,19 +69,11 @@
                     <span>Upload Galeri</span></a>
             </li>
 
-
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <div class="sidebar-heading">
             </div>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -90,6 +82,22 @@
                 Data dan Statistik
             </div>
 
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Upload Data</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Statistik</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Lihat Data</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -126,57 +134,59 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name']; ?></span>
-                                <img class="img-profile rounded-circle" src="http://localhost/satudata/assets/assets/img/logokaro.gif">
+                                <img class="img-profile rounded-circle" src="<?= base_url('upload/foto/'.$user['image']) ?>">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <a class="dropdown-item" href="<?= base_url('admin/ubahpass'); ?>">
-                                <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Ubah Password
-                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="<?= base_url('admin/detailadmin'); ?>">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="<?= base_url('admin/ubahpass'); ?>">
+                                    <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Ubah Password
+                                </a>
 
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="<?= base_url('admin/login/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
-                            </a>
-            </div>
-            </li>
-
-            </ul>
-
-            </nav>
-            <!-- End of Topbar -->
-
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-
-                <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
-                    <div class="card-header">Ubah Password</div>
-                    <div class="card-body text-primary">
-                        <?= $this->session->flashdata('message'); ?>
-                        <form action="<?= base_url('admin/ubahpass') ?>" method="post" enctype="multipart/form-data">
-                            <div class="form-group row">
-                                <label for="lama" class="col-md-4">Password Lama</label>
-                                <input type="password" class="form-control col-md-6" id="lama" name="lama" placeholder="Masukkan Password Lama">
-                                <?= form_error('lama', '<small class ="text-danger pl-3">', '</small>'); ?>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="<?= base_url('admin/login/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
                             </div>
-                            <div class="form-group row">
-                                <label for="baru" class="col-md-4">Password Baru</label>
-                                <input type="password" class="form-control col-md-6" id="baru" name="baru" placeholder="Masukkan Password Baru">
-                                <?= form_error('baru', '<small class ="text-danger pl-3">', '</small>'); ?>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
+                        <div class="card-header">Upload Galeri</div>
+                        <div class="card-body text-primary">
+                            <?php echo form_open_multipart('admin/upload/prosestambahgambar'); ?>
+                            <div class="form-group" style="max-width: 70%;">
+                                <label for="formGroupExampleInput">Judul </label>
+                                <input name="judul" type="text" class="form-control" id="formGroupExampleInput" placeholder="Masukkan Judul Galeri">
                             </div>
-                            <div class="form-group row">
-                                <label for="ulang" class="col-md-4">Ulangi Password Baru</label>
-                                <input type="password" class="form-control col-md-6" id="ulang" name="ulang" placeholder="Ulangi Masukkan Password Baru">
-                                <?= form_error('ulang', '<small class ="text-danger pl-3">', '</small>'); ?>
+                            <div class="form-group" style="max-width: 70%; ">
+                                <input type="file" name="file" id="customFile">
                             </div>
-                            <div class="form-group row">
-                                <input type="submit" class="btn btn-primary btn-sm" id="simpan" value="Simpan Perubahan" placeholder="Ulangi Masukkan Password Baru">
+                            <div class="form-group" style="max-width: 70%;">
+                                <label for="formGroupExampleInput2">Keterangan</label>
+                                <textarea name="keterangan" id="formGroupExampleInput2" cols="30" rows="5" class="form-control" placeholder="masukkan keterangan"></textarea>
                             </div>
-                        </form>
+                            
+                            <div class="form-group">
+                                <input type="submit" value="upload" class="btn btn-primary">
+                            </div>
+                            <?php echo form_close(); ?>
+                        </div>
                     </div>
+
                 </div>
                 <!-- /.container-fluid -->
 
@@ -209,15 +219,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Apakah Anda Yakin?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Klik tombol "Keluar" jika and ingin keluar.</div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout'); ?>">Keluar</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout'); ?>">Logout</a>
                 </div>
             </div>
         </div>

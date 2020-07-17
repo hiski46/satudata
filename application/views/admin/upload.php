@@ -60,9 +60,13 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+            <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
+                    <i class="fas fa-fw fa-table"></i>
                     <span>Upload Data</span></a>
+                
+                    <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
+                    <i class="fas fa-fw fa-image"></i>
+                    <span>Upload Galeri</span></a>
             </li>
 
             <!-- Divider -->
@@ -73,9 +77,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+               
             </li>
 
             <!-- Divider -->
