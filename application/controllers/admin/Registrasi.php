@@ -40,7 +40,7 @@ class Registrasi extends CI_Controller
                 ];
             $this->db->insert('public.user', $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Selamat akun baru berhasil dibuat,Silahkan Login </div>');
-            redirect('admin/login');
+            redirect('admin/daftaropd');
         }
     }
 }

@@ -54,10 +54,10 @@
                                         </div>
                                         <button class="btn btn-outline-success btn-user btn-block" type="submit">Login</button>
                                         <hr>
+                                        <a class="" href="<?= base_url('') ?>" style="text-decoration: none;">
+                                            <button class="btn btn-outline-danger btn-user btn-block" type="button">Batal</button>
+                                        </a>
                                     </form>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>

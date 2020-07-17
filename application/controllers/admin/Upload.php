@@ -21,40 +21,40 @@ class Upload extends CI_Controller
 
         $this->load->view('admin/upload', $data);
     }
-    
+
     public function prosestambahgambar()
     {
-        $judul=$this->input->post('judul');
-        $file=$_FILES['file']['name'];
-        $keterangan=$this->input->post('keterangan');
-        $kategori=$this->input->post('kategori');
-        $owner=$this->session->userdata('id');
+        $judul = $this->input->post('judul');
+        $file = $_FILES['file']['name'];
+        $keterangan = $this->input->post('keterangan');
+        $kategori = $this->input->post('kategori');
+        $owner = $this->session->userdata('id');
 
-        if ($file=''){}
-        else{
-            $config['upload_path']='././upload/file';
-            $config['allowed_types']='jpg|gif|png|txt|xls|xlsx|doc|docx|pdf|xhtml|ppt|pptx';
+        if ($file = '') {
+        } else {
+            $config['upload_path'] = '././upload/file';
+            $config['allowed_types'] = 'jpg|gif|png|txt|xls|xlsx|doc|docx|pdf|xhtml|ppt|pptx';
             $config['max_size']             = 10000;
 
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('file')) {
-                echo "download gagal"; 
+                echo "download gagal";
                 die;
-            }else{
-                $file=$this->upload->data('file_name');
+            } else {
+                $file = $this->upload->data('file_name');
             }
-            $data=array(
-                'judul'=>$judul,
-                'tanggal'=>time(),
-                'id_owner'=>$owner,
-                'file'=>$file,
-                'kategori'=>$kategori,
-                'keterangan'=>$keterangan
+            $data = array(
+                'judul' => $judul,
+                'tanggal' => time(),
+                'id_owner' => $owner,
+                'file' => $file,
+                'kategori' => $kategori,
+                'keterangan' => $keterangan
             );
 
-            $this->DataModel->input_data($data,'public.data');
+            $this->DataModel->input_data($data, 'public.data');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">  Anda Berhasil Menambahkan Data </div>');
             redirect('admin/dashboard');
         }
     }
-    
 }
