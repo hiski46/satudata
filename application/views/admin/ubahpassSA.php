@@ -29,7 +29,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center"href="<?php echo base_url('admin/operator')?>">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('admin/operator') ?>">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-th-large "></i>
                 </div>
@@ -41,7 +41,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/operator')?>">
+                <a class="nav-link" href="<?php echo base_url('admin/operator') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -55,25 +55,25 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="<?php echo base_url('admin/registrasi')?>" >
+                <a class="nav-link collapsed" href="<?php echo base_url('admin/registrasi') ?>">
                     <i class="fas fa-fw fa-plus-square"></i>
                     <span> Registrasi admin</span>
                 </a>
-                
+
             </li>
-             <!-- Nav Item - Pages Collapse Menu -->
-             <li class="nav-item">
-                <a class="nav-link collapsed" href="<?php echo base_url('admin/DaftarOPD') ?>" >
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="<?php echo base_url('admin/DaftarOPD') ?>">
                     <i class="fas fa-fw fa-folder"></i>
                     <span> Daftar OPD </span>
                 </a>
-                
+
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-           
-            
-           
+
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -99,7 +99,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-               <!-- <a class="nav-link" href="<?php echo base_url('admin/login')?>">
+                <!-- <a class="nav-link" href="<?php echo base_url('admin/login') ?>">
                     <i class="fas fa-fw fa-sign-out"></i>
                     <span>Logout</span></a> >
             </li>
@@ -111,12 +111,12 @@
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+                <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+                <!-- Sidebar Toggler (Sidebar) -->
+                <div class="text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -150,7 +150,7 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-     <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
@@ -172,7 +172,7 @@
 
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            
+
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
@@ -217,7 +217,7 @@
 
                         <!-- Nav Item - Messages -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            
+
                             <!-- Dropdown - Messages -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
@@ -273,7 +273,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                                <img class="img-profile rounded-circle" src="<?php echo  base_url('assets/assets/img/logokaro.gif');?>">
+                                <img class="img-profile rounded-circle" src="<?php echo  base_url('assets/assets/img/logokaro.gif'); ?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -293,7 +293,7 @@
                                     Logout
                                 </a>
                             </div>
-                            
+
                         </li>
 
                     </ul>
@@ -317,7 +317,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="baru" class="col-md-4">Password Baru</label>
-                                    <input type="password" class="form-control col-md-6" id="baru" name="baru" placeholder="Masukkan Password Baru" >
+                                    <input type="password" class="form-control col-md-6" id="baru" name="baru" placeholder="Masukkan Password Baru">
                                     <?= form_error('baru', '<small class ="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group row">
@@ -369,10 +369,10 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">klik tombol "Keluar" jika anda ingin keluar.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout') ?>">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout') ?>">Keluar</a>
                 </div>
             </div>
         </div>
