@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Tentang</title>
+    <title>Bantuan</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -48,21 +48,25 @@
             </div>
                           <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
                             <div class="card-header">
-                               <H3> TENTANG </H3> 
+                               <H3> Bantuan </H3> 
                             </div>
                             <div class="card-body">
                                 <blockquote class="blockquote mb-0">
-                                <p>Portal Satu Data Indonesia (data.go.id) merupakan portal resmi data terbuka Indonesia yang berisi data lintas kementerian, lembaga pemerintahan, pemerintahan daerah, 
-                                    dan semua instansi lain yang terkait yang menghasilkan data terkait Indonesia. 
-                                    Satu Data Indonesia adalah sebuah inisiatif pemerintah untuk memperbaiki dan meningkatkan kualitas
-                                     tata kelola data pemerintah. Pemanfaatan data pemerintah tidak sebatas untuk pengambilan kebijakan, 
-                                     tetapi juga sebagai bentuk pemenuhan kebutuhan data publik bagi masyarakat.
-                                     <br>
-                                     <br>
-
-                                    Melalui Satu Data, Kantor Staf Presiden mendukung dan berupaya penuh untuk melakukan
-                                    perbaikan terhadap data pemerintah Indonesia. Data tersedia dalam format terbuka dan mudah digunakan kembali, dengan tujuan untuk meningkatkan transparansi dan akuntabilitas pemerintah, serta untuk meningkatkan partisipasi masyarakat dalam mengawal pembangunan. Kami menyediakan data dalam format yang mudah dicari, diakses serta digunakan dengan harapan bahwa pengguna portal ini dapat memanfaatkan data yang tersedia untuk mewujudkan dan mendukung pembangunan Indonesia. Seluruh kumpulan data dalam portal ini dikategorikan sebagai data publik, sehingga tidak diperkenankan memuat informasi yang mengandung rahasia negara, rahasia pribadi atau hal lain sejenisnya dan sudah diatur dalam ketetapan Undang-Undang Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik.</p>
                                     
+                                <p>Hai! Selamat datang pusat bantuan Satu Data Kabupaten Karo. <br>
+                            Berikut merupakan beberapa pertanyaan yang sering ditanyakan terkait  <br>
+                            Satu Data Kabupaten Karo:
+    <br>
+    <br>
+                        Q : Apa itu Satu Data? <br>
+                        A : Satu Data adalah data yang dapat digunakan secara bebas, <br>
+                            dimanfaatkan, dan didistribusikan kembali oleh siapapun tanpa syarat, <br>
+                            kecuali dengan mengutip sumber dan pemilik data. Selain itu, seluruh data yang <br>
+                            dipublikasikan harus mengikuti peraturan perundang-undangan yang berlaku. <br>
+                        Q : Dari manakah sumber data yang ada pada Satu Data Kabupaten Karo?<br>
+                        A : Perangkat Daerah dan Instansi Vertikal. <br>
+
+                                
                                 </blockquote>
                             </div>
                             </div>
