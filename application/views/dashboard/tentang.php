@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Data</title>
+    <title>Tentang</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -41,27 +41,35 @@
 
     <!-- Services-->
     <section class="page-section" id="services">
-        <div class="container" style="">
+       
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Kabupaten Karo</h2>
                 <h3 class="section-subheading text-muted">Dalam Satu Data</h3>
             </div>
-            <div class="row text-center">
-                <?php
-                foreach ($data_instansi as $instansi) {
-                ?>
-                    <div class="col-md-2 col-sm-3 col-4">
-                        <div class="item">
-                            <a href="<?= base_url('data/userid/' . $instansi->id) ?>">
-                                <span class="notify-badge"><?php $controller->hitung($instansi->id); ?></span>
-                                <img src="<?= base_url('upload/foto/' . $instansi->image) ?>" alt="" class="img-responsive img-fluid" style="max-width:60%">
-                                <h4 class="my-3"><?= $instansi->name; ?></h4>
-                            </a>
-                            <p class="text-muted"></p>
-                        </div>
+                          <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
+                            <div class="card-header">
+                               <H3> TENTANG </H3> 
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                <p>Portal Satu Data Indonesia (data.go.id) merupakan portal resmi data terbuka Indonesia yang berisi data lintas kementerian, lembaga pemerintahan, pemerintahan daerah, 
+                                    dan semua instansi lain yang terkait yang menghasilkan data terkait Indonesia. 
+                                    Satu Data Indonesia adalah sebuah inisiatif pemerintah untuk memperbaiki dan meningkatkan kualitas
+                                     tata kelola data pemerintah. Pemanfaatan data pemerintah tidak sebatas untuk pengambilan kebijakan, 
+                                     tetapi juga sebagai bentuk pemenuhan kebutuhan data publik bagi masyarakat.
+                                     <br>
+                                     <br>
+
+                                    Melalui Satu Data, Kantor Staf Presiden mendukung dan berupaya penuh untuk melakukan
+                                    perbaikan terhadap data pemerintah Indonesia. Data tersedia dalam format terbuka dan mudah digunakan kembali, dengan tujuan untuk meningkatkan transparansi dan akuntabilitas pemerintah, serta untuk meningkatkan partisipasi masyarakat dalam mengawal pembangunan. Kami menyediakan data dalam format yang mudah dicari, diakses serta digunakan dengan harapan bahwa pengguna portal ini dapat memanfaatkan data yang tersedia untuk mewujudkan dan mendukung pembangunan Indonesia. Seluruh kumpulan data dalam portal ini dikategorikan sebagai data publik, sehingga tidak diperkenankan memuat informasi yang mengandung rahasia negara, rahasia pribadi atau hal lain sejenisnya dan sudah diatur dalam ketetapan Undang-Undang Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik.</p>
+                                    
+                                </blockquote>
+                            </div>
+                            </div>
+                        
                     </div>
 
-                <?php } ?>
+              
                 <!-- <div class="col-md-2 col-sm-3 col-4">
                         <div class="item">
                             <a href="http://localhost/satudata/detail">

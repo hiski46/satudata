@@ -119,73 +119,73 @@
 
 
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                                                <ul class="navbar-nav ml-auto">
 
-                        <div class="topbar-divider d-none d-sm-block"></div>
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name']; ?></span>
-                                <img class="img-profile rounded-circle" src="http://localhost/satudata/assets/assets/img/logokaro.gif">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="<?= base_url('admin/detailadmin'); ?>">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
+                            <div class="topbar-divider d-none d-sm-block"></div>
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name']; ?></span>
+                                    <img class="img-profile rounded-circle" src="<?= base_url('upload/foto/'.$user['image']) ?>">
                                 </a>
-                                <a class="dropdown-item" href="<?= base_url('admin/ubahpass'); ?>">
-                                    <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Ubah Password
-                                </a>
+                                <!-- Dropdown - User Information -->
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="<?= base_url('admin/detailadmin'); ?>">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Profile
+                                    </a>
+                                    <a class="dropdown-item" href="<?= base_url('admin/ubahpass'); ?>">
+                                        <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Ubah Password
+                                    </a>
 
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="<?= base_url('admin/login/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="<?= base_url('admin/login/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Logout
+                                    </a>
+                                </div>
+                            </li>
+
+                            </ul>
+
+            </nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+
+                <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
+                    <div class="card-header">Ubah Password</div>
+                    <div class="card-body text-primary">
+                        <?= $this->session->flashdata('message'); ?>
+                        <form action="<?= base_url('admin/ubahpass') ?>" method="post" enctype="multipart/form-data">
+                            <div class="form-group row">
+                                <label for="lama" class="col-md-4">Password Lama</label>
+                                <input type="password" class="form-control col-md-6" id="lama" name="lama" placeholder="Masukkan Password Lama">
+                                <?= form_error('lama', '<small class ="text-danger pl-3">', '</small>'); ?>
                             </div>
-                        </li>
-
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                   
-                    <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
-                        <div class="card-header">Ubah Password</div>
-                        <div class="card-body text-primary">
-                            <?= $this->session->flashdata('message'); ?>
-                            <form action="<?= base_url('admin/ubahpass') ?>" method="post" enctype="multipart/form-data">
-                                <div class="form-group row">
-                                    <label for="lama" class="col-md-4">Password Lama</label>
-                                    <input type="password" class="form-control col-md-6" id="lama" name="lama" placeholder="Masukkan Password Lama">
-                                    <?= form_error('lama', '<small class ="text-danger pl-3">', '</small>'); ?>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="baru" class="col-md-4">Password Baru</label>
-                                    <input type="password" class="form-control col-md-6" id="baru" name="baru" placeholder="Masukkan Password Baru" >
-                                    <?= form_error('baru', '<small class ="text-danger pl-3">', '</small>'); ?>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="ulang" class="col-md-4">Ulangi Password Baru</label>
-                                    <input type="password" class="form-control col-md-6" id="ulang" name="ulang" placeholder="Ulangi Masukkan Password Baru">
-                                    <?= form_error('ulang', '<small class ="text-danger pl-3">', '</small>'); ?>
-                                </div>
-                                <div class="form-group row">
-                                    <input type="submit" class="btn btn-primary btn-sm" id="simpan" value="Simpan Perubahan" placeholder="Ulangi Masukkan Password Baru">
-                                </div>
-                            </form>
-                        </div>
+                            <div class="form-group row">
+                                <label for="baru" class="col-md-4">Password Baru</label>
+                                <input type="password" class="form-control col-md-6" id="baru" name="baru" placeholder="Masukkan Password Baru">
+                                <?= form_error('baru', '<small class ="text-danger pl-3">', '</small>'); ?>
+                            </div>
+                            <div class="form-group row">
+                                <label for="ulang" class="col-md-4">Ulangi Password Baru</label>
+                                <input type="password" class="form-control col-md-6" id="ulang" name="ulang" placeholder="Ulangi Masukkan Password Baru">
+                                <?= form_error('ulang', '<small class ="text-danger pl-3">', '</small>'); ?>
+                            </div>
+                            <div class="form-group row">
+                                <input type="submit" class="btn btn-primary btn-sm" id="simpan" value="Simpan Perubahan" placeholder="Ulangi Masukkan Password Baru">
+                            </div>
+                        </form>
                     </div>
+                </div>
                 <!-- /.container-fluid -->
 
-                </div>
+            </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
@@ -214,15 +214,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Apakah Anda Yakin?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Klik tombol "Keluar" jika and ingin keluar.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout'); ?>">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout'); ?>">Keluar</a>
                 </div>
             </div>
         </div>

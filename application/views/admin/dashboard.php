@@ -142,7 +142,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name']; ?></span>
-                                <img class="img-profile rounded-circle" src="<?= base_url('upload/foto/'.$user['image']) ?>">
+                                <img class="img-profile rounded-circle" src="<?= base_url('upload/foto/' . $user['image']) ?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -185,7 +185,7 @@
                         </div>
                     </form>
                     <hr>
-
+                    <?= $this->session->flashdata('message') ?>
                     <?php foreach ($user1 as $x) { ?>
                         <div class="list-group">
                             <div href="#" class="list-group-item list-group-item-action ">
@@ -193,19 +193,19 @@
                                     <h5 class="mb-1"><?= $x->judul; ?> - <?= $x->kategori; ?></h5>
                                     <div class="row">
                                         <small class="col"><?= date('d F Y', $x->tanggal); ?></small>
-                                        <small class="col">Terakhir Diubah :<?php if($x->tgl_perbarui==NULL){
+                                        <small class="col">Terakhir Diubah :<?php if ($x->tgl_perbarui == NULL) {
                                                                                 echo date('d F Y', $x->tanggal);
-                                                                            }else{
+                                                                            } else {
                                                                                 echo date('d F Y', $x->tgl_perbarui);
                                                                             } ?></small>
                                     </div>
-                                    
+
                                 </div>
                                 <p class="mb-1"><?= $x->file; ?></p>
                                 <small>
 
-                                    <a><i class="fas fa-chevron-circle-down text-primary" data-toggle="modal" data-target="#exampleModalLong<?=$x->id_data?>"> Details</i></a>
-                                    <a><i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya<?=$x->id_data?>"> Hapus</i></a>
+                                    <a><i class="fas fa-chevron-circle-down text-primary" data-toggle="modal" data-target="#exampleModalLong<?= $x->id_data ?>"> Details</i></a>
+                                    <a><i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya<?= $x->id_data ?>"> Hapus</i></a>
 
                                 </small>
                             </div>
@@ -219,77 +219,77 @@
                 <!-- Button trigger modal -->
 
                 <!-- Modal -->
-                <?php foreach ($user1 as $data ) {?>
-                <div class="modal fade" id="exampleModalLong<?= $data->id_data ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content p-2 pl-2">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel"> Form Edit Data</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="<?= base_url('admin/Dashboard/edit') ?>" method="post" enctype="multipart/form-data">
-                                    <div class="form-group row">
-                                        <label for="judul"> Judul </label>
-                                        <input name="judul" type="text" class="form-control" id="judul" value="<?= $data->judul ?>">
-                                    </div>
-                                    <div class="form-group row">    
-                                        <label for="keterangan">Keterangan</label>
-                                        <textarea name="keterangan" type="password" class="form-control" id="keterangan"  ><?= $data->keterangan ?></textarea>
-                                    </div>
-                                    <div class="form-group row">    
-                                        <input name="id" type="hidden" value="<?= $data->id_data ?>">
-                                        <input name="file_lama" type="hidden" value="<?= $data->file ?>">
-                                    </div>
-                                    <div class="form-group">                                      
-                                        <input name="file" type="file" class="form-control-file" id="file">
-                                    </div>
-                                    <div class="form-group" style="max-width: 70%;">
-                                        <label for="sel1">Kategori :</label>
-                                        <select name="kategori" class="form-control" id="sel1" placeholder="<?= $data->kategori ?>">
-                                            <option value="" disabled>Kategori</option>
-                                            <option value="keuangan">Keuangan</option>
-                                            <option value="kepegawaian">Kepegawaian</option>
-                                            <option value="informasi">Informasi</option>
-                                            <option value="sosial">Sosial</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="submit" value="upload" class="btn btn-primary">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary btn-lg active btn-sm" data-dismiss="modal">Batal</button>
+                <?php foreach ($user1 as $data) { ?>
+                    <div class="modal fade" id="exampleModalLong<?= $data->id_data ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content p-2 pl-2">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel"> Form Edit Data</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="<?= base_url('admin/Dashboard/edit') ?>" method="post" enctype="multipart/form-data">
+                                        <div class="form-group row">
+                                            <label for="judul"> Judul </label>
+                                            <input name="judul" type="text" class="form-control" id="judul" value="<?= $data->judul ?>">
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="keterangan">Keterangan</label>
+                                            <textarea name="keterangan" type="password" class="form-control" id="keterangan"><?= $data->keterangan ?></textarea>
+                                        </div>
+                                        <div class="form-group row">
+                                            <input name="id" type="hidden" value="<?= $data->id_data ?>">
+                                            <input name="file_lama" type="hidden" value="<?= $data->file ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="file" type="file" class="form-control-file" id="file">
+                                        </div>
+                                        <div class="form-group" style="max-width: 70%;">
+                                            <label for="sel1">Kategori :</label>
+                                            <select name="kategori" class="form-control" id="sel1" placeholder="<?= $data->kategori ?>">
+                                                <option value="" disabled>Kategori</option>
+                                                <option value="keuangan">Keuangan</option>
+                                                <option value="kepegawaian">Kepegawaian</option>
+                                                <option value="informasi">Informasi</option>
+                                                <option value="sosial">Sosial</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" value="upload" class="btn btn-primary">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary btn-lg active btn-sm" data-dismiss="modal">Batal</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <?php }?>
+                <?php } ?>
 
-                <?php foreach ($user1 as $data ) {?>
-                <div class="modal fade" id="modalsaya<?= $data->id_data ?>" tabindex="-1" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Hapus</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p> Apakah Anda Yakin ? </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-dark" data-dismiss="modal"> Batal </button>
-                                <a href="<?= base_url('admin/Dashboard/hapus/' . $data->id_data) ?>"><button type="button" class="btn btn-light btn btn-outline-primary"> Hapus </button></a>
+                <?php foreach ($user1 as $data) { ?>
+                    <div class="modal fade" id="modalsaya<?= $data->id_data ?>" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Hapus</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p> Apakah Anda Yakin ? </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal"> Batal </button>
+                                    <a href="<?= base_url('admin/Dashboard/hapus/' . $data->id_data) ?>"><button type="button" class="btn btn-light btn btn-outline-primary"> Hapus </button></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <?php }?>
+                <?php } ?>
 
             </div>
             <!-- End of Main Content -->

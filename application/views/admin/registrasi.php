@@ -55,8 +55,11 @@
                   </div>
                 </div>
                 <button class="btn btn-outline-success btn-user btn-block" type="submit">Registrasi</button>
+                <hr>
+                <a class="" href="<?= base_url('admin/operator') ?> " style="text-decoration: none;">
+                  <button class="btn btn-outline-danger btn-user btn-block" type="button">Batal</button>
+                </a>
               </form>
-              <hr>
             </div>
           </div>
         </div>
