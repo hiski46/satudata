@@ -66,7 +66,7 @@
                 
                     <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
                     <i class="fas fa-fw fa-image"></i>
-                    <span>Upload Galeri</span></a>
+                    <span> Galeri </span></a>
             </li>
 
             <!-- Divider -->
@@ -118,12 +118,16 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Upload Galeri
+                    </button>
 
 
                     <!-- Topbar Navbar -->
@@ -164,29 +168,29 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="card border-primary mb-3 mx-auto" style="max-width: 75%;">
-                        <div class="card-header">Upload Galeri</div>
-                        <div class="card-body text-primary">
-                            <?php echo form_open_multipart('admin/upload/prosestambahgambar'); ?>
-                            <div class="form-group" style="max-width: 70%;">
-                                <label for="formGroupExampleInput">Judul </label>
-                                <input name="judul" type="text" class="form-control" id="formGroupExampleInput" placeholder="Masukkan Judul Galeri">
+                    
+                <hr class="garis">
+                 <div class="row">
+                    <div class="col-md-3 ">
+                        <div class="single-album">
+                            <div class="album-img">
+                                <a target="_blank" class="mybox" href=" http://localhost/satudata/assets/assets/img/poster.jpg" title="judul" data-lcl-txt="deskripsina" data-lcl-author="aku">
+                                    <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="" class="mb2">
                             </div>
-                            <div class="form-group" style="max-width: 70%; ">
-                                <input type="file" name="file" id="customFile">
-                            </div>
-                            <div class="form-group" style="max-width: 70%;">
-                                <label for="formGroupExampleInput2">Keterangan</label>
-                                <textarea name="keterangan" id="formGroupExampleInput2" cols="30" rows="5" class="form-control" placeholder="masukkan keterangan"></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                <input type="submit" value="upload" class="btn btn-primary">
-                            </div>
-                            <?php echo form_close(); ?>
+                            <br>
+                            <div class="album-content">
+                               
+                            <a> <i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya"> Hapus</i></a> 
                         </div>
                     </div>
-
+                     </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <hr class="garis">
                 </div>
                 <!-- /.container-fluid -->
 
@@ -209,12 +213,76 @@
     </div>
     <!-- End of Page Wrapper -->
 
+    <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    
+                    </button>
+                </div>
+                <div class="modal-body">
+                <div class="card border-primary mb-3 mx-auto" style="max-width: 85%;">
+                        <div class="card-header">Upload Galeri</div>
+                        <div class="card-body text-primary">
+                            <?php echo form_open_multipart('admin/upload/prosestambahgambar'); ?>
+                            <div class="form-group" style="max-width: 70%;">
+                                <label for="formGroupExampleInput">Judul </label>
+                                <input name="judul" type="text" class="form-control" id="formGroupExampleInput" placeholder="Masukkan Judul Galeri">
+                            </div>
+                            <div class="form-group" style="max-width: 70%; ">
+                                <input type="file" name="file" id="customFile">
+                            </div>
+                            <div class="form-group" style="max-width: 70%;">
+                                <label for="formGroupExampleInput2">Keterangan</label>
+                                <textarea name="keterangan" id="formGroupExampleInput2" cols="30" rows="5" class="form-control" placeholder="masukkan keterangan"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                
+                            </div>
+                            <?php echo form_close(); ?>
+                        </div>
+                    </div>  
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <input type="submit" value="upload" class="btn btn-primary">
+                </div>
+                </div>
+            </div>
+            </div>
+
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+    
+    <div class="modal fade" id="modalsaya" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Hapus</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p> Apakah Anda Yakin ? </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal"> Batal </button>
+                                    <a href="#"><button type="button" class="btn btn-light btn btn-outline-primary"> Hapus </button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    <!--  Modal-->
+    
 
-    <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
