@@ -102,8 +102,41 @@
             </div> -->
     </header>
     <!-- Services-->
-    <!-- Portfolio Grid-->
-    
+    <section class="page-section" id="hasil">
+        <div class="container">
+            <div class="row">
+                <h3>Hasil Pencarian...</h3>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                    <div class="col-10">
+                        <div class="bs-example">    
+                            <div class="list-group">
+                                <div class="view" id="view">
+                                    <?php
+                                    if (!empty($data)) {
+                                    foreach ($data as $dat) {
+                                        $file=$dat->file;
+                                    ?>
+                                        <a href="<?= base_url('upload/file/'.$file) ?>" class="list-group-item list-group-item-action" download>
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h4><?= $dat->judul ?> - <?= $dat->kategori ?></h4>
+                                                <small><?= date('d F Y', $dat->tanggal) ?></small>
+                                            </div>
+                                            <p><?= $dat->file ?></p>
+                                        </a>
+                                        <?php } ?>
+                                    <?php } else{
+                                        echo "<h4> Tidak Ada Data </h4>";
+                                    }?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+        </div>
+    </section>
     <!-- Footer-->
     <footer class="footer py-4">
         <div class="container">
@@ -116,7 +149,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
@@ -133,7 +166,15 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        
+        <script>
+            function hasil() {
+                document.getElementById('hasil').scrollIntoView();
+                window.setTimeout(function() {
+                    top();
+                }, 2000);
+            }
+            hasil();
+        </script>
 </body>
 
 </html>

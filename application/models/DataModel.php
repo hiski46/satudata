@@ -15,6 +15,12 @@
             return $query->result();
         }
 
+        public function tampildata()
+        {
+            $query = $this->db->select('*')->where('id_data', NULL)->get('public.data');
+            return $query->result();
+        }
+
         public function input_data($data,$table){
             $this->db->insert($table,$data);
         }
@@ -59,6 +65,15 @@
         {
             $query = $this->db->query("UPDATE public.user SET image ='$foto' WHERE id=$id ;");
             return $query;
+        }
+
+        public function search($key){
+            $this->db->like('judul', $key);
+            $this->db->or_like('keterangan', $key);
+            $this->db->or_like('kategori', $key);
+
+            $hasil = $this->db->get('public.data')->result();
+            return $hasil;
         }
     }
     
