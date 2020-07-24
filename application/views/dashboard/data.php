@@ -46,6 +46,7 @@
                 <h2 class="section-heading text-uppercase">Kabupaten Karo</h2>
                 <h3 class="section-subheading text-muted">Dalam Satu Data</h3>
             </div>
+
             <div class="row text-center">
                 <?php
                 foreach ($data_instansi as $instansi) {
@@ -60,8 +61,8 @@
                             <p class="text-muted"></p>
                         </div>
                     </div>
-
                 <?php } ?>
+
                 <!-- <div class="col-md-2 col-sm-3 col-4">
                         <div class="item">
                             <a href="http://localhost/satudata/detail">
