@@ -19,8 +19,20 @@ class DataModel extends CI_Model
         $this->db->from('public.data');
         $this->db->order_by('id_data', 'ASC');
 
+<<<<<<< HEAD
         return $this->db->get();
     }
+=======
+        public function tampildata()
+        {
+            $query = $this->db->select('*')->where('id_data', NULL)->get('public.data');
+            return $query->result();
+        }
+
+        public function input_data($data,$table){
+            $this->db->insert($table,$data);
+        }
+>>>>>>> 9dabe3f98f71498de34b988f4cc405d35d4aae1d
 
     public function input_data($data, $table)
     {
@@ -57,6 +69,7 @@ class DataModel extends CI_Model
         return $total;
     }
 
+<<<<<<< HEAD
     public function edit_data($id, $judul, $file, $kategori, $keterangan, $tgl_perbarui)
     {
         $query = $this->db->query("UPDATE public.data SET judul ='$judul',keterangan='$keterangan',kategori='$kategori',file='$file',tgl_perbarui='$tgl_perbarui' WHERE id_data=$id ;");
@@ -71,5 +84,25 @@ class DataModel extends CI_Model
     {
         $query = $this->db->query("UPDATE public.user SET image ='$foto' WHERE id=$id ;");
         return $query;
+=======
+        // public function namadangambar($id){
+        //     $query = $this->db->select('*')->where('id',$id)->get('public.user');
+        //     return $query->result();
+        // }
+        public function edit_foto($id,$foto)
+        {
+            $query = $this->db->query("UPDATE public.user SET image ='$foto' WHERE id=$id ;");
+            return $query;
+        }
+
+        public function search($key){
+            $this->db->like('judul', $key);
+            $this->db->or_like('keterangan', $key);
+            $this->db->or_like('kategori', $key);
+
+            $hasil = $this->db->get('public.data')->result();
+            return $hasil;
+        }
+>>>>>>> 9dabe3f98f71498de34b988f4cc405d35d4aae1d
     }
 }
