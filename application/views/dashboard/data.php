@@ -59,6 +59,7 @@
                     </form>
                     <hr>
                     <br>
+
             <div class="row text-center">
                 <?php
                 foreach ($data_instansi as $instansi) {
@@ -73,8 +74,8 @@
                             <p class="text-muted"></p>
                         </div>
                     </div>
-
                 <?php } ?>
+
                 <!-- <div class="col-md-2 col-sm-3 col-4">
                         <div class="item">
                             <a href="http://localhost/satudata/detail">
