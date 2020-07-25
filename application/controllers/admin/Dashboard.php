@@ -98,6 +98,14 @@ class Dashboard extends CI_Controller
         $this->DataModel->edit_foto($id, $foto);
         redirect('admin/detailadmin');
     }
-
+    
+    public function cari()
+    {
+        $id = $this->session->userdata('id');
+        $keyword = $this->input->post('data');
+        $dat['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $dat['user1'] = $this->DataModel->searchDataAdmin($keyword, $id);
+        $this->load->view('admin/dashboard_cari', $dat);
+    }
     
 }

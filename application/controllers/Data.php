@@ -25,8 +25,17 @@ class Data extends CI_Controller {
 
     public function userid(){
         $id = $this->uri->segment(3);
+        $key = $this->input->post('cari');
         $data['user1'] = $this->db->get_where('user', ['id' => $id])->row_array();
         $data['user']=$this->DataModel->tampil_userid($id);
         $this->load->view('dashboard/detail', $data);
+    }
+
+    public function userid1(){
+        $id = $this->uri->segment(3);
+        $key = $this->input->post('cari');
+        $data['user1'] = $this->db->get_where('user', ['id' => $id])->row_array();
+        $data['user']=$this->DataModel->searchDataAdmin($key, $id);
+        $this->load->view('dashboard/detailcari', $data);
     }
 }

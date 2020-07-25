@@ -68,11 +68,30 @@
         }
 
         public function search($key){
-            $this->db->like('judul', $key);
-            $this->db->or_like('keterangan', $key);
-            $this->db->or_like('kategori', $key);
+            $this->db->like('LOWER(judul)', strtolower($key));
+            $this->db->or_like('LOWER(keterangan)', strtolower($key));
+            $this->db->or_like('LOWER(kategori)', strtolower($key));
 
             $hasil = $this->db->get('public.data')->result();
+            return $hasil;
+        }
+
+        public function searchDataAdmin($key,$id){
+            $this->db->like('LOWER(judul)', strtolower($key));
+            $this->db->or_like('LOWER(keterangan)', strtolower($key));
+            $this->db->or_like('LOWER(kategori)', strtolower($key));
+            $this->db->where('id_owner', $id);
+
+            $hasil = $this->db->get('public.data')->result();
+            return $hasil;
+        }
+
+        public function searchUser($key){
+            $this->db->like('LOWER(name)', strtolower($key));
+            $this->db->or_like('LOWER(email)', strtolower($key));
+            $this->db->where('role_id', 2);
+
+            $hasil = $this->db->get('public.user')->result();
             return $hasil;
         }
     }

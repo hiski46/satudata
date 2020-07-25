@@ -57,4 +57,17 @@ class DaftarOPD extends CI_Controller
             }
         }
     }
+
+    public function cariOpd()
+    {   
+        $key=$this->input->post('cari');
+        
+        $data = array(
+            'title' => 'Data',
+            'controller' => $this,
+            'data_instansi' => $this->DataModel->searchUser($key)
+        );
+        $this->load->view('admin/daftaropd_cari', $data);
+    }
+
 }

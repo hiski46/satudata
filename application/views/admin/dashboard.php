@@ -174,11 +174,11 @@
                     <h1 class="h3 mb-4 text-gray-800" style="text-align:center">KARO SATU DATA </h1>
                     <h1 class="h3 mb-4 text-gray-800" style="text-align:center">KABUPATEN KARO</h1>
 
-                    <form class="form-inline mr-auto w-100">
+                    <form class="form-inline mr-auto w-100" method="post" action='<?=base_url('admin/dashboard/cari') ?>'>
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-2 " placeholder="Cari Data" aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-2 " name='data' id='data' placeholder="Cari Data" aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn btn-primary" type="submit">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
