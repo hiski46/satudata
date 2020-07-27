@@ -13,23 +13,8 @@ class Galery extends CI_Controller
     public function index()
     {
         $data = array(
-            'title' => 'Data',
-            'controller' => $this,
-            'data_instansi' => $this->DataModel->get_all_instansi()
+            'data_foto' => $this->DataModel->get_all_foto()
         );
         $this->load->view('dashboard/galery', $data);
-    }
-
-    public function hitung($id)
-    {
-        $jlh = $this->DataModel->jumlah_data($id);
-        echo $jlh;
-    }
-
-    public function userid()
-    {
-        $id = $this->uri->segment(3);
-        $data['user'] = $this->DataModel->tampil_userid($id);
-        $this->load->view('dashboard/detail', $data);
     }
 }

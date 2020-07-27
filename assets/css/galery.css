@@ -30,7 +30,7 @@
 
 .album-content
 {
-    height: 80px;
+    height: 0%;
     width: 100%;
     overflow: hidden;
     text-align: center;
@@ -40,7 +40,7 @@
     background: rgba(26, 25, 20, 0.7);
 }
 .single-album:hover .album-content {
-    height: 150px;
+    height: 100%;
 
 }
 .album-info {

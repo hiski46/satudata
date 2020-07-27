@@ -50,7 +50,7 @@
                 <div class="masthead-subheading">MEJUAH-JUAH</div>
                 <div class="masthead-heading text-uppercase">Karo Satu Data</div>
                 <form action="<?= base_url('auth/cari') ?>" method="post" id="myform">
-                    <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4" style="padding = 1px">
+                    <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4" style="padding : 1px">
                         <div class="input-group">
                             <input type="text" placeholder="Cari data" value="" aria-describedby="button-addon1" class="form-control border-0 bg-transparent" name="data" id="data">
                             <div class="input-group-append">
