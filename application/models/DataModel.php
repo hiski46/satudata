@@ -15,24 +15,17 @@ class DataModel extends CI_Model
         // $query = $this->db->select('*')->where('id_owner', $id)->get('public.data');
         // return $query->result();
         $this->db->select('*');
-        $this->db->where('id_owner');
-        $this->db->from('public.data');
+        $this->db->where('id_owner', $id);
         $this->db->order_by('id_data', 'ASC');
 
-<<<<<<< HEAD
-        return $this->db->get();
+        return $this->db->get('public.data')->result();
     }
-=======
-        public function tampildata()
-        {
-            $query = $this->db->select('*')->where('id_data', NULL)->get('public.data');
-            return $query->result();
-        }
+    public function tampildata()
+    {
+        $query = $this->db->select('*')->where('id_data', NULL)->get('public.data');
+        return $query->result();
+    }
 
-        public function input_data($data,$table){
-            $this->db->insert($table,$data);
-        }
->>>>>>> 9dabe3f98f71498de34b988f4cc405d35d4aae1d
 
     public function input_data($data, $table)
     {
@@ -69,7 +62,7 @@ class DataModel extends CI_Model
         return $total;
     }
 
-<<<<<<< HEAD
+
     public function edit_data($id, $judul, $file, $kategori, $keterangan, $tgl_perbarui)
     {
         $query = $this->db->query("UPDATE public.data SET judul ='$judul',keterangan='$keterangan',kategori='$kategori',file='$file',tgl_perbarui='$tgl_perbarui' WHERE id_data=$id ;");
@@ -84,47 +77,46 @@ class DataModel extends CI_Model
     {
         $query = $this->db->query("UPDATE public.user SET image ='$foto' WHERE id=$id ;");
         return $query;
-=======
-        // public function namadangambar($id){
-        //     $query = $this->db->select('*')->where('id',$id)->get('public.user');
-        //     return $query->result();
-        // }
-        public function edit_foto($id,$foto)
-        {
-            $query = $this->db->query("UPDATE public.user SET image ='$foto' WHERE id=$id ;");
-            return $query;
-        }
+    }
+    // public function namadangambar($id){
+    //     $query = $this->db->select('*')->where('id',$id)->get('public.user');
+    //     return $query->result();
+    // }
 
-        public function search($key){
-            $this->db->like('LOWER(judul)', strtolower($key));
-            $this->db->or_like('LOWER(keterangan)', strtolower($key));
-            $this->db->or_like('LOWER(kategori)', strtolower($key));
 
-            $hasil = $this->db->get('public.data')->result();
-            return $hasil;
-        }
-<<<<<<< HEAD
+    public function search($key)
+    {
+        $this->db->like('LOWER(judul)', strtolower($key));
+        $this->db->or_like('LOWER(keterangan)', strtolower($key));
+        $this->db->or_like('LOWER(kategori)', strtolower($key));
+        $this->db->or_like('LOWER(tanggal)', strtolower($key));
 
-        public function searchDataAdmin($key,$id){
-            $this->db->like('LOWER(judul)', strtolower($key));
-            $this->db->or_like('LOWER(keterangan)', strtolower($key));
-            $this->db->or_like('LOWER(kategori)', strtolower($key));
-            $this->db->where('id_owner', $id);
+        $hasil = $this->db->get('public.data')->result();
+        return $hasil;
+    }
 
-            $hasil = $this->db->get('public.data')->result();
-            return $hasil;
-        }
+    public function searchDataAdmin($key, $id)
+    {
+        // $this->db->select('*');
+        // $this->db->from('publi.data');
+        // $this->db->where('id_owner', $id);
+        // $this->db->like('LOWER(judul)', strtolower($key));
+        // $this->db->or_like('LOWER(keterangan)', strtolower($key));
+        // $this->db->or_like('LOWER(kategori)', strtolower($key));
 
-        public function searchUser($key){
-            $this->db->like('LOWER(name)', strtolower($key));
-            $this->db->or_like('LOWER(email)', strtolower($key));
-            $this->db->where('role_id', 2);
+        // return $this->db->get()->result();
+        $query = $this->db->query("SELECT * FROM public.data WHERE id_owner =" . $id . " and (judul like '%" . $key . "%' or kategori like '%" . $key . "%' or keterangan like '%" . $key . "%' or tanggal like '%" . $key . "%' );");
+        $total = $query->result();
+        return $total;
+    }
 
-            $hasil = $this->db->get('public.user')->result();
-            return $hasil;
-        }
-=======
->>>>>>> 9dabe3f98f71498de34b988f4cc405d35d4aae1d
->>>>>>> 37f42118e4a2387b2a4705ad42bf5f1b9fb826a4
+    public function searchUser($key)
+    {
+        $this->db->like('LOWER(name)', strtolower($key));
+        $this->db->or_like('LOWER(email)', strtolower($key));
+        $this->db->where('role_id', 2);
+
+        $hasil = $this->db->get('public.user')->result();
+        return $hasil;
     }
 }

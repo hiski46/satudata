@@ -41,24 +41,24 @@
 
     <!-- Services-->
     <section class="page-section" id="services">
-        <div class="container" style="">
+        <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Kabupaten Karo</h2>
                 <h3 class="section-subheading text-muted">Dalam Satu Data</h3>
             </div>
-            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="post" action="<?= base_url('admin/DaftarOPD/cariOpd') ?>">
-                        <div class="input-group">
+            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="post" action="<?= base_url('Data/cariOpd1') ?>">
+                <div class="input-group">
 
-                            <input type="text" class="form-control bg-light border-0 small" name='cari' id='cari' placeholder=" Cari Instansi ..." aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <hr>
-                    <br>
+                    <input type="text" class="form-control bg-light border-0 small" name='cari' id='cari' placeholder=" Cari Instansi ..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fas fa-search fa-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <hr>
+            <br>
 
             <div class="row text-center">
                 <?php

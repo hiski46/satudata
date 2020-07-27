@@ -61,11 +61,11 @@
             </div>
 
             <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
+                <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Upload Data</span></a>
-                
-                    <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
+
+                <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
                     <i class="fas fa-fw fa-image"></i>
                     <span>Upload Galeri</span></a>
             </li>
@@ -174,7 +174,7 @@
                     <h1 class="h3 mb-4 text-gray-800" style="text-align:center">KARO SATU DATA </h1>
                     <h1 class="h3 mb-4 text-gray-800" style="text-align:center">KABUPATEN KARO</h1>
 
-                    <form class="form-inline mr-auto w-100" method="post" action='<?=base_url('admin/dashboard/cari') ?>'>
+                    <form class="form-inline mr-auto w-100" method="post" action='<?= base_url('admin/dashboard/cari') ?>'>
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-2 " name='data' id='data' placeholder="Cari Data" aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
@@ -192,11 +192,11 @@
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1"><?= $x->judul; ?> - <?= $x->kategori; ?></h5>
                                     <div class="row">
-                                        <small class="col"><?= date('d F Y', $x->tanggal); ?></small>
+                                        <small class="col"><?= $x->tanggal; ?></small>
                                         <small class="col">Terakhir Diubah :<?php if ($x->tgl_perbarui == NULL) {
-                                                                                echo date('d F Y', $x->tanggal);
+                                                                                echo $x->tanggal;
                                                                             } else {
-                                                                                echo date('d F Y', $x->tgl_perbarui);
+                                                                                echo $x->tgl_perbarui;
                                                                             } ?></small>
                                     </div>
 

@@ -35,21 +35,20 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url("admin/login") ?>">Login</a></li>
                 </ul>
             </div>
-        </nav>
-        <section class="page-section" id="services">
-            <div class="container" style="">
-                <div class="row" style="">
-                    <div class="col-2"><img src="<?= base_url('upload/foto/'.$user1['image']) ?>" alt="" class="img-responsive img-fluid" style="max-width:70% height:auto;"></div>
-                    <div class="col-10">
-                        <div class="text-left">
-                            <h2 class="section-heading text-uppercase"><?= $user1['name'] ?></h2>
-                            <h3 class="section-subheading text-muted">Dalam Satu Data</h3>
-                        </div>
-                        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="post" action="<?= base_url('data/userid1/'.$user1['id']) ?>">
+    </nav>
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"><img src="<?= base_url('upload/foto/' . $user1['image']) ?>" alt="" class="img-responsive img-fluid" style="max-width:70% height:auto;"></div>
+                <div class="col-10">
+                    <div class="text-left">
+                        <h2 class="section-heading text-uppercase"><?= $user1['name'] ?></h2>
+                        <h3 class="section-subheading text-muted">Dalam Satu Data</h3>
+                    </div>
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="post" action="<?= base_url('data/userid1/' . $user1['id']) ?>">
                         <div class="input-group">
 
                             <input type="text" class="form-control bg-light border-0 small" name='cari' id='cari' placeholder="Cari Data ..." aria-label="Search" aria-describedby="basic-addon2">
-                            <input type="text" value="<?= $user1['id']; ?>" id='id' name='id'>
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="submit">
                                     <i class="fas fa-search fa-sm"></i>
@@ -57,27 +56,27 @@
                             </div>
                         </div>
                     </form>
-                    <hr>  
-                    </div>
+                    <hr>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-10">
-                        <div class="bs-example">    
-                            <div class="list-group">
-                                <?php 
-                                foreach ($user as $instansi) {
-                                ?>
-                                    <a href="<?= base_url('upload/file/'.$instansi->file) ?>" class="list-group-item list-group-item-action" download>
-                                        <div class="d-flex w-100 justify-content-between">
-                                            <h4><?= $instansi->judul ?> - <?= $instansi->kategori ?></h4>
-                                            <small><?= date('d F Y', $instansi->tanggal) ?></small>
-                                        </div>
-                                        <p><?= $instansi->file ?></p>
-                                    </a>
-                                <?php } ?>
-                                <!-- <a href="#" class="list-group-item list-group-item-action ">
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-10">
+                    <div class="bs-example">
+                        <div class="list-group">
+                            <?php
+                            foreach ($user as $instansi) {
+                            ?>
+                                <a href="<?= base_url('upload/file/' . $instansi->file) ?>" class="list-group-item list-group-item-action" download>
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h4><?= $instansi->judul ?> - <?= $instansi->kategori ?></h4>
+                                        <small><?= $instansi->tanggal ?></small>
+                                    </div>
+                                    <p><?= $instansi->file ?></p>
+                                </a>
+                            <?php } ?>
+                            <!-- <a href="#" class="list-group-item list-group-item-action ">
         </div>
     </nav>
     <section class="page-section" id="services">
@@ -108,7 +107,7 @@
                                 </a>
                             <?php } ?>
                             <?php echo $this->pagination->create_links(); ?>
-                            <!-- <a href="#" class="list-group-item list-group-item-action ">
+                         <a href="#" class="list-group-item list-group-item-action ">
                                     <div class="d-flex w-100 justify-content-between">
                                         <h4>Scientists found massive black hole</h4>
                                         <small>2 days ago</small>

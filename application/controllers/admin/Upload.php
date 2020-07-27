@@ -45,7 +45,7 @@ class Upload extends CI_Controller
             }
             $data = array(
                 'judul' => $judul,
-                'tanggal' => time(),
+                'tanggal' => date('d F Y', time()),
                 'id_owner' => $owner,
                 'file' => $file,
                 'kategori' => $kategori,

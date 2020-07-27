@@ -59,9 +59,9 @@ class DaftarOPD extends CI_Controller
     }
 
     public function cariOpd()
-    {   
-        $key=$this->input->post('cari');
-        
+    {
+        $key = $this->input->post('cari');
+
         $data = array(
             'title' => 'Data',
             'controller' => $this,
@@ -69,5 +69,4 @@ class DaftarOPD extends CI_Controller
         );
         $this->load->view('admin/daftaropd_cari', $data);
     }
-
 }

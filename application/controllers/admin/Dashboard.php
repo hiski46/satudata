@@ -25,50 +25,50 @@ class Dashboard extends CI_Controller
         $this->load->view('admin/dashboard', $data);
     }
 
-    public function hapus($id_data){
+    public function hapus($id_data)
+    {
         $id['id_data'] = $this->uri->segment(4);
         $this->DataModel->hapus_data($id);
         redirect('admin/dashboard');
-        
     }
 
-    public function edit(){
-        $id= $this->input->post('id');
-        $judul=$this->input->post('judul');
-        
-        
-        $file=$_FILES['file']['name'];
-        $file_lama=$this->input->post('file_lama');
-        $keterangan=$this->input->post('keterangan');
-        $kategori=$this->input->post('kategori');
-        $tgl_perbarui=time();
-        if ($file==''){
-            $file=$file_lama;
-        }
-        else{
-            $config['upload_path']='././upload/file';
-            $config['allowed_types']='jpg|gif|png|txt|xls|xlsx|doc|docx|pdf|xhtml|ppt|pptx';
+    public function edit()
+    {
+        $id = $this->input->post('id');
+        $judul = $this->input->post('judul');
+
+
+        $file = $_FILES['file']['name'];
+        $file_lama = $this->input->post('file_lama');
+        $keterangan = $this->input->post('keterangan');
+        $kategori = $this->input->post('kategori');
+        $tgl_perbarui = date('d F Y', time());
+        if ($file == '') {
+            $file = $file_lama;
+        } else {
+            $config['upload_path'] = '././upload/file';
+            $config['allowed_types'] = 'jpg|gif|png|txt|xls|xlsx|doc|docx|pdf|xhtml|ppt|pptx';
             $config['max_size']             = 10000;
 
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('file')) {
-                echo "download gagal"; 
+                echo "download gagal";
                 die;
-            }else{
-                $file=$this->upload->data('file_name');
+            } else {
+                $file = $this->upload->data('file_name');
             }
-            $data=array(
-                'id_data'=>$id,
-                'judul'=>$judul,
-                
-                
-                'file'=>$file,
-                'kategori'=>$kategori,
-                'keterangan'=>$keterangan,
-                'tgl_perbarui'=>time()
+            $data = array(
+                'id_data' => $id,
+                'judul' => $judul,
+
+
+                'file' => $file,
+                'kategori' => $kategori,
+                'keterangan' => $keterangan,
+                'tgl_perbarui' => time()
             );
         }
-        $this->DataModel->edit_data($id,$judul,$file,$kategori,$keterangan,$tgl_perbarui);
+        $this->DataModel->edit_data($id, $judul, $file, $kategori, $keterangan, $tgl_perbarui);
         redirect('admin/dashboard');
     }
 
@@ -76,29 +76,27 @@ class Dashboard extends CI_Controller
     {
         $id = $this->session->userdata('id');
 
-        $foto=$_FILES['foto']['name'];
-        
-        if ($foto==''){
+        $foto = $_FILES['foto']['name'];
+
+        if ($foto == '') {
             redirect('admin/detailadmin');
-        }
-        else{
-            $config['upload_path']='././upload/foto';
-            $config['allowed_types']='jpg|gif|png';
+        } else {
+            $config['upload_path'] = '././upload/foto';
+            $config['allowed_types'] = 'jpg|gif|png';
             $config['max_size']             = 10000;
 
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('foto')) {
-                echo "download gagal"; 
+                echo "download gagal";
                 die;
-            }else{
-                $foto=$this->upload->data('file_name');
+            } else {
+                $foto = $this->upload->data('file_name');
             }
-            
         }
         $this->DataModel->edit_foto($id, $foto);
         redirect('admin/detailadmin');
     }
-    
+
     public function cari()
     {
         $id = $this->session->userdata('id');
@@ -107,5 +105,4 @@ class Dashboard extends CI_Controller
         $dat['user1'] = $this->DataModel->searchDataAdmin($keyword, $id);
         $this->load->view('admin/dashboard_cari', $dat);
     }
-    
 }

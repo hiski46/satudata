@@ -34,22 +34,31 @@ class Data extends CI_Controller
         $data['user1'] = $this->db->get_where('user', ['id' => $id])->row_array();
         $data['user'] = $this->DataModel->tampil_userid($id);
         $config['base_url'] = site_url();
-        $config['total_rows'] = $this->DataModel->tampil_userid($id)->num_rows();
+        // $config['total_rows'] = $this->DataModel->tampil_userid($id)->num_rows();
         $config['per_page'] = $perpage;
 
         $this->pagination->initialize($config);
         $this->load->view('dashboard/detail', $data);
     }
-<<<<<<< HEAD
 
-    public function userid1(){
+    public function userid1()
+    {
         $id = $this->uri->segment(3);
         $key = $this->input->post('cari');
         $data['user1'] = $this->db->get_where('user', ['id' => $id])->row_array();
-        $data['user']=$this->DataModel->searchDataAdmin($key, $id);
+        $data['user'] = $this->DataModel->searchDataAdmin($key, $id);
         $this->load->view('dashboard/detailcari', $data);
     }
+
+    public function cariOpd1()
+    {
+        $key = $this->input->post('cari');
+
+        $data = array(
+            'title' => 'Data',
+            'controller' => $this,
+            'data_instansi' => $this->DataModel->searchUser($key)
+        );
+        $this->load->view('dashboard/datacari', $data);
+    }
 }
-=======
-}
->>>>>>> 37f42118e4a2387b2a4705ad42bf5f1b9fb826a4
