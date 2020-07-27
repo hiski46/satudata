@@ -118,7 +118,7 @@ class DataModel extends CI_Model
 
     public function searchUser($key)
     {
-        $this->db->like('LOWER(nam)', strtolower($key));
+        $this->db->like('LOWER(name)', strtolower($key));
         $this->db->or_like('LOWER(email)', strtolower($key));
         $this->db->where('role_id', 2);
 
