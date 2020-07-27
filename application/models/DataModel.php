@@ -48,9 +48,15 @@ class DataModel extends CI_Model
         $query = $this->db->query('DELETE FROM public.data WHERE id_owner =' . $id . ';');
         return $query;
     }
+    public function hapus_foto_user($id)
+    {
+        $query = $this->db->query('DELETE FROM public.galeri WHERE id_owner =' . $id . ';');
+        return $query;
+    }
     public function hapus_user($id)
     {
         $this->hapus_data_user($id);
+        $this->hapus_foto_user($id);
         $query = $this->db->query('delete from public.user where id =' . $id . ';');
         return $query;
     }
@@ -105,18 +111,46 @@ class DataModel extends CI_Model
         // $this->db->or_like('LOWER(kategori)', strtolower($key));
 
         // return $this->db->get()->result();
-        $query = $this->db->query("SELECT * FROM public.data WHERE id_owner =" . $id . " and (judul like '%" . $key . "%' or kategori like '%" . $key . "%' or keterangan like '%" . $key . "%' or tanggal like '%" . $key . "%' );");
+        $query = $this->db->query("SELECT * FROM public.data WHERE id_owner =" . $id . " and (LOWER(judul) like '%" . strtolower($key) . "%' or LOWER(kategori) like '%" . strtolower($key) . "%' or LOWER(keterangan) like '%" . strtolower($key) . "%' or LOWER(tanggal) like '%" . strtolower($key) . "%' );");
         $total = $query->result();
         return $total;
     }
 
     public function searchUser($key)
     {
-        $this->db->like('LOWER(name)', strtolower($key));
+        $this->db->like('LOWER(nam)', strtolower($key));
         $this->db->or_like('LOWER(email)', strtolower($key));
         $this->db->where('role_id', 2);
 
         $hasil = $this->db->get('public.user')->result();
         return $hasil;
+    }
+
+    public function get_all_foto()
+    {
+        $query = $this->db->query('select * from public.galeri inner join public.user on public.galeri.id_owner = public.user.id ;');
+        return $query->result();
+    }
+
+    public function get_all_fotobyid($id)
+    {
+        $query = $this->db->query('select * from public.galeri where id_owner=' . $id . ';');
+        return $query->result();
+    }
+
+    public function hapus_foto($id)
+    {
+        $query = $this->db->delete("public.galeri", $id);
+
+        if ($query) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function input_foto($data, $table)
+    {
+        $this->db->insert($table, $data);
     }
 }

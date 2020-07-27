@@ -17,6 +17,9 @@
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url('assets/admin/'); ?>css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="http://localhost/satudata/assets/css/styles.css" rel="stylesheet" />
+    <link href="http://localhost/satudata/assets/css/galery.css" rel="stylesheet" />
+    <link href="http://localhost/satudata/assets/css/lc_lightbox.min.css" rel="stylesheet" />
 
 </head>
 
@@ -63,8 +66,8 @@
                 <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Upload Data</span></a>
-                
-                    <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
+
+                <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
                     <i class="fas fa-fw fa-image"></i>
                     <span> Galeri </span></a>
             </li>
@@ -118,7 +121,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    
+
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -126,7 +129,7 @@
                     </button>
 
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Upload Galeri
+                        Upload Galeri
                     </button>
 
 
@@ -138,7 +141,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name']; ?></span>
-                                <img class="img-profile rounded-circle" src="<?= base_url('upload/foto/'.$user['image']) ?>">
+                                <img class="img-profile rounded-circle" src="<?= base_url('upload/foto/' . $user['image']) ?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -168,120 +171,123 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    
-                <hr class="garis">
-                 <div class="row">
-                    <div class="col-md-3 ">
-                        <div class="single-album">
-                            <div class="album-img">
-                                <a target="_blank" class="mybox" href=" http://localhost/satudata/assets/assets/img/poster.jpg" title="judul" data-lcl-txt="deskripsina" data-lcl-author="aku">
-                                    <img src="http://localhost/satudata/assets/assets/img/poster.jpg" alt="" class="mb2">
+
+                    <hr class="garis">
+                    <div class="row">
+                        <?php foreach ($foto as $x) { ?>
+                            <div class="col-md-3 ">
+                                <div class="single-album">
+                                    <div class="album-img">
+                                        <a target="_blank" class="mybox" href=" <?= base_url('upload/foto/' . $x->gambar) ?>" title="judul" data-lcl-txt="deskripsina" data-lcl-author="aku">
+                                            <img src="<?= base_url('upload/foto/' . $x->gambar) ?>" alt="" class="mb2">
+                                    </div>
+                                    <br>
+                                    <div class="album-content">
+
+                                        <a> <i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya<?= $x->id ?>"> Hapus</i></a>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                            <div class="album-content">
-                               
-                            <a> <i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya"> Hapus</i></a> 
-                        </div>
-                    </div>
-                     </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
-            
-        </div>
-    </section>
-    <hr class="garis">
-                </div>
-                <!-- /.container-fluid -->
 
+        </div>
+        </section>
+        <hr class="garis">
+    </div>
+    <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; The Most Angry 2020. </span>
             </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; The Most Angry 2020. </span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
         </div>
-        <!-- End of Content Wrapper -->
+    </footer>
+    <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
 
     <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    
+
                     </button>
                 </div>
                 <div class="modal-body">
-                <div class="card border-primary mb-3 mx-auto" style="max-width: 85%;">
+                    <div class="card border-primary mb-3 mx-auto" style="max-width: 85%;">
                         <div class="card-header">Upload Galeri</div>
                         <div class="card-body text-primary">
-                            <?php echo form_open_multipart('admin/upload/prosestambahgambar'); ?>
-                            <div class="form-group" style="max-width: 70%;">
-                                <label for="formGroupExampleInput">Judul </label>
-                                <input name="judul" type="text" class="form-control" id="formGroupExampleInput" placeholder="Masukkan Judul Galeri">
-                            </div>
-                            <div class="form-group" style="max-width: 70%; ">
-                                <input type="file" name="file" id="customFile">
-                            </div>
-                            <div class="form-group" style="max-width: 70%;">
-                                <label for="formGroupExampleInput2">Keterangan</label>
-                                <textarea name="keterangan" id="formGroupExampleInput2" cols="30" rows="5" class="form-control" placeholder="masukkan keterangan"></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                
-                            </div>
-                            <?php echo form_close(); ?>
+                            <form action="<?= base_url('admin/UploadGaleri/upload') ?>" method="POST" enctype="multipart/form-data">
+                                <div class="form-group" style="max-width: 70%;">
+                                    <label for="formGroupExampleInput">Judul </label>
+                                    <input name="judul" type="text" class="form-control" name="judul" id="formGroupExampleInput" placeholder="Masukkan Judul Galeri">
+                                </div>
+                                <div class="form-group" style="max-width: 70%; ">
+                                    <input type="file" name="file" id="file">
+                                </div>
+                                <div class="form-group" style="max-width: 70%;">
+                                    <label for="formGroupExampleInput2">Keterangan</label>
+                                    <textarea name="keterangan" id="formGroupExampleInput2" cols="30" rows="5" class="form-control" placeholder="masukkan keterangan"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <button class="btn btn-primary" type="submit">Upload</button>
+                                </div>
+                            </form>
                         </div>
-                    </div>  
+                    </div>
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                     <input type="submit" value="upload" class="btn btn-primary">
                 </div>
-                </div>
             </div>
-            </div>
+        </div>
+    </div>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-    
-    <div class="modal fade" id="modalsaya" tabindex="-1" role="dialog">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Hapus</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p> Apakah Anda Yakin ? </p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal"> Batal </button>
-                                    <a href="#"><button type="button" class="btn btn-light btn btn-outline-primary"> Hapus </button></a>
-                                </div>
-                            </div>
-                        </div>
+    <?php foreach ($foto as $x) { ?>
+        <div class="modal fade" id="modalsaya<?= $x->id ?>" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Hapus</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
+                    <div class="modal-body">
+                        <p> Apakah Anda Yakin ? </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal"> Batal </button>
+                        <a href="<?= base_url('admin/UploadGaleri/hapus/' . $x->id) ?>"><button type="button" class="btn btn-light btn btn-outline-primary"> Hapus </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
     <!--  Modal-->
-    
+
 
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
