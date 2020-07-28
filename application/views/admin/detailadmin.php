@@ -128,7 +128,7 @@
 
                 </nav>
                 <!-- End of Topbar -->
-
+                <?= $this->session->flashdata('message'); ?>
                 <!-- Begin Page Content -->
                 <div class="card  mx-auto" style="max-width: 85% ;">
                     <div class="card-header">
@@ -180,25 +180,27 @@
         <h5 class="modal-title" id="ModalScrollableTitle">Ubah Email</h5>
     </div>
     <div class="modal-body">
+    <form action="<?= base_url('admin/detailAdmin/gantiEmail') ?>" method="post">
     <div class="form-group row">
                                 <label for="lama" class="col-md-4">Password </label>
-                                <input type="password" class="form-control col-md-6" id="lama" name="lama" placeholder="Masukkan Password Anda">
+                                <input type="password" class="form-control col-md-6" id="pass" name="pass" placeholder="Masukkan Password Anda">
                                 
 </div>
 
 <div class="form-group row">
                                 <label for="inputEmail4" class="col-md-4"> Email Baru </label>
-                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="Masukkan Email Baru" >
+                                <input type="email" class="form-control col-md-6" id="email" name="email" placeholder="Masukkan Email Baru" >
                             </div>
                             
                            
     </div>
     <div class="modal-footer">
     <div class="form-group row">
-                                <input type="submit" class="btn btn-primary btn-sm" id="simpan" value="Simpan Perubahan" placeholder="Ulangi Masukkan Password Baru">
+                                <input type="submit" class="btn btn-primary btn-sm" id="simpan" value="Simpan Perubahan" >
                             </div>
 
     </div>
+    </form>
     </div>
     </div>
 </div>
