@@ -3,23 +3,23 @@
 
 <head>
     <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Agency - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Beranda - Karo Satu Data</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="<?= base_url('assets/css/styles.css') ?>" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="<?= base_url('assets/css/styles.css') ?>" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -41,7 +41,7 @@
     </nav>
     <!-- Masthead-->
     <header class="masthead">
-        <div id="myCarousel" class="carousel slide row d-flex justify-content-center" data-ride="carousel" style="">
+        <div id="myCarousel" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
             <!-- <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide="0" class="active"></li>
                             <li data-target="#myCarousel" data-slide="1"></li>
@@ -49,14 +49,17 @@
                         </ol> -->
             <div calss="p-2 col-sl-5 mx-auto my-auto " style="position:absolute; z-index:10; top:15%; margin-top:5%;">
                 <div class="masthead-subheading">MEJUAH-JUAH</div>
+                <br>
                 <div class="masthead-heading text-uppercase">Karo Satu Data</div>
-                <form action="<?= base_url('auth/cari') ?>" method="post"  id="myform" >
-                    <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4" style="padding = 1px">
+                <br>
+                <br>
+                <form action="<?= base_url('auth/cari') ?>" method="post" id="myform">
+                    <div class="p-1 bg-light rounded rounded-half shadow-sm mb-4" style="padding : 1px">
                         <div class="input-group">
-                            <input type="text" placeholder="Cari data" value="" aria-describedby="button-addon1" class="form-control border-0 bg-transparent" name="data" id="data">
+                            <input type="text" placeholder="Cari data" value="" aria-describedby="button-addon1" class="form-control border-0 bg-transparent text-dark text-bolt" name="data" id="data">
                             <div class="input-group-append">
-                                <button id="tombolcari" type="submit" class="btn btn-link text-primary">search</i></button>
-                            </div>  
+                                <button id="tombolcari" type="submit" class="btn btn-link text-primary"><i class="fas fa-search"></i></button>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -89,12 +92,11 @@
             </div>
             <a class="left carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span calss="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span calss="sr-only">Next</span>
-            </a>
+                <i class="fas fa-angle-double-left size : 5x"></i>
+                <a class="right carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <i class="fas fa-angle-double-right size : 5x"></i>
+                </a>
         </div>
         <!-- <div class="container">
                 <div class="masthead-subheading">MEJUAH-JUAH</div>
@@ -114,24 +116,24 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
-        <!-- Core theme JS-->
-        <script src="<?=base_url('assets/js/scripts.js')?>"></script>
-        <script src="<?=base_url('assets/js/jquery.min.js')?>"></script>
-        <script src="<?=base_url('assets/js/jquery.js')?>"></script>
-        <script src="<?=base_url('assets/js/config.js')?>"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Contact form JS-->
+    <script src="assets/mail/jqBootstrapValidation.js"></script>
+    <script src="assets/mail/contact_me.js"></script>
+    <!-- Core theme JS-->
+    <script src="<?= base_url('assets/js/scripts.js') ?>"></script>
+    <script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/jquery.js') ?>"></script>
+    <script src="<?= base_url('assets/js/config.js') ?>"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
