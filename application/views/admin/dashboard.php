@@ -67,7 +67,7 @@
 
                 <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
                     <i class="fas fa-fw fa-image"></i>
-                    <span>Upload Galeri</span></a>
+                    <span> Galeri</span></a>
             </li>
 
             <!-- Divider -->
@@ -325,10 +325,10 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">pilih "Keluar" jika yakin keluar.</div>
+                <div class="modal-body">pilih "Keluar" jika anda yakin keluar.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout'); ?>">Keluar</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout'); ?>">Logout</a>
                 </div>
             </div>
         </div>

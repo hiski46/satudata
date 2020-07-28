@@ -354,7 +354,7 @@
                                 <div class="modal-body">Klik tombol "Keluar" jika anda ingin keluar.</div>
                                 <div class="modal-footer">
                                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout') ?>">Keluar</a>
+                                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout') ?>">Logout</a>
                                 </div>
                             </div>
                         </div>
