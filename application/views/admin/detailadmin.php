@@ -142,11 +142,14 @@
                                 </div>
                             <div class="form-group row">
                                 <label for="inputEmail4" class="col-md-4"> Email</label>
-                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['email'] ?>" disabled>
+                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['email'] ?>" disabled> 
+                                <button type="button" class="btn btn-primary btn-sm px-2 mx" data-toggle="modal" data-target="#ModalScrollable">
+                                        Ubah
+                                    </button>
                             </div>
                             <div class="form-group row">
                                 <label for="inputEmail4" class="col-md-4" >Foto</label>
-                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['image'] ?>" disabled>
+                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['image'] ?>" disabled> 
                             </div>
                             
                             <div class="text-center">
@@ -168,8 +171,37 @@
         </div>
     </div>
 </div>
-                    
+
             <!-- End of Main Content -->
+            <div class="modal fade" id="ModalScrollable" tabindex="-1" role="dialog" aria-labelledby="ModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content p-5 pl-2">
+        <div class="modal-header mx-auto">
+        <h5 class="modal-title" id="ModalScrollableTitle">Ubah Email</h5>
+    </div>
+    <div class="modal-body">
+    <div class="form-group row">
+                                <label for="lama" class="col-md-4">Password </label>
+                                <input type="password" class="form-control col-md-6" id="lama" name="lama" placeholder="Masukkan Password Anda">
+                                
+</div>
+
+<div class="form-group row">
+                                <label for="inputEmail4" class="col-md-4"> Email Baru </label>
+                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="Masukkan Email Baru" >
+                            </div>
+                            
+                           
+    </div>
+    <div class="modal-footer">
+    <div class="form-group row">
+                                <input type="submit" class="btn btn-primary btn-sm" id="simpan" value="Simpan Perubahan" placeholder="Ulangi Masukkan Password Baru">
+                            </div>
+
+    </div>
+    </div>
+    </div>
+</div>
 
             <!-- Button trigger modal -->
 
