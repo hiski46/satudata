@@ -351,10 +351,10 @@
                                         <span aria-hidden="true">×</span>
                                     </button>
                                 </div>
-                                <div class="modal-body">Klik tombol "Keluar" jika anda ingin keluar.</div>
+                                <div class="modal-body">Klik tombol "Logout" jika anda ingin keluar.</div>
                                 <div class="modal-footer">
                                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout') ?>">Keluar</a>
+                                    <a class="btn btn-primary" href="<?= base_url('admin/login/logout') ?>">Logout</a>
                                 </div>
                             </div>
                         </div>
@@ -406,45 +406,47 @@
                                 </div>
                             </div>
                         </div>
+                    <?php } ?>
                 </div>
             </div>
-        <?php } ?>
 
-        <?php foreach ($data_instansi as $data) { ?>
-            <div class="modal fade" id="modalsaya<?= $data->id ?>" tabindex="-1" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Hapus</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p> Apakah Anda Yakin ? </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal"> Batal </button>
-                            <a href="<?= base_url('admin/DaftarOPD/hapus/' . $data->id) ?>"><button type="button" class="btn btn-primary"> Hapus </button></a>
+
+            <?php foreach ($data_instansi as $data) { ?>
+                <div class="modal fade" id="modalsaya<?= $data->id ?>" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Hapus</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p> Apakah Anda Yakin ? </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Batal </button>
+                                <a href="<?= base_url('admin/DaftarOPD/hapus/' . $data->id) ?>"><button type="button" class="btn btn-primary"> Hapus </button></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        <?php } ?>
+            <?php } ?>
 
-        </div>
 
-        <!-- End of Main Content -->
 
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Satudata Kabupaten Karo 2020 </span>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Satudata Kabupaten Karo 2020 </span>
+                    </div>
                 </div>
-            </div>
-        </footer>
-        <!-- End of Footer -->
+            </footer>
+            <!-- End of Footer -->
+        </div>
 
     </div>
     <!-- End of Content Wrapper -->
