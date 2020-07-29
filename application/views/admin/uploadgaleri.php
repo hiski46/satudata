@@ -210,14 +210,14 @@
                             <form action="<?= base_url('admin/UploadGaleri/upload') ?>" method="POST" enctype="multipart/form-data">
                                 <div class="form-group" style="max-width: 70%;">
                                     <label for="formGroupExampleInput">Judul </label>
-                                    <input name="judul" type="text" class="form-control" name="judul" id="formGroupExampleInput" placeholder="Masukkan Judul Galeri">
+                                    <input name="judul" type="text" class="form-control " name="judul" id="formGroupExampleInput" placeholder="Masukkan Judul Galeri">
                                 </div>
                                 <div class="form-group" style="max-width: 70%; ">
                                     <input type="file" name="file" id="file">
                                 </div>
                                 <div class="form-group" style="max-width: 70%;">
                                     <label for="formGroupExampleInput2">Keterangan</label>
-                                    <textarea name="keterangan" id="formGroupExampleInput2" cols="30" rows="5" class="form-control" placeholder="masukkan keterangan"></textarea>
+                                    <textarea name="keterangan" id="formGroupExampleInput2" cols="30" rows="5" class="form-control " placeholder="masukkan keterangan"></textarea>
                                 </div>
 
                                 <div class="form-group">
