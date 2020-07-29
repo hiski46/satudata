@@ -10077,7 +10077,6 @@ img::-moz-selection {
 
 #mainNav {
   padding-top: 1rem;
-  /* padding-bottom: 1rem; */
   background-color: #212529;
   /* margin-right: 1px; */
 }
@@ -10113,11 +10112,10 @@ img::-moz-selection {
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 1.5rem;
-    /* padding-bottom: 1.5rem; */
     
     border: none;
     background-color: black;
-    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.2s ease-in-out;
   }
   #mainNav .navbar-brand {
     font-size: 1.5em;
@@ -10130,7 +10128,7 @@ img::-moz-selection {
   }
   #mainNav.navbar-shrink {
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0rem;
     background-color: #212529;
   }
   #mainNav.navbar-shrink .navbar-brand {
