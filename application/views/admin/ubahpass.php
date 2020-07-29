@@ -147,17 +147,17 @@
                             <form action="<?= base_url('admin/ubahpass') ?>" method="post" enctype="multipart/form-data">
                                 <div class="form-group row">
                                     <label for="lama" class="col-md-4">Password Lama</label>
-                                    <input type="password" class="form-control col-md-6" id="lama" name="lama" placeholder="Masukkan Password Lama">
+                                    <input type="password" class="form-control col-md-8" id="lama" name="lama" placeholder="Masukkan Password Lama">
                                     <?= form_error('lama', '<small class ="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group row">
                                     <label for="baru" class="col-md-4">Password Baru</label>
-                                    <input type="password" class="form-control col-md-6" id="baru" name="baru" placeholder="Masukkan Password Baru">
+                                    <input type="password" class="form-control col-md-8" id="baru" name="baru" placeholder="Masukkan Password Baru">
                                     <?= form_error('baru', '<small class ="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group row">
                                     <label for="ulang" class="col-md-4">Ulangi Password Baru</label>
-                                    <input type="password" class="form-control col-md-6" id="ulang" name="ulang" placeholder="Ulangi Masukkan Password Baru">
+                                    <input type="password" class="form-control col-md-8" id="ulang" name="ulang" placeholder="Ulangi Masukkan Password Baru">
                                     <?= form_error('ulang', '<small class ="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group row">

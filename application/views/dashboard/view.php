@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Agency - Start Bootstrap Theme</title>
+    <title>Beranda - Karo Satu Data</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
@@ -26,13 +26,14 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="" /></a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="<?= base_url('assets/assets/img/logo1.png') ?>" alt="" /></a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url("data") ?>">Data</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url("galery") ?>">Galeri</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>">Toolkit</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url("tentang") ?>">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url("help") ?>">Bantuan</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url("admin/login") ?>">Login</a></li>
                 </ul>
             </div>
@@ -40,7 +41,7 @@
     </nav>
     <!-- Masthead-->
     <header class="masthead">
-        <div id="myCarousel" class="carousel slide row d-flex justify-content-center" data-ride="carousel" style="">
+        <div id="myCarousel" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
             <!-- <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide="0" class="active"></li>
                             <li data-target="#myCarousel" data-slide="1"></li>
@@ -48,13 +49,16 @@
                         </ol> -->
             <div calss="p-2 col-sl-5 mx-auto my-auto " style="position:absolute; z-index:10; top:15%; margin-top:5%;">
                 <div class="masthead-subheading">MEJUAH-JUAH</div>
+                <br>
                 <div class="masthead-heading text-uppercase">Karo Satu Data</div>
+                <br>
+                <br>
                 <form action="<?= base_url('auth/cari') ?>" method="post" id="myform">
-                    <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4" style="padding : 1px">
+                    <div class="p-1 bg-light rounded rounded-half shadow-sm mb-4" style="padding : 1px">
                         <div class="input-group">
-                            <input type="text" placeholder="Cari data" value="" aria-describedby="button-addon1" class="form-control border-0 bg-transparent" name="data" id="data">
+                            <input type="text" placeholder="Cari data" value="" aria-describedby="button-addon1" class="form-control border-0 bg-transparent text-dark text-bolt" name="data" id="data">
                             <div class="input-group-append">
-                                <button id="tombolcari" type="submit" class="btn btn-link text-primary">search</i></button>
+                                <button id="tombolcari" type="submit" class="btn btn-link text-primary"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
                     </div>
@@ -62,7 +66,7 @@
             </div>
             <div class="carousel-inner" role="">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/karo-5.jpg" alt="">
+                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/kia1.jpg" alt="">
                     <!-- <div class="carousel-caption ">
                                     <div class="masthead-subheading">MEJUAH-JUAH</div>
                                     <div class="masthead-heading text-uppercase">Karo Satu Data</div>
@@ -70,7 +74,7 @@
                                 </div> -->
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/karo-4.jpg" alt="">
+                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/kia3.jpg" alt="">
                     <!-- <div class="carousel-caption ">
                                     <div class="masthead-subheading">MEJUAH-JUAH</div>
                                     <div class="masthead-heading text-uppercase">Karo Satu Data</div>
@@ -78,7 +82,15 @@
                                 </div> -->
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/karo-1.jpg" alt="">
+                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/kia2.jpg" alt="">
+                    <!-- <div class="carousel-caption ">
+                                    <div class="masthead-subheading">MEJUAH-JUAH</div>
+                                    <div class="masthead-heading text-uppercase">Karo Satu Data</div>
+                                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                                </div> -->
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/kia4.jpg" alt="">
                     <!-- <div class="carousel-caption ">
                                     <div class="masthead-subheading">MEJUAH-JUAH</div>
                                     <div class="masthead-heading text-uppercase">Karo Satu Data</div>
@@ -88,12 +100,11 @@
             </div>
             <a class="left carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span calss="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span calss="sr-only">Next</span>
-            </a>
+                <i class="fas fa-angle-double-left size : 5x"></i>
+                <a class="right carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <i class="fas fa-angle-double-right size : 5x"></i>
+                </a>
         </div>
         <!-- <div class="container">
                 <div class="masthead-subheading">MEJUAH-JUAH</div>
@@ -143,7 +154,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020</div>
                 <div class="col-lg-4 my-3 my-lg-0">
-                <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/dinkominfokaro"><i class="fab fa-twitter"></i></a><a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/kominfo.karo/"><i class="fab fa-facebook-f"></i></a><a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/dinkominfokaro/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/dinkominfokaro"><i class="fab fa-twitter"></i></a><a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/kominfo.karo/"><i class="fab fa-facebook-f"></i></a><a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/dinkominfokaro/"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="col-lg-4 text-lg-right"><a class="mr-3" href="#!">Privacy Policy</a><a href="#!">Terms of Use</a></div>
             </div>
