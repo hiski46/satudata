@@ -26,7 +26,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="" /></a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="<?= base_url('assets/assets/img/logo1.png') ?>" alt="" /></a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>">Beranda</a></li>
@@ -66,7 +66,7 @@
             </div>
             <div class="carousel-inner" role="">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/karo-5.jpg" alt="">
+                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/kia1.jpg" alt="">
                     <!-- <div class="carousel-caption ">
                                     <div class="masthead-subheading">MEJUAH-JUAH</div>
                                     <div class="masthead-heading text-uppercase">Karo Satu Data</div>
@@ -74,7 +74,7 @@
                                 </div> -->
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/karo-4.jpg" alt="">
+                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/kia3.jpg" alt="">
                     <!-- <div class="carousel-caption ">
                                     <div class="masthead-subheading">MEJUAH-JUAH</div>
                                     <div class="masthead-heading text-uppercase">Karo Satu Data</div>
@@ -82,7 +82,15 @@
                                 </div> -->
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/karo-1.jpg" alt="">
+                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/kia2.jpg" alt="">
+                    <!-- <div class="carousel-caption ">
+                                    <div class="masthead-subheading">MEJUAH-JUAH</div>
+                                    <div class="masthead-heading text-uppercase">Karo Satu Data</div>
+                                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                                </div> -->
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="http://localhost/satudata/assets/assets/img/kia4.jpg" alt="">
                     <!-- <div class="carousel-caption ">
                                     <div class="masthead-subheading">MEJUAH-JUAH</div>
                                     <div class="masthead-heading text-uppercase">Karo Satu Data</div>
