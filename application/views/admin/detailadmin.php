@@ -139,7 +139,7 @@
                             <div class="form-group row">
                                 <label for="inputEmail4" class="col-md-4">Nama Instansi</label>
                                 <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['name'] ?>" disabled>
-                                <button type="button" class="btn btn-primary btn-sm px-2 mx" data-toggle="modal" data-target="#ModalScrollable">
+                                <button type="button" class="btn btn-primary btn-sm px-2 mx" data-toggle="modal" data-target="#ModalInstansi">
                                     Ubah
                                 </button>
                             </div>
@@ -205,6 +205,39 @@
     </div>
 
     <!-- Button trigger modal -->
+
+    <div class="modal fade" id="ModalInstansi" tabindex="-1" role="dialog" aria-labelledby="ModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content p-5 pl-2">
+                <div class="modal-header mx-auto">
+                    <h5 class="modal-title" id="ModalScrollableTitle">Ubah Nama Instansi</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="<?= base_url('') ?>" method="post">
+                        <div class="form-group row">
+                            <label for="lama" class="col-md-4">Password </label>
+                            <input type="password" class="form-control col-md-8" id="pass" name="pass" placeholder="Masukkan Password Anda">
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="inputEmail4" class="col-md-4"> Nama Instansi Baru </label>
+                            <input type="email" class="form-control col-md-8" id="email" name="email" placeholder="Nama Instansi Baru">
+                        </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group row">
+                        <input type="submit" class="btn btn-primary btn-sm" id="simpan" value="Simpan Perubahan">
+                    </div>
+
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
