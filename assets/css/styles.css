@@ -10076,7 +10076,7 @@ img::-moz-selection {
 }
 
 #mainNav {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   background-color: #212529;
   /* margin-right: 1px; */
 }
@@ -10111,7 +10111,7 @@ img::-moz-selection {
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 1.5rem;
+    padding-top: 0.3rem;
     
     border: none;
     background-color: black;

@@ -46,6 +46,33 @@ class DetailADMIN extends CI_Controller
             }
         }
     }
+
+    public function gantinama()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $this->form_validation->set_rules('nama', 'nama', 'required' );
+        $this->form_validation->set_rules('pass', 'pass', 'required|trim' );
+        
+
+        if ($this->form_validation->run()== false) {
+            $this->load->view('admin/DetailADMIN',$data);
+        }else{
+            $id=$this->session->userdata('id');
+            $pass=$this->input->post('pass');
+            $nama=$this->input->post('nama');
+            if(!password_verify($pass, $data['user']['password'] )){
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Pasword Salah</div>');
+                redirect('admin/DetailADMIN');
+            }else{
+                    $this->db->set('name', $nama);
+                    $this->db->where('id', $id);
+                    $this->db->update('public.user');
+                    $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Nama Instansi Berhasil Diubah</div>');
+                    redirect('admin/DetailADMIN');
+            }
+        }
+    }
+
     public function logout()
     {
         $this->session->unset_userdata('email');

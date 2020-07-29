@@ -213,7 +213,7 @@
                     <h5 class="modal-title" id="ModalScrollableTitle">Ubah Nama Instansi</h5>
                 </div>
                 <div class="modal-body">
-                    <form action="<?= base_url('') ?>" method="post">
+                    <form action="<?= base_url('admin/detailadmin/gantinama') ?>" method="post">
                         <div class="form-group row">
                             <label for="lama" class="col-md-4">Password </label>
                             <input type="password" class="form-control col-md-8" id="pass" name="pass" placeholder="Masukkan Password Anda">
@@ -222,10 +222,8 @@
 
                         <div class="form-group row">
                             <label for="inputEmail4" class="col-md-4"> Nama Instansi Baru </label>
-                            <input type="email" class="form-control col-md-8" id="email" name="email" placeholder="Nama Instansi Baru">
+                            <input type="text" class="form-control col-md-8" id="nama" name="nama" placeholder="Nama Instansi Baru">
                         </div>
-
-
                 </div>
                 <div class="modal-footer">
                     <div class="form-group row">
