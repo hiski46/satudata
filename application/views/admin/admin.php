@@ -40,65 +40,49 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Administrator
-            </div>
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/dashboard'); ?>">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard Admin</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Data dan Statistik
+                Data
             </div>
 
             <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
-                    <i class="fas fa-fw fa-table"></i>
+                <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
+                    <i class="fas fa-file-upload"></i>
                     <span>Upload Data</span></a>
-                
-                    <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
-                    <i class="fas fa-fw fa-image"></i>
-                    <span>Galeri</span></a>
 
+                <a class="nav-link" href="<?= base_url('admin/dashboard'); ?>">
+                    <i class="far fa-folder-open"></i>
+                    <span>Lihat Data</span></a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+                <!-- Divider -->
+                <hr class="sidebar-divider ">
 
-            <div class="sidebar-heading">
-            </div>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
             </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
             <div class="sidebar-heading">
-                Data dan Statistik
+                Galeri
             </div>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
+                    <i class="fas fa-fw fa-image"></i>
+                    <span>Upload Galeri</span></a>
 
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+                <hr class="sidebar-divider ">
+            </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
         </ul>
+
+
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -125,7 +109,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name']; ?></span>
-                                <img class="img-profile rounded-circle" src="<?= base_url('upload/foto/'.$user['image']) ?>">
+                                <img class="img-profile rounded-circle" src="<?= base_url('upload/foto/' . $user['image']) ?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -158,7 +142,7 @@
                     <div class="card mb-3" style="max-width:auto;">
                         <div class="row no-gutters mx-auto">
                             <div class="col-md-4" style="padding: 5%">
-                                <img src="<?= base_url('upload/foto/'.$user['image']) ?>" class="card-img " alt="...">
+                                <img src="<?= base_url('upload/foto/' . $user['image']) ?>" class="card-img " alt="...">
                             </div>
                             <div class="col-md-8 ">
                                 <div class="card-body">

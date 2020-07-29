@@ -29,6 +29,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
+        <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
@@ -43,74 +44,48 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Administrator
-            </div>
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/dashboard') ?>">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Upload
+                Data
             </div>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-file-upload"></i>
                     <span>Upload Data</span></a>
 
+                <a class="nav-link" href="<?= base_url('admin/dashboard'); ?>">
+                    <i class="far fa-folder-open"></i>
+                    <span>Lihat Data</span></a>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider ">
+
+            </li>
+
+            <div class="sidebar-heading">
+                Galeri
+            </div>
+            <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
                     <i class="fas fa-fw fa-image"></i>
-                    <span> Galeri </span></a>
+                    <span>Upload Galeri</span></a>
+
+
+                <hr class="sidebar-divider ">
             </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <div class="sidebar-heading">
-            </div>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <div class="sidebar-heading">
-                Data dan Statistik
-            </div>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Upload Data</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Statistik</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Lihat Data</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
         </ul>
+
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -254,7 +229,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    
+
                 </div>
             </div>
         </div>

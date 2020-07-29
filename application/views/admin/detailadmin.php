@@ -60,21 +60,21 @@
             </div>
 
             <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
+                <a class="nav-link" href="<?= base_url('admin/upload'); ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Upload Data</span></a>
-                
-                    <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
+
+                <a class="nav-link" href="<?= base_url('admin/uploadgaleri'); ?>">
                     <i class="fas fa-fw fa-image"></i>
                     <span> Galeri</span></a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+                <!-- Divider -->
+                <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+                <!-- Sidebar Toggler (Sidebar) -->
+                <div class="text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -103,7 +103,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name']; ?></span>
-                                <img class="img-profile rounded-circle" src="<?php echo  base_url('upload/foto/'.$user['image']);?>">
+                                <img class="img-profile rounded-circle" src="<?php echo  base_url('upload/foto/' . $user['image']); ?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -134,115 +134,114 @@
                     <div class="card-header">
                         Profile Instansi
                     </div>
-                    <div class="card-body" >         
+                    <div class="card-body">
                         <form>
                             <div class="form-group row">
                                 <label for="inputEmail4" class="col-md-4">Nama Instansi</label>
                                 <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['name'] ?>" disabled>
-                                </div>
+                                <button type="button" class="btn btn-primary btn-sm px-2 mx" data-toggle="modal" data-target="#ModalScrollable">
+                                    Ubah
+                                </button>
+                            </div>
                             <div class="form-group row">
                                 <label for="inputEmail4" class="col-md-4"> Email</label>
-                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['email'] ?>" disabled> 
+                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['email'] ?>" disabled>
                                 <button type="button" class="btn btn-primary btn-sm px-2 mx" data-toggle="modal" data-target="#ModalScrollable">
-                                        Ubah
-                                    </button>
+                                    Ubah
+                                </button>
                             </div>
                             <div class="form-group row">
-                                <label for="inputEmail4" class="col-md-4" >Foto</label>
-                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['image'] ?>" disabled> 
+                                <label for="inputEmail4" class="col-md-4">Foto</label>
+                                <input type="email" class="form-control col-md-6" id="disabledinput" placeholder="<?= $user['image'] ?>" disabled>
+                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalScrollable">
+                                    Ubah Foto
+                                </button>
                             </div>
-                            
+
                             <div class="text-center">
-                                <img src="<?php echo  base_url('upload/foto/'.$user['image']);?>" class="rounded" alt="image" style="max-width: 30%">
+                                <img src="<?php echo  base_url('upload/foto/' . $user['image']); ?>" class="rounded" alt="image" style="max-width: 30%">
                             </div>
-                            <div class="form-group row mx-auto">
-                                <div class="col">
-                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalScrollable">
-                                        Ubah Foto
-                                    </button>
-                                </div>
-                            </div>   
                         </form>
-                    </div>  
+                    </div>
                     <div class="card-footer text-muted p-8">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
 
-            <!-- End of Main Content -->
-            <div class="modal fade" id="ModalScrollable" tabindex="-1" role="dialog" aria-labelledby="ModalScrollableTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable" role="document">
-    <div class="modal-content p-5 pl-2">
-        <div class="modal-header mx-auto">
-        <h5 class="modal-title" id="ModalScrollableTitle">Ubah Email</h5>
-    </div>
-    <div class="modal-body">
-    <form action="<?= base_url('admin/detailAdmin/gantiEmail') ?>" method="post">
-    <div class="form-group row">
-                                <label for="lama" class="col-md-4">Password </label>
-                                <input type="password" class="form-control col-md-6" id="pass" name="pass" placeholder="Masukkan Password Anda">
-                                
-</div>
-
-<div class="form-group row">
-                                <label for="inputEmail4" class="col-md-4"> Email Baru </label>
-                                <input type="email" class="form-control col-md-6" id="email" name="email" placeholder="Masukkan Email Baru" >
-                            </div>
-                            
-                           
-    </div>
-    <div class="modal-footer">
-    <div class="form-group row">
-                                <input type="submit" class="btn btn-primary btn-sm" id="simpan" value="Simpan Perubahan" >
-                            </div>
-
-    </div>
-    </form>
-    </div>
-    </div>
-</div>
-
-            <!-- Button trigger modal -->
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable" role="document">
-    <div class="modal-content p-5 pl-2">
-        <div class="modal-header mx-auto">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">Ubah Foto Profile</h5>
-    </div>
-    <div class="modal-body">
-        <form action="<?= base_url('admin/Dashboard/foto') ?>" method="post" enctype="multipart/form-data" >      
-            <div class="form-group row"> 
-                <p>Pilih Gambar</p>
-                <input type="file" name="foto" id="foto">
-            </div>
-            <div class="form-group row"> 
-                <input type="submit" value="Ubah" class="btn btn-primary btn-sm">
-            </div>
-        </form>     
-    </div>
-    <div class="modal-footer">
-    </div>
-    </div>
-    </div>
-</div>
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; The Most Angry 2020. </span>
-                    </div>
+    <!-- End of Main Content -->
+    <div class="modal fade" id="ModalScrollable" tabindex="-1" role="dialog" aria-labelledby="ModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content p-5 pl-2">
+                <div class="modal-header mx-auto">
+                    <h5 class="modal-title" id="ModalScrollableTitle">Ubah Email</h5>
                 </div>
-            </footer>
-            <!-- End of Footer -->
+                <div class="modal-body">
+                    <form action="<?= base_url('admin/detailAdmin/gantiEmail') ?>" method="post">
+                        <div class="form-group row">
+                            <label for="lama" class="col-md-4">Password </label>
+                            <input type="password" class="form-control col-md-6" id="pass" name="pass" placeholder="Masukkan Password Anda">
 
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="inputEmail4" class="col-md-4"> Email Baru </label>
+                            <input type="email" class="form-control col-md-6" id="email" name="email" placeholder="Masukkan Email Baru">
+                        </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group row">
+                        <input type="submit" class="btn btn-primary btn-sm" id="simpan" value="Simpan Perubahan">
+                    </div>
+
+                </div>
+                </form>
+            </div>
         </div>
-        <!-- End of Content Wrapper -->
+    </div>
+
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content p-5 pl-2">
+                <div class="modal-header mx-auto">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">Ubah Foto Profile</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="<?= base_url('admin/Dashboard/foto') ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-group row">
+                            <p>Pilih Gambar</p>
+                            <input type="file" name="foto" id="foto">
+                        </div>
+                        <div class="form-group row">
+                            <input type="submit" value="Ubah" class="btn btn-primary btn-sm">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; The Most Angry 2020. </span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
