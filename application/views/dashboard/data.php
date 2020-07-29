@@ -69,7 +69,7 @@
                             <a href="<?= base_url('data/userid/' . $instansi->id) ?>">
                                 <span class="notify-badge"><?php $controller->hitung($instansi->id); ?></span>
                                 <img src="<?= base_url('upload/foto/' . $instansi->image) ?>" alt="" class="img-responsive img-fluid" style="max-width:60%">
-                                <h4 class="my-3"><?= $instansi->name; ?></h4>
+                                <h6 class="my-3" style="color: black;"><?= $instansi->name; ?></h6>
                             </a>
                             <p class="text-muted"></p>
                         </div>
@@ -147,7 +147,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020</div>
                 <div class="col-lg-4 my-3 my-lg-0">
-                <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/dinkominfokaro"><i class="fab fa-twitter"></i></a><a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/kominfo.karo/"><i class="fab fa-facebook-f"></i></a><a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/dinkominfokaro/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/dinkominfokaro"><i class="fab fa-twitter"></i></a><a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/kominfo.karo/"><i class="fab fa-facebook-f"></i></a><a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/dinkominfokaro/"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="col-lg-4 text-lg-right"><a class="mr-3" href="#!">Privacy Policy</a><a href="#!">Terms of Use</a></div>
             </div>
