@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <link rel="icon" type="image/gif" href="<?= base_url('upload/foto/logokaro.gif') ?>" >
     <title> Karo Satu Data - Ubah Password SA</title>
 
     <!-- Custom fonts for this template-->
@@ -342,7 +342,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Satudata Kabupaten Karo 2020 </span>
+                        <span>Copyright &copy; The Most Angry 2020 </span>
                     </div>
                 </div>
             </footer>
