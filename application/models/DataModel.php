@@ -16,13 +16,13 @@ class DataModel extends CI_Model
         // return $query->result();
         $this->db->select('*');
         $this->db->where('id_owner', $id);
-        $this->db->order_by('id_data', 'ASC');
+        $this->db->order_by('id_data', 'DESC');
 
         return $this->db->get('public.data')->result();
     }
     public function tampildata()
     {
-        $query = $this->db->select('*')->where('id_data', NULL)->get('public.data');
+        $query = $this->db->select('*')->where('id_data', NULL)->order_by('id_data', 'DESC')->get('public.data');
         return $query->result();
     }
 
@@ -96,6 +96,7 @@ class DataModel extends CI_Model
         $this->db->or_like('LOWER(keterangan)', strtolower($key));
         $this->db->or_like('LOWER(kategori)', strtolower($key));
         $this->db->or_like('LOWER(tanggal)', strtolower($key));
+        $this->db->order_by('id_data', 'DESC');
 
         $hasil = $this->db->get('public.data')->result();
         return $hasil;
@@ -111,7 +112,7 @@ class DataModel extends CI_Model
         // $this->db->or_like('LOWER(kategori)', strtolower($key));
 
         // return $this->db->get()->result();
-        $query = $this->db->query("SELECT * FROM public.data WHERE id_owner =" . $id . " and (LOWER(judul) like '%" . strtolower($key) . "%' or LOWER(kategori) like '%" . strtolower($key) . "%' or LOWER(keterangan) like '%" . strtolower($key) . "%' or LOWER(tanggal) like '%" . strtolower($key) . "%' );");
+        $query = $this->db->query("SELECT * FROM public.data WHERE id_owner =" . $id . " and (LOWER(judul) like '%" . strtolower($key) . "%' or LOWER(kategori) like '%" . strtolower($key) . "%' or LOWER(keterangan) like '%" . strtolower($key) . "%' or LOWER(tanggal) like '%" . strtolower($key) . "%' ) ORDER BY id_data DESC;");
         $total = $query->result();
         return $total;
     }

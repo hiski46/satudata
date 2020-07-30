@@ -159,7 +159,7 @@
                                     <br>
                                     <div class="album-content">
 
-                                        <a> <i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya<?= $x->id ?>"> Hapus</i></a>
+                                        <a class="btn btn-danger" style="margin-top:50%"> <i class="fas fa-trash-alt text-white" data-toggle="modal" data-target="#modalsaya<?= $x->id ?>"> Hapus</i></a>
                                     </div>
                                 </div>
                             </div>

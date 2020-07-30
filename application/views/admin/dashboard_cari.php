@@ -169,7 +169,7 @@
                                 <p class="mb-1"><?= $x->file; ?></p>
                                 <small>
 
-                                    <a><i class="fas fa-chevron-circle-down text-primary" data-toggle="modal" data-target="#exampleModalLong<?= $x->id_data ?>"> Details</i></a>
+                                    <a><i class="fas fa-chevron-circle-down text-primary" data-toggle="modal" data-target="#exampleModalLong<?= $x->id_data ?>"> Edit</i></a>
                                     <a><i class="fas fa-trash-alt text-danger" data-toggle="modal" data-target="#modalsaya<?= $x->id_data ?>"> Hapus</i></a>
 
                                 </small>
@@ -222,7 +222,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input type="submit" value="upload" class="btn btn-primary">
+                                            <input type="submit" value="Simpan Perubahan" class="btn btn-primary">
                                         </div>
                                     </form>
                                 </div>
