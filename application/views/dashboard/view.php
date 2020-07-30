@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <link rel="icon" type="image/gif" href="<?= base_url('upload/foto/logokaro.gif') ?>" >
     <title>Beranda - Karo Satu Data</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+   
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
